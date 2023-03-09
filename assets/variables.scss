@@ -1,0 +1,292 @@
+// BackGround Colors
+$bcgWhite: #fff;
+$bcgSecondary: rgb(235, 235, 235);
+$bcgButton: #6AC3EF;
+
+%menu-items {
+  font-size: 14px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+//btn
+%main-btn {
+  background-color: $bcgWhite;
+  height: 48px;
+  border-radius: 13px;
+  font-size: 14px;
+  width: 150px;
+}
+%main-filter-btn {
+  background-color: $bcgWhite;
+  height: 48px;
+  border-radius: 13px;
+  font-size: 14px;
+  width: 62px;
+}
+%secondary-btn {
+  font-size: 12px;
+  border-radius: 10px;
+  width: 150px;
+  height: 42px;
+  margin-top: 10px;
+  background-color: $bcgSecondary;
+}
+//search input
+%main-search {
+  max-width: 404px;
+  height: 42px;
+  border-radius: 15px;
+  background-color: $bcgWhite;
+  display: inline-block;
+}
+//table
+%main-table-head-th {
+  background-color: $bcgButton;
+  font-size: 14px;
+  font-weight: normal;
+  border-right: 2px solid $bcgWhite;
+}
+%main-data-table-td {
+  border-bottom: none !important;
+  border-right: 3px solid  $bcgSecondary;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+// create page
+%name-of-create-page {
+  width: 404px;
+  margin-top: 7px;
+  padding: 10px 0;
+  border-radius: 15px;
+  background-color: $bcgWhite;
+  text-align: center;
+  align-items: center;
+}
+%full-section {
+  background-color: $bcgWhite;
+  height: 86vh;
+  border-radius: 15px;
+  padding: 4rem 4rem;
+}
+%not-full-section {
+  background-color: $bcgWhite;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+}
+// input
+%main-input-without-width {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+}
+%main-input-width-200 {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 200px;
+}
+%main-input-width-150 {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 150px;
+}
+%blank-time-input {
+  width: 80%;
+  height: 35px;
+  margin-top: 12px;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: $bcgSecondary;
+}
+%main-textarea {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+%name-of-survey {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: $bcgSecondary;
+  padding: 10px 25px;
+}
+
+section {
+  margin-top: 10px;
+
+//Index Cabinet page
+// Header fo all
+  .main-search {
+    @extend %main-search;
+  }
+  .main-btn {
+    @extend %main-btn;
+    &:hover{
+      background-color: $bcgButton;
+    }
+  }
+  .main-filter-btn {
+    @extend %main-filter-btn;
+    &:hover{
+      background-color: $bcgButton;
+    }
+  }
+
+// Table
+  .main-table-head-th {
+    @extend %main-table-head-th;
+    &:first-child {
+      border-end-start-radius: 15px;
+      border-start-start-radius: 15px;
+    }
+    &:last-child {
+      border-end-end-radius: 15px;
+      border-start-end-radius: 15px;
+      border: none;
+    }
+  }
+  .v-data-table td {
+    @extend %main-data-table-td;
+    &:first-child {
+      text-align: center;
+    }
+    &:last-child {
+      border: none;
+    }
+  } 
+  .main-table-pagination{
+    padding: 15px;
+  }
+  .main-table-btn{
+    @extend %secondary-btn;
+  }
+
+// Create default
+// Header
+  .create-id {
+    @extend %name-of-create-page;
+  }
+
+// Value (form)
+  .create-value {
+    @extend %full-section;
+    .create-main-input {
+      @extend %main-input-without-width;
+    }
+    .create-main-input-cassa{
+      @extend %main-input-width-200;
+    }
+    .create-child-input{
+      @extend %main-input-width-150;
+    }
+    .complaint-value-btn{
+      @extend %secondary-btn;
+    }
+  }
+
+// Create Personal page
+  .create-value-personal{
+    @extend %not-full-section;
+    .image-personal{
+      background-color: $bcgSecondary;
+      border-radius: 10px;
+    }
+    .create-main-input {
+      @extend %main-input-without-width;
+    }
+    .personal-createP-day{
+      margin-top: 0px;
+    }
+    .personal-createP-btn{
+      @extend %secondary-btn; 
+    }
+    .create-main-textarea{
+      @extend %main-textarea;
+    }
+    .complaint-value-btn{
+      @extend %secondary-btn;
+    }
+  }
+
+// ID page Blank
+  .main-element{
+    @extend %main-input-width-200;
+  }
+  .column-time-blank{
+    margin-top: -20px;
+  }
+  .create-value-blank{
+    @extend %not-full-section;
+      .main-name{
+        font-size: 16px;
+      }
+      .main-input-blank {
+        @extend %main-input-width-200;
+      }
+      .blank-time-input{
+        @extend %blank-time-input;
+        &:focus{
+          outline-width: 0;
+        }
+      }
+      .main-input-blank-2{
+        max-width: 330px;
+        height: 42px;
+        border-radius: 10px;
+      }
+      .create-main-list{
+        height: 42px;
+        border-radius: 10px;
+      }
+      .create-main-textarea{
+        @extend %main-textarea;
+      }
+  }
+
+// Patient Complaint Page 
+  .complaint-value{
+    @extend %full-section;
+    .complaint-value-textarea{
+      @extend %main-textarea;
+    }
+  }
+
+//Records Survey Show Page
+  .survey-of-patient-value{
+    @extend %not-full-section;
+    .complaint-value-textarea{
+      @extend %main-textarea;
+    }
+    .complaint-value-btn{
+      @extend %secondary-btn;
+    }
+    .name-of-survey {
+      @extend %name-of-survey;
+    }
+    .create-main-input{
+      @extend %main-input-without-width;
+    }
+  }
+}
+
+// Dropdown main index page
+.menu-items{
+  @extend %menu-items;
+  &:hover {
+    background-color: $bcgSecondary;
+    border-radius: 15px;
+  }
+}
+
+// Survey Edit page 
+.survey-edit-dialog{
+  padding-top: 80px;
+  .survey-edit-dialog-btn{
+    width: 150px;
+    height: 42px;
+    margin: 10px 20px;
+  }
+}
+

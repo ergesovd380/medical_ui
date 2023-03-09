@@ -1,0 +1,418 @@
+<template>
+  <section>
+    <v-app-bar
+      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      dense
+      elevation="0"
+    >
+<!--Page name-->
+      <h3 class="create-id my-2">Новый пациент</h3>
+<!--Button add-->
+      <nuxt-link tag="button" to="/patient" class="main-btn main-create-back-btn my-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link tag="button" to="/patient" class="main-btn main-create-back-btn my-2 ms-2">Отмениить</nuxt-link>
+    </v-app-bar>
+    <v-form 
+      class="create-value-personal mt-5"
+      ref="form"
+      v-model="valid"
+      lazy-validation
+    >
+      <div class="create-personal-form">
+<!--Number of MedCard and Checkbox-->
+        <v-row>
+          <v-col class="col-4">
+            <h4 class="ms-4">Номер мед карты</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Номер мед карты"
+              v-model="numberofcard"
+              autocomplete="none"
+              type="text"
+              :rules="rulesInput"
+              required
+            ></v-text-field>
+          </v-col>
+          <v-col class="mt-4">
+            <v-checkbox
+            label="Личные данные неизвестны"
+            color="#6AC3EF"
+            v-model="checkbox"
+            ></v-checkbox>
+          </v-col>
+        </v-row>
+<!--F.I.O personal-->
+        <v-row>
+          <v-col class="col-6">
+            <h4 class="ms-4">Ф.И.О пациента</h4>
+            <v-text-field
+              v-model="surnamePatient"
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Фамилия"
+              autocomplete="none"
+              type="text"
+              :rules="rulesInput"
+              :disabled="checkbox"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="namePatient"
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input mt-6"
+              placeholder="Имя"
+              autocomplete="none"
+              type="text"
+              :rules="rulesInput"
+              :disabled="checkbox"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="fathNamePatient"
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input mt-6"
+              placeholder="Отчество"
+              autocomplete="none"
+              type="text"
+              :rules="rulesInput"
+              :disabled="checkbox"
+              required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+<!--Sex, birthday, PassportSeria-->
+        <v-row>
+          <v-col>
+            <h4 class="ms-4">Пол</h4>
+            <v-autocomplete
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Выберите"
+              no-data-text="Нет данных"
+              :rules="rulesInput"
+              required
+              :items="['Мужской', 'Женский']"
+              :disabled="checkbox"
+            >
+            </v-autocomplete>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Дата рождения</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              class="create-main-input"
+              v-model="birthdayPatient"
+              :rules="rulesInput"
+              type="date"
+              required
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Пасспорт №</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              class="create-main-input"
+              color="#6AC3EF"
+              placeholder="I-AS 000000"
+              v-model="passportSerai"
+              :rules="rulesInput"
+              type="text"
+              required
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+<!--Status and phonenumber-->
+        <v-row>
+          <v-col>
+            <h4 class="ms-4">Гражданский статус</h4>
+            <v-autocomplete
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Выберите"
+              no-data-text="Нет данных"
+              :rules="rulesInput"
+              required
+              :items="['Гражданин Туркменистана', 'Иностранец', 'Иностранец-дипломат']"
+              :disabled="checkbox"
+            >
+            </v-autocomplete>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Номер телефона</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="+993"
+              type="number"
+              v-model="phonenumberOfPatient"
+              :rules="rulesInputForPhone"
+              :disabled="checkbox"
+              :counter="11"
+              required
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Номер телефона 2</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="+993"
+              type="number"
+              v-model="phonenumberOfPatient2"
+              :rules="rulesInputForPhone"
+              :disabled="checkbox"
+              :counter="11"
+              required
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <hr class="my-10">
+<!--Poliklinika-->
+        <v-row>
+          <v-col>
+            <h4 class="ms-4">Поликлининка</h4>
+            <v-autocomplete
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Выберите"
+              no-data-text="Нет данных"
+              :items="['Поликлиника номер1', 'Поликлиника номер2', 'Поликлиника номер3', 'Поликлиника номер4']"
+              :disabled="checkbox"
+            >
+            </v-autocomplete>
+          </v-col>
+          <v-col class="mt-6">
+            <v-btn class="personal-createP-btn">Нет в списке</v-btn>
+          </v-col>
+        </v-row>
+        <hr class="my-10">
+<!--Группа, vip-->
+        <v-row>
+          <v-col class="col-4">
+            <h4 class="ms-4">Группа</h4>
+            <v-autocomplete
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              placeholder="Выберите"
+              no-data-text="Нет данных"
+              :rules="rulesInput"
+              :disabled="checkbox"
+              required
+            >
+            </v-autocomplete>
+          </v-col>
+          <v-col class="mt-4">
+            <v-checkbox
+            label="VIP"
+            color="#6AC3EF"
+            v-model="vip"
+            ></v-checkbox>
+          </v-col>
+        </v-row>
+<!--Примечания-->
+        <v-row>
+          <v-col>
+            <v-textarea
+              filled
+              rounded
+              auto-grow
+              dense
+              type="text"
+              color="#6AC3EF"
+              rows="10"
+              row-height="10"
+              class="create-main-textarea"
+              placeholder="Примечания"
+              v-model="notes"
+            ></v-textarea>
+          </v-col>
+        </v-row>
+        <hr class="my-10">
+        <h4 class="ms-4">Адрес</h4>
+<!--Region, City-->
+        <v-row>
+          <v-col>
+            <h4 class="ms-4">Регион</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="region"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Город</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="city"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Район</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="area"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+<!--Street, home-->
+        <v-row>
+          <v-col>
+            <h4 class="ms-4">Улица</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="street"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Дом</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="home"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <h4 class="ms-4">Квартира/Офис</h4>
+            <v-text-field
+              filled
+              rounded
+              dense
+              color="#6AC3EF"
+              class="create-main-input"
+              type="text"
+              v-model="flat"
+              :disabled="checkbox"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+<!--Примечания-->
+        <v-row>
+          <v-col>
+            <v-textarea
+              filled
+              rounded
+              auto-grow
+              dense
+              type="text"
+              color="#6AC3EF"
+              rows="10"
+              row-height="10"
+              class="create-main-textarea"
+              placeholder="Примечания"
+              v-model="notes2"
+              :disabled="checkbox"
+            ></v-textarea>
+          </v-col>
+        </v-row>
+        <v-btn class="personal-createP-btn">Есть еще один?</v-btn>
+        <hr class="my-10">
+        <v-checkbox
+          v-model="active"
+          :label="active ? 'Активный' : 'Не активный'"
+          color="#6AC3EF"
+        ></v-checkbox>
+      </div>
+    </v-form>
+    <slot name="dialog"></slot>
+  </section>
+</template>
+<script lang="ts">
+export default {
+  data (): any {
+    return {
+      valid: true,
+      checkbox: false,
+      vip: false,
+      active: false,
+      numberofcard: '',
+      surnamePatient: '',
+      namePatient: '',
+      fathNamePatient: '',
+      birthdayPatient: '',
+      passportSerai: '',
+      phonenumberOfPatient: '',
+      phonenumberOfPatient2: '',
+      region: '',
+      city: '',
+      area: '',
+      street: '',
+      home: '',
+      flat: '',
+      notes: '',
+      notes2: '',
+// Rules for inputs
+      rulesInput: [
+        (v: any) => !!v || 'Нельзя оставить пустым',
+      ],
+      rulesInputForPhone: [
+        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => v.length === 11 || 'Должен быть 11 цифр',
+      ],
+    }
+  },
+}
+</script>
