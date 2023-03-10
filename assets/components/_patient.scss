@@ -1,0 +1,7 @@
+.patient {
+  margin-top: 10px;
+
+  &__title {
+    @include name-of-create-page;
+  }
+}

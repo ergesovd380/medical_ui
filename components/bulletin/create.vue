@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="bulletin__title">Новый бюллетень</h3>
 <!--Button add-->
-      <button tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Сохранить</button>
-      <nuxt-link tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 

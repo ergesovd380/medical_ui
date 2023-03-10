@@ -17,11 +17,11 @@
       ></v-text-field>
 <!--Button add-->
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id" class="bulletin__btn mt-2 me-2">Бюллетень</nuxt-link>
+      <nuxt-link tag="button" :to="'/bulletin/' + id" class="main-btn mt-2 me-2">Бюллетень</nuxt-link>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
           <template v-slot:activator="{ on, attrs }">
-              <v-btn icon v-bind="attrs" v-on="on" class="bulletin__filter-btn mt-2 ms-2">
+              <v-btn icon v-bind="attrs" v-on="on" class="main-filter-btn mt-2 ms-2">
                 <v-icon>
                   mdi-filter-variant
                 </v-icon>

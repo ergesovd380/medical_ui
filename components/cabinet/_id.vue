@@ -11,11 +11,11 @@
       <nuxt-link 
         tag="button" 
         to="/cabinet" 
-        class="cabinet__btn mt-2 ms-2"
+        class="main-btn mt-2 ms-2"
         no-prefetch
       >Назад</nuxt-link>
       <v-spacer></v-spacer>
-      <v-btn :to="'/cabinet/' + id + '/edit'" icon class="cabinet__filter-btn mt-2">
+      <v-btn :to="'/cabinet/' + id + '/edit'" icon class="main-filter-btn mt-2">
         <v-icon>
           mdi-pencil
         </v-icon>

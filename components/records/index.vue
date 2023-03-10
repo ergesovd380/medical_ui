@@ -16,12 +16,12 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/records/create" class="index__btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/records/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
           <template v-slot:activator="{ on, attrs }">
-              <v-btn icon v-bind="attrs" v-on="on" class="index__filter-btn">
+              <v-btn icon v-bind="attrs" v-on="on" class="main-filter-btn">
                 <v-icon>
                   mdi-filter-variant
                 </v-icon>

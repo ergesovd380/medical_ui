@@ -8,15 +8,15 @@
 <!--Page name-->
       <h3 class="bulletin__title">Бюллетень</h3>
 <!--Button back-->
-      <nuxt-link tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Назад</nuxt-link>
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="bulletin__btn mt-2 ms-2">Статистика</nuxt-link>
-      <v-btn icon class="ms-4 mt-2 bulletin__filter-btn" :to="'/bulletin/' + id + '/view'">
+      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">Статистика</nuxt-link>
+      <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/view'">
         <v-icon>
           mdi-bulletin-board
         </v-icon>
       </v-btn>
-      <v-btn icon class="ms-4 mt-2 bulletin__filter-btn" :to="'/bulletin/' + id + '/edit'">
+      <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/edit'">
         <v-icon>
           mdi-pencil
         </v-icon>

@@ -20,7 +20,7 @@
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
           <template v-slot:activator="{ on, attrs }">
-              <v-btn icon v-bind="attrs" v-on="on" class="index__filter-btn">
+              <v-btn icon v-bind="attrs" v-on="on" class="main-filter-btn">
                 <v-icon>
                   mdi-filter-variant
                 </v-icon>

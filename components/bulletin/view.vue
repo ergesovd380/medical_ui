@@ -8,12 +8,12 @@
 <!--Page name-->
       <h3 class="bulletin__title">Бюллетень просмотр</h3>
 <!--Button lang-->
-      <button class="bulletin__btn mt-2 ms-2">Туркменский</button>
-      <button class="bulletin__btn mt-2 ms-2">Русский</button>
+      <button class="main-btn mt-2 ms-2">Туркменский</button>
+      <button class="main-btn mt-2 ms-2">Русский</button>
 
 <!--Button back-->
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id" class="bulletin__btn mt-2 me-2">Бюллетень</nuxt-link>
+      <nuxt-link tag="button" :to="'/bulletin/' + id" class="main-btn mt-2 me-2">Бюллетень</nuxt-link>
     </v-app-bar>
 <!-- Form edit -->
     <v-form 

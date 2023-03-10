@@ -6,7 +6,7 @@
       elevation="0"
     >
 <!--Header-->
-      <nuxt-link tag="button" to="/blank" class="blank__back-btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link tag="button" to="/blank" class="main-btn mt-2 ms-2">Назад</nuxt-link>
       <v-spacer></v-spacer>
       <label class="mx-3">Görnüşiň şertli belgisi</label>
       <v-text-field
@@ -26,7 +26,7 @@
         solo
         flat
       ></v-text-field>
-      <v-btn icon class="mt-2 ms-2 blank__filter-btn">
+      <v-btn icon class="mt-2 ms-2 main-filter-btn">
         <v-icon>
           mdi-printer-outline
         </v-icon>

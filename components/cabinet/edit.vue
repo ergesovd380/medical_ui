@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="cabinet__title red--text">{{ $route.params.id }}</h3>
 <!--Button add-->
-      <nuxt-link no-prefetch tag="button" :to="'/cabinet/' + id" class="cabinet__btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link no-prefetch tag="button" :to="'/cabinet/' + id" class="cabinet__btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link no-prefetch tag="button" :to="'/cabinet/' + id" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link no-prefetch tag="button" :to="'/cabinet/' + id" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form edit -->
     <v-form 

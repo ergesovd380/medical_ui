@@ -5,22 +5,6 @@
     @include name-of-create-page;
   }
 
-  &__btn {
-    @include main-btn;
-
-    &:hover{
-      background-color: var(--blue-color);
-    }
-  }
-
-  &__filter-btn {
-    @include main-btn;
-
-    &:hover{
-      background-color: var(--blue-color);
-    }
-  }
-
   &__value {
     @include full-section;
   }

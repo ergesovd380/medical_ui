@@ -1,24 +1,8 @@
 .blank {
   margin-top: 10px;
 
-  &__back-btn {
-    @include main-btn;
-
-    &:hover{
-      background-color: var(--blue-color);
-    }
-  }
-
   &__element {
     @include main-input-width-200;
-  }
-
-  &__filter-btn {
-    @include main-filter-btn;
-
-    &:hover{
-      background-color: var(--blue-color);
-    }
   }
 
   &__value {

@@ -4,9 +4,9 @@
 @import './mixin/default';
 @import './components/navigation';
 
-
 // Pages scss files
 @import './components/table';
+@import './components/btn';
 @import './components/blank';
 @import './components/./bulletin';
 @import './components/cabinet';
@@ -19,4 +19,3 @@
 @import './components/statistic';
 @import './components/survey';
 @import './components/tolerance'
-

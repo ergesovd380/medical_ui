@@ -1,15 +1,15 @@
 <template>
-  <section>
+  <section class="patinet">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id my-2">Новый пациент</h3>
+      <h3 class="patinet__title my-2">Новый пациент</h3>
 <!--Button add-->
-      <nuxt-link tag="button" to="/patient" class="main-btn main-create-back-btn my-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" to="/patient" class="main-btn main-create-back-btn my-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
     <v-form 
       class="create-value-personal mt-5"

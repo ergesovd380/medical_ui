@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="cabinet__title">Новый кабинет</h3>
 <!--Button add-->
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="cabinet__btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="cabinet__btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
