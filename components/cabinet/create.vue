@@ -1,19 +1,19 @@
 <template>
-  <section>
+  <section class="cabinet">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id">Новый кабинет</h3>
+      <h3 class="cabinet__title">Новый кабинет</h3>
 <!--Button add-->
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="cabinet__btn mt-2 ms-2">Сохранить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="cabinet__btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-    class="create-value"
+    class="cabinet__value"
     ref="form"
     v-model="valid"
     lazy-validation
@@ -26,7 +26,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="cabinet__input"
             placeholder="Trawmatolog"
             autocomplete="none"
             v-model="nameOfCabinet"
@@ -44,7 +44,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="cabinet__input"
             type="number"
             placeholder="+993612345678"
             autocomplete="none"
@@ -63,7 +63,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-child-input"
+            class="cabinet__child-input"
             placeholder="401"
             autocomplete="none"
             type="text"
@@ -79,7 +79,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-child-input"
+            class="cabinet__child-input"
             type="number"
             placeholder="4"
             autocomplete="none"

@@ -1,21 +1,21 @@
 <template>
-  <section>
+  <section class="cabinet">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ $route.params.id }}</h3>
+      <h3 class="cabinet__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
         to="/cabinet" 
-        class="main-btn mt-2 ms-2"
+        class="cabinet__btn mt-2 ms-2"
         no-prefetch
       >Назад</nuxt-link>
       <v-spacer></v-spacer>
-      <v-btn :to="'/cabinet/' + id + '/edit'" icon class="main-filter-btn mt-2">
+      <v-btn :to="'/cabinet/' + id + '/edit'" icon class="cabinet__filter-btn mt-2">
         <v-icon>
           mdi-pencil
         </v-icon>
@@ -23,7 +23,7 @@
     </v-app-bar>
 <!-- Form edit -->
     <v-form 
-      class="create-value"
+      class="cabinet__value"
       ref="form"
     >
       <v-row>
@@ -33,7 +33,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="cabinet__input"
             v-model="nameOfCabinet"
             readonly
           ></v-text-field>
@@ -46,7 +46,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="cabinet__input"
             v-model="phoneNumber"
             readonly
           ></v-text-field>
@@ -59,7 +59,7 @@
             filled
             rounded
             dense
-            class="create-child-input"
+            class="cabinet__child-input"
             v-model="numberofCabinet"
             readonly
           ></v-text-field>
@@ -70,7 +70,7 @@
             filled
             rounded
             dense
-            class="create-child-input"
+            class="cabinet__child-input"
             v-model="floor"
             readonly
           ></v-text-field>

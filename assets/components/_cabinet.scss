@@ -1,0 +1,35 @@
+.cabinet {
+  margin-top: 10px;
+
+  &__title {
+    @include name-of-create-page;
+  }
+
+  &__btn {
+    @include main-btn;
+
+    &:hover{
+      background-color: var(--blue-color);
+    }
+  }
+
+  &__filter-btn {
+    @include main-btn;
+
+    &:hover{
+      background-color: var(--blue-color);
+    }
+  }
+
+  &__value {
+    @include full-section;
+  }
+
+  &__input {
+    @include main-input-without-width;
+  }
+
+  &__child-input{
+    @include main-input-width-150;
+  }
+}
