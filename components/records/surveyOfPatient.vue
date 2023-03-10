@@ -26,19 +26,19 @@
           <h4 class="ms-4">Результат</h4>
           <div class="records__name">{{ elementsRecordCreate[0].survey }}</div>
         </v-col>
-        <v-col class="col-2 mt-6">
+        <v-col class="col-2 mt-8">
           <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
         </v-col>
         <v-col class="col-10">
           <div class="records__name">{{ elementsRecordCreate[1].survey }}</div>
         </v-col>
-        <v-col class="col-2">
+        <v-col class="col-2 mt-2">
           <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
         </v-col>
         <v-col class="col-10">
           <div class="records__name">{{ elementsRecordCreate[2].survey }}</div>
         </v-col>
-        <v-col class="col-2">
+        <v-col class="col-2 mt-2">
           <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
         </v-col>
       </v-row>
@@ -57,7 +57,7 @@
           >
           </v-autocomplete>
         </v-col>
-        <v-col class="mt-4">
+        <v-col class="mt-6">
           <v-btn class="records__secondary-btn" elevation="1">Нет в списке?</v-btn>
         </v-col>
       </v-row>

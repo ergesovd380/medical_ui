@@ -1,12 +1,12 @@
 // Main scss files 
 @import './vars';
 @import './mixin/setting';
-@import './mixin/default';
 @import './components/navigation';
 
 // Pages scss files
 @import './components/table';
 @import './components/btn';
+@import './components/dialog';
 @import './components/blank';
 @import './components/./bulletin';
 @import './components/cabinet';

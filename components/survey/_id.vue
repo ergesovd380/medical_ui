@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <section class="survey">
     <v-app-bar
       style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ $route.params.id }}</h3>
+      <h3 class="survey__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
@@ -22,8 +22,8 @@
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-    class="create-value"
-    ref="form"
+      class="survey__value"
+      ref="form"
     >
 <!--Header inputs-->
       <v-row>
@@ -33,7 +33,7 @@
               filled
               rounded
               dense
-              class="create-main-input-cassa"
+              class="survey__input-cassa"
               readonly
               v-model="numberOfCassa"
           ></v-text-field>
@@ -46,7 +46,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="survey__input"
             readonly
             v-model="name"
           ></v-text-field>
@@ -60,7 +60,7 @@
                 filled
                 rounded
                 dense
-                class="create-child-input"
+                class="survey__child-input"
                 readonly
                 v-model="withoutInsurance"
             ></v-text-field>
@@ -71,7 +71,7 @@
                 filled
                 rounded
                 dense
-                class="create-child-input"
+                class="survey__child-input"
                 readonly
                 v-model="withInsurance"
             ></v-text-field>
@@ -82,7 +82,7 @@
               filled
               rounded
               dense
-              class="create-child-input"
+              class="survey__child-input"
               readonly
               v-model="foreigner"
             ></v-text-field>
@@ -93,7 +93,7 @@
               filled
               rounded
               dense
-              class="create-child-input"
+              class="survey__child-input"
               readonly
               v-model="diplomat"
             ></v-text-field>

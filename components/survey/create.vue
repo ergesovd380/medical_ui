@@ -1,22 +1,22 @@
 <template>
-  <section>
+  <section class="survey">
     <v-app-bar
       style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id">Новое обследование</h3>
+      <h3 class="survey__title">Новое обследование</h3>
 <!--Button add-->
       <nuxt-link tag="button" to="/survey" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
       <nuxt-link tag="button" to="/survey" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-    class="create-value"
-    ref="form"
-    v-model="valid"
-    lazy-validation
+      class="survey__value"
+      ref="form"
+      v-model="valid"
+      lazy-validation
     >
 <!--Header inputs-->
       <v-row>
@@ -27,7 +27,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-main-input-cassa"
+            class="survey__input-cassa"
             autocomplete="none"
             v-model="numberOfCassa"
             :rules="rulesInput"
@@ -44,7 +44,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-main-input"
+            class="survey__input"
             type="text"
             placeholder="Içki organlaryň ultrases barlagy"
             autocomplete="none"
@@ -63,7 +63,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-child-input"
+            class="survey__child-input"
             autocomplete="none"
             type="number"
             v-model="withoutInsurance"
@@ -76,7 +76,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-child-input"
+            class="survey__child-input"
             type="number"
             autocomplete="none"
             v-model="withInsurance"
@@ -89,7 +89,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-child-input"
+            class="survey__child-input"
             type="number"
             autocomplete="none"
             v-model="foreigner"
@@ -102,7 +102,7 @@
             rounded
             dense
             color="var(--blue-color)"
-            class="create-child-input"
+            class="survey__child-input"
             type="number"
             autocomplete="none"
             v-model="diplomat"

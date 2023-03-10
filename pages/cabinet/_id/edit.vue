@@ -1,19 +1,19 @@
 <template>
   <cabinetEdit :element="element"> 
 <!--Dialog-->
-    <div slot="dialog">
+  <div slot="dialog" class="dialog">
       <v-dialog
         v-model="openDialog"
         width="600"
       >
         <v-card height="256">
-          <div class="survey-edit-dialog">
+          <div class="dialog__title">
             <h3 class="text-center">Вы хотите отменить внесенные изменения?</h3>
             <div class="mt-10 text-center">
-              <v-btn class="survey-edit-dialog-btn" color="rgb(235, 235, 235)" @click="dialogResponse(true)">
+              <v-btn class="dialog__btn" color="rgb(235, 235, 235)" @click="dialogResponse(true)">
                 Да
               </v-btn>
-              <v-btn class="survey-edit-dialog-btn" color="rgb(235, 235, 235)" @click="openDialog = !openDialog">
+              <v-btn class="dialog__btn" color="rgb(235, 235, 235)" @click="openDialog = !openDialog">
                 Нет
               </v-btn>
             </div>

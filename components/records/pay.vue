@@ -119,8 +119,3 @@
     }
   }
 </script>
-<style scoped lang="scss">
-.main-btn {
-  margin-right: -100px;
-}
-</style>
