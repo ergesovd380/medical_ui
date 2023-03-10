@@ -4,4 +4,24 @@
   &__title {
     @include name-of-create-page;
   }
+
+  &__value {
+    @include not-full-section;
+  }
+
+  &__input {
+    @include main-input-without-width;
+  }
+
+  &__textarea {
+    @include main-textarea;
+  }
+
+  &__secondary-btn {
+    @include secondary-btn; 
+  }
+
+  &__complaint-value {
+    @include full-section;
+  }
 }

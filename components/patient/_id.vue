@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <section class="patient">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ numberofcard }}</h3>
+      <h3 class="patient__title red--text">{{ numberofcard }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
@@ -25,7 +25,7 @@
       </v-btn>
     </v-app-bar>
     <v-form 
-      class="create-value-personal mt-5"
+      class="patient__value mt-5"
       ref="form"
     >
 <!--F.I.O patient-->
@@ -37,7 +37,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             readonly
           ></v-text-field>
           <v-text-field
@@ -45,7 +45,7 @@
             filled
             rounded
             dense
-            class="create-main-input mt-6"
+            class="patient__input mt-6"
             readonly
           ></v-text-field>
           <v-text-field
@@ -53,7 +53,7 @@
             filled
             rounded
             dense
-            class="create-main-input mt-6"
+            class="patient__input mt-6"
             readonly
           ></v-text-field>
         </v-col>
@@ -66,7 +66,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             readonly
             v-model="sex"
           >
@@ -78,7 +78,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="birthdayPatient"
             readonly
           ></v-text-field>
@@ -89,7 +89,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="passportSerai"
             readonly
           ></v-text-field>
@@ -103,7 +103,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             readonly
             v-model="cityzenStatus"
           >
@@ -115,7 +115,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="phonenumberOfPatient"
             readonly
           ></v-text-field>
@@ -126,7 +126,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="phonenumberOfPatient2"
             readonly
           ></v-text-field>
@@ -141,7 +141,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="poliklinika"
             readonly
           >
@@ -157,7 +157,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="patient__input"
               readonly
             >
             </v-text-field>
@@ -174,56 +174,56 @@
 <!--Примечания-->
       <v-row>
         <v-col>
-            <v-textarea
-              filled
-              rounded
-              auto-grow
-              dense
-              rows="10"
-              row-height="10"
-              class="create-main-textarea"
-              v-model="notes"
-              readonly
-            ></v-textarea>
+          <v-textarea
+            filled
+            rounded
+            auto-grow
+            dense
+            rows="10"
+            row-height="10"
+            class="patient__textarea"
+            v-model="notes"
+            readonly
+          ></v-textarea>
         </v-col>
       </v-row>
       <hr class="my-10">
       <h4 class="ms-4">Адрес</h4>
 <!--Region, City-->
       <v-row>
-          <v-col>
-            <h4 class="ms-4">Регион</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              class="create-main-input"
-              v-model="region"
-              readonly
-            ></v-text-field>
-          </v-col>
-          <v-col>
-            <h4 class="ms-4">Город</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              class="create-main-input"
-              v-model="city"
-              readonly
-            ></v-text-field>
-          </v-col>
-          <v-col>
-            <h4 class="ms-4">Район</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              class="create-main-input"
-              v-model="area"
-              readonly
-            ></v-text-field>
-          </v-col>
+        <v-col>
+          <h4 class="ms-4">Регион</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            class="patient__input"
+            v-model="region"
+            readonly
+          ></v-text-field>
+        </v-col>
+        <v-col>
+          <h4 class="ms-4">Город</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            class="patient__input"
+            v-model="city"
+            readonly
+          ></v-text-field>
+        </v-col>
+        <v-col>
+          <h4 class="ms-4">Район</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            class="patient__input"
+            v-model="area"
+            readonly
+          ></v-text-field>
+        </v-col>
       </v-row>
 <!--Street, home-->
       <v-row>
@@ -233,7 +233,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="street"
             readonly
           ></v-text-field>
@@ -244,7 +244,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="home"
             readonly
           ></v-text-field>
@@ -255,7 +255,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="flat"
             readonly
           ></v-text-field>
@@ -271,7 +271,7 @@
             dense
             rows="10"
             row-height="10"
-            class="create-main-textarea"
+            class="patient__textarea"
             v-model="notes2"
             readonly
           ></v-textarea>

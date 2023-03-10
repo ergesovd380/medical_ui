@@ -1,49 +1,48 @@
 <template>
-  <section class="patinet">
+  <section class="patient">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="patinet__title my-2">Новый пациент</h3>
+      <h3 class="patient__title my-2">Новый пациент</h3>
 <!--Button add-->
       <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Сохранить</nuxt-link>
       <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
     <v-form 
-      class="create-value-personal mt-5"
+      class="patient__value mt-5"
       ref="form"
       v-model="valid"
       lazy-validation
     >
-      <div class="create-personal-form">
 <!--Number of MedCard and Checkbox-->
-        <v-row>
-          <v-col class="col-4">
-            <h4 class="ms-4">Номер мед карты</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-input"
-              placeholder="Номер мед карты"
-              v-model="numberofcard"
-              autocomplete="none"
-              type="text"
-              :rules="rulesInput"
-              required
-            ></v-text-field>
-          </v-col>
-          <v-col class="mt-4">
-            <v-checkbox
-            label="Личные данные неизвестны"
+      <v-row>
+        <v-col class="col-4">
+          <h4 class="ms-4">Номер мед карты</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
             color="#6AC3EF"
-            v-model="checkbox"
-            ></v-checkbox>
-          </v-col>
-        </v-row>
+            class="patient__input"
+            placeholder="Номер мед карты"
+            v-model="numberofcard"
+            autocomplete="none"
+            type="text"
+            :rules="rulesInput"
+            required
+          ></v-text-field>
+        </v-col>
+        <v-col class="mt-4">
+          <v-checkbox
+          label="Личные данные неизвестны"
+          color="#6AC3EF"
+          v-model="checkbox"
+          ></v-checkbox>
+        </v-col>
+      </v-row>
 <!--F.I.O personal-->
         <v-row>
           <v-col class="col-6">
@@ -54,7 +53,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="Фамилия"
               autocomplete="none"
               type="text"
@@ -68,7 +67,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input mt-6"
+              class="patient__input mt-6"
               placeholder="Имя"
               autocomplete="none"
               type="text"
@@ -82,7 +81,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input mt-6"
+              class="patient__input mt-6"
               placeholder="Отчество"
               autocomplete="none"
               type="text"
@@ -101,7 +100,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
               :rules="rulesInput"
@@ -117,7 +116,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="patient__input"
               v-model="birthdayPatient"
               :rules="rulesInput"
               type="date"
@@ -131,7 +130,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="patient__input"
               color="#6AC3EF"
               placeholder="I-AS 000000"
               v-model="passportSerai"
@@ -151,7 +150,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
               :rules="rulesInput"
@@ -168,7 +167,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="+993"
               type="number"
               v-model="phonenumberOfPatient"
@@ -185,7 +184,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="+993"
               type="number"
               v-model="phonenumberOfPatient2"
@@ -206,7 +205,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
               :items="['Поликлиника номер1', 'Поликлиника номер2', 'Поликлиника номер3', 'Поликлиника номер4']"
@@ -228,7 +227,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
               :rules="rulesInput"
@@ -257,7 +256,7 @@
               color="#6AC3EF"
               rows="10"
               row-height="10"
-              class="create-main-textarea"
+              class="patient__textarea"
               placeholder="Примечания"
               v-model="notes"
             ></v-textarea>
@@ -274,7 +273,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="region"
               :disabled="checkbox"
@@ -287,7 +286,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="city"
               :disabled="checkbox"
@@ -300,7 +299,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="area"
               :disabled="checkbox"
@@ -316,7 +315,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="street"
               :disabled="checkbox"
@@ -329,7 +328,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="home"
               :disabled="checkbox"
@@ -342,7 +341,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-input"
+              class="patient__input"
               type="text"
               v-model="flat"
               :disabled="checkbox"
@@ -361,21 +360,20 @@
               color="#6AC3EF"
               rows="10"
               row-height="10"
-              class="create-main-textarea"
+              class="patient__textarea"
               placeholder="Примечания"
               v-model="notes2"
               :disabled="checkbox"
             ></v-textarea>
           </v-col>
         </v-row>
-        <v-btn class="personal-createP-btn">Есть еще один?</v-btn>
+        <v-btn class="patient__secondary-btn">Есть еще один?</v-btn>
         <hr class="my-10">
         <v-checkbox
           v-model="active"
           :label="active ? 'Активный' : 'Не активный'"
           color="#6AC3EF"
         ></v-checkbox>
-      </div>
     </v-form>
     <slot name="dialog"></slot>
   </section>

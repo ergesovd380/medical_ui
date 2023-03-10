@@ -1,18 +1,18 @@
 <template>
-  <section>
+  <section class="patient">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ numberofcard }}</h3>
+      <h3 class="patient__title red--text">{{ numberofcard }}</h3>
 <!--Button add or cancel-->
       <nuxt-link tag="button" :to="'/patient/' + id" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
       <nuxt-link tag="button" :to="'/patient/' + id" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
     <v-form 
-      class="create-value-personal mt-5"
+      class="patient__value mt-5"
       ref="form"
       v-model="valid"
       lazy-validation
@@ -27,7 +27,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="Фамилия"
             autocomplete="none"
             type="text"
@@ -40,7 +40,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input mt-6"
+            class="patient__input mt-6"
             placeholder="Имя"
             autocomplete="none"
             type="text"
@@ -53,7 +53,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input mt-6"
+            class="patient__input mt-6"
             placeholder="Отчество"
             autocomplete="none"
             type="text"
@@ -71,7 +71,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
             :rules="rulesInput"
@@ -86,7 +86,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             v-model="birthdayPatient"
             :rules="rulesInput"
             type="date"
@@ -99,7 +99,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="patient__input"
             color="#6AC3EF"
             placeholder="I-AS 000000"
             v-model="passportSerai"
@@ -118,7 +118,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
             :rules="rulesInput"
@@ -134,7 +134,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="+993"
             type="number"
             v-model="phonenumberOfPatient"
@@ -150,7 +150,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="+993"
             type="number"
             v-model="phonenumberOfPatient2"
@@ -170,7 +170,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
             :items="['Поликлиника номер1', 'Поликлиника номер2', 'Поликлиника номер3', 'Поликлиника номер4']"
@@ -191,7 +191,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
             :rules="rulesInput"
@@ -219,7 +219,7 @@
             color="#6AC3EF"
             rows="10"
             row-height="10"
-            class="create-main-textarea"
+            class="patient__textarea"
             placeholder="Примечания"
             v-model="notes"
           ></v-textarea>
@@ -236,7 +236,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="region"
           ></v-text-field>
@@ -248,7 +248,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="city"
           ></v-text-field>
@@ -260,7 +260,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="area"
           ></v-text-field>
@@ -275,7 +275,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="street"
           ></v-text-field>
@@ -287,7 +287,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="home"
           ></v-text-field>
@@ -299,7 +299,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="patient__input"
             type="text"
             v-model="flat"
           ></v-text-field>
@@ -317,13 +317,13 @@
             color="#6AC3EF"
             rows="10"
             row-height="10"
-            class="create-main-textarea"
+            class="patient__textarea"
             placeholder="Примечания"
             v-model="notes2"
           ></v-textarea>
         </v-col>
       </v-row>
-      <v-btn class="personal-createP-btn" :class="{'d-none': checkbox}">Есть еще один?</v-btn>
+      <v-btn class="patient__secondary-btn" :class="{'d-none': checkbox}">Есть еще один?</v-btn>
       <hr class="my-10">
       <v-checkbox
         v-model="active"

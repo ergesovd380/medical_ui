@@ -1,21 +1,21 @@
 <template>
-  <section>
+  <section class="patient">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ element.numberofcard }}</h3>
+      <h3 class="patient__title red--text">{{ element.numberofcard }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
         :to="'/patient/' + id" 
-        class="main-btn main-create-back-btn mt-2 ms-2"
+        class="main-btn mt-2 ms-2"
         no-prefetch
       >Назад</nuxt-link>
     </v-app-bar>
-    <div class="complaint-value mt-5">
+    <div class="patient__complaint-value mt-5">
       <v-row>
         <v-col>
           <h4 class="ms-4">Жалоба</h4>
@@ -28,11 +28,11 @@
             color="#6AC3EF"
             rows="10"
             row-height="10"
-            class="complaint-value-textarea"
+            class="patient__textarea"
             placeholder="Примечания"
             v-model="notes2"
           ></v-textarea>
-          <v-btn class="complaint-value-btn" elevation="1">Добавить</v-btn>
+          <v-btn class="patient__secondary-btn" elevation="1">Добавить</v-btn>
         </v-col>
       </v-row>
       <v-row>
