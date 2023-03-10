@@ -1,19 +1,23 @@
 <template>
-  <section>
+  <section class="bulletin">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id">Бюллетень просмотр</h3>
+      <h3 class="bulletin__title">Бюллетень просмотр</h3>
+<!--Button lang-->
+      <button class="bulletin__btn mt-2 ms-2">Туркменский</button>
+      <button class="bulletin__btn mt-2 ms-2">Русский</button>
+
 <!--Button back-->
-      <button class="main-btn main-create-back-btn mt-2 ms-2">Туркменский</button>
-      <button class="main-btn main-create-back-btn mt-2 ms-2">Русский</button>
+      <v-spacer></v-spacer>
+      <nuxt-link tag="button" :to="'/bulletin/' + id" class="bulletin__btn mt-2 me-2">Бюллетень</nuxt-link>
     </v-app-bar>
 <!-- Form edit -->
     <v-form 
-      class="create-value-personal mt-5"
+      class="bulletin__value mt-5"
       ref="form"
     >
       <v-row>
@@ -39,7 +43,8 @@ export default {
       <p>Şu günler howanyň düzüminde tozan bölejikleriniň möçberiniň kadadan 21 göterim artmagy bilen baglanyşykly häzirki wagtda howa şertleriniň adam bedenine ýetirýän oňaýsyz täsirleriniň öňüni almak üçin, köçelerde we beýleki jemgyýetçilik ýerlerinde bolýan wagtyňyz agyz-burun örtüklerini ulanmagy maslahat berýäris. Saglygyňyzy goraň — agyz-burun örtüklerini ulanyň!</p>
       <p>Hormatly okyjylar! <br>
       Aşakda ýerleşdirilen habarlar hem Siziň ünsiňiz çekip biler, şol sebäpli gök bilen ýazylan habarlary hem okamagy Size maslahat berýäris!</p>
-      `
+      `,
+      id: this.$route.params.id
     }
   },
 }

@@ -1,19 +1,19 @@
 <template>
-  <section>
+  <section class="bulletin">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id">Новый бюллетень</h3>
+      <h3 class="bulletin__title">Новый бюллетень</h3>
 <!--Button add-->
-      <button tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Сохранить</button>
-      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <button tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Сохранить</button>
+      <nuxt-link tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Отмениить</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-    class="create-value-personal"
+    class="bulletin__value"
     ref="form"
     v-model="valid"
     lazy-validation
@@ -27,7 +27,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="bulletin__input"
             type="text"
             autocomplete="none"
             v-model="nameonturkmen"
@@ -44,7 +44,7 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="bulletin__input"
             type="text"
             autocomplete="none"
             v-model="nameonrussian"
@@ -62,15 +62,15 @@
             rounded
             dense
             color="#6AC3EF"
-            class="create-main-input"
+            class="bulletin__input"
             autocomplete="none"
             type="text"
             v-model="image"
             readonly
           ></v-text-field>
         </v-col>
-        <v-col class="mt-6">
-          <v-btn class="complaint-value-btn" elevation="1" @click="triggerFile">Выбрать</v-btn>
+        <v-col class="mt-4">
+          <v-btn class="bulletin__secondary-btn" elevation="1" @click="triggerFile">Выбрать</v-btn>
           <input
             type="file"
             class="d-none"

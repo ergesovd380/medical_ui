@@ -1,22 +1,22 @@
 <template>
-  <section>
+  <section class="bulletin">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id">Бюллетень</h3>
+      <h3 class="bulletin__title">Бюллетень</h3>
 <!--Button back-->
-      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link tag="button" to="/bulletin" class="bulletin__btn mt-2 ms-2">Назад</nuxt-link>
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">Статистика</nuxt-link>
-      <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/view'">
+      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="bulletin__btn mt-2 ms-2">Статистика</nuxt-link>
+      <v-btn icon class="ms-4 mt-2 bulletin__filter-btn" :to="'/bulletin/' + id + '/view'">
         <v-icon>
           mdi-bulletin-board
         </v-icon>
       </v-btn>
-      <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/edit'">
+      <v-btn icon class="ms-4 mt-2 bulletin__filter-btn" :to="'/bulletin/' + id + '/edit'">
         <v-icon>
           mdi-pencil
         </v-icon>
@@ -24,8 +24,8 @@
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-    class="create-value-personal"
-    ref="form"
+      class="bulletin__value"
+      ref="form"
     >
 <!--Names inputs-->
       <v-row>
@@ -35,7 +35,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="bulletin__input"
             v-model="nameonturkmen"
             readonly
           ></v-text-field>
@@ -48,7 +48,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="bulletin__input"
             v-model="nameonrussian"
             readonly
           ></v-text-field>
@@ -62,7 +62,7 @@
             filled
             rounded
             dense
-            class="create-main-input"
+            class="bulletin__input"
             v-model="image"
             readonly
           ></v-text-field>
