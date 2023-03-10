@@ -1,0 +1,62 @@
+.blank {
+  margin-top: 10px;
+
+  &__back-btn {
+    @include main-btn;
+
+    &:hover{
+      background-color: var(--blue-color);
+    }
+  }
+
+  &__element {
+    @include main-input-width-200;
+  }
+
+  &__filter-btn {
+    @include main-filter-btn;
+
+    &:hover{
+      background-color: var(--blue-color);
+    }
+  }
+
+  &__value {
+    @include not-full-section;
+  }
+
+  &__name {
+    font-size: 16px;
+  }
+
+  &__input {
+    @include main-input-width-200;
+  }
+
+  &__input2{
+    max-width: 330px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  &__create-input {
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  &__textarea {
+    @include main-textarea;
+  }
+
+  &__time-input{
+    @include blank-time-input;
+
+    &:focus{
+      outline-width: 0;
+    }
+  }
+
+  .column-time-blank{
+    margin-top: -20px;
+  }
+}

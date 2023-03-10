@@ -4,7 +4,7 @@
       :mini-variant="miniVariant"
       app
       permanent
-      class="nav-drawer"
+      class="nav"
       dense
     >
       <v-btn
@@ -19,8 +19,8 @@
         class="text-center"
       >
         <nuxt-link no-prefetch to="/"><img src="@/images/logo.png" width="103px" height="101px" /></nuxt-link>
-        <h1 class="logo-title">Международный <br> центр травматологии</h1>
-        <h1 class="personal-title text-left">Главный администратор</h1>
+        <h1 class="nav__logo">Международный <br> центр травматологии</h1>
+        <h1 class="nav__title text-left">Главный администратор</h1>
       </div>
       <v-list
         nav
@@ -36,10 +36,10 @@
           exact
         >
           <v-icon class="me-2">{{ item.icon }}</v-icon>
-          <v-list-item-title class="ms-2 item-title">{{ item.title }}</v-list-item-title>
+          <v-list-item-title class="ms-2 nav__item">{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-      <v-btn color="white exit-btn" fixed bottom>
+      <v-btn class="white nav__exit-btn" fixed bottom>
           <v-icon class="me-2">mdi-exit-to-app</v-icon>
           <span v-if="!miniVariant"> Выйти</span>
       </v-btn>
@@ -66,27 +66,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .nav-drawer{
-    max-width: 222px;
-    .logo-title {
-      color: #009332;
-      font-size: 16px;
-    }
-    .personal-title{
-      font-size: 16px;
-      margin: 20px 20px;
-    }
-    .item-title{
-      font-size: 14px;
-    }
-    .exit-btn{
-      border: none;
-      box-shadow: none;
-      text-transform: none;
-      font-size: 14px;
-      color: rgb(102, 101, 101);
-    }
-  }
-</style>

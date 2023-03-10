@@ -1,0 +1,123 @@
+// create page
+@mixin name-of-create-page {
+  width: 404px;
+  margin-top: 7px;
+  padding: 10px 0;
+  border-radius: 15px;
+  background-color: var(--light-color);
+  text-align: center;
+  align-items: center;
+}
+@mixin full-section {
+  background-color: var(--light-color);
+  height: 86vh;
+  border-radius: 15px;
+  padding: 4rem 4rem;
+}
+@mixin not-full-section {
+  background-color: var(--light-color);
+  border-radius: 15px;
+  padding: 2rem 3rem;
+}
+
+//btn
+@mixin main-btn {
+  background-color: var(--light-color);
+  height: 48px;
+  border-radius: 13px;
+  font-size: 14px;
+  width: 150px;
+}
+@mixin main-filter-btn {
+  background-color: var(--light-color);
+  height: 48px;
+  border-radius: 13px;
+  font-size: 14px;
+  width: 62px;
+}
+@mixin secondary-btn {
+  font-size: 12px;
+  border-radius: 10px;
+  width: 150px;
+  height: 42px;
+  margin-top: 10px;
+  background-color: var(--secondary-color);
+}
+
+// input
+@mixin main-input-without-width {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+}
+@mixin main-input-width-200 {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 200px;
+}
+@mixin main-input-width-150 {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 150px;
+}
+@mixin blank-time-input {
+  width: 80% ;
+  height: 35px;
+  margin-top: 12px;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+@mixin main-textarea {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+@mixin name-of-survey {
+  margin-top: 10px;
+  height: 42px;
+  border-radius: 10px;
+  width: 100% ;
+  background-color: var(--secondary-color);
+  padding: 10px 25px;
+}
+
+//table
+@mixin table-head-th {
+  background-color: var(--blue-color);
+  font-size: 14px;
+  font-weight: normal;
+  border-right: 2px solid var(--light-color);
+}
+@mixin data-table-td {
+  border-bottom: none !important;
+  border-right: 3px solid  var(--secondary-color);
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+//search input
+.main-search {
+  max-width: 404px;
+  height: 42px;
+  border-radius: 15px;
+  background-color: var(--light-color);
+  display: inline-block;
+}
+
+// Dropdown main index page
+%menu-items {
+  font-size: 14px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.menu-items{
+  @extend %menu-items;
+  &:hover {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+  }
+}

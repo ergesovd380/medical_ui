@@ -1,16 +1,16 @@
 <template>
-  <section>
+  <section class="blank">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Header-->
-      <nuxt-link tag="button" to="/blank" class="main-btn main-create-back-btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link tag="button" to="/blank" class="blank__back-btn mt-2 ms-2">Назад</nuxt-link>
       <v-spacer></v-spacer>
       <label class="mx-3">Görnüşiň şertli belgisi</label>
       <v-text-field
-        class="main-element"
+        class="blank__element"
         autocomplete="none"
         color="#6AC3EF"
         type="text"
@@ -19,14 +19,14 @@
       ></v-text-field>
       <label class="mx-3">Edaranyň şertli belgisi</label>
       <v-text-field
-        class="main-element"
+        class="blank__element"
         color="#6AC3EF"
         autocomplete="none"
         type="text"
         solo
         flat
       ></v-text-field>
-      <v-btn icon class="main-btn mt-2 ms-2 main-filter-btn">
+      <v-btn icon class="mt-2 ms-2 blank__filter-btn">
         <v-icon>
           mdi-printer-outline
         </v-icon>
@@ -34,396 +34,394 @@
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-      class="create-value-blank"
+      class="blank__value"
       ref="form"
       v-model="valid"
       lazy-validation
     >
-      <div class="create-form">
 <!--Shapka-->
-        <v-row>
-          <v-col class="text-center">
-            <h1 class="main-name">Türkmenistanyň Saglygy goraýyş we derman <br> senagaty ministrligi</h1>
-            <h1 class="mt-5 main-name">Şikesleri bejeriş halkara merkezi</h1>
-          </v-col>
-          <v-col class="text-center">
-            <img src="@/images/logo.png" width="103px" height="101px">
-          </v-col>
-          <v-col>
-            <h1 class="main-name">499/h görnüşli saglygy goraýyş resminamasy Türkmenistanyň SD we DS ministrligi tarapyndan 18.11.2006ý. №230-njy buýruk esasynda tassyklanan</h1>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col class="text-center">
+          <h1 class="blank__name">Türkmenistanyň Saglygy goraýyş we derman <br> senagaty ministrligi</h1>
+          <h1 class="mt-5 blank__name">Şikesleri bejeriş halkara merkezi</h1>
+        </v-col>
+        <v-col class="text-center">
+          <img src="@/images/logo.png" width="103px" height="101px">
+        </v-col>
+        <v-col>
+          <h1 class="blank__name">499/h görnüşli saglygy goraýyş resminamasy Türkmenistanyň SD we DS ministrligi tarapyndan 18.11.2006ý. №230-njy buýruk esasynda tassyklanan</h1>
+        </v-col>
+      </v-row>
 <!--Название болезни-->
-        <v-row>
-          <v-col class="col-4">
-          <h1 class="main-name">Immunoferment derňeiniň netijesi №</h1>
-          </v-col>
-          <v-col class="col-2">
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="main-input-blank"
-              autocomplete="none"
-              type="text"
-            ></v-text-field>
-          </v-col>
-          <v-col class="col-3 offset-3">
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="main-input-blank-2"
-              autocomplete="none"
-              type="date"
-            ></v-text-field>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col class="col-4">
+        <h1 class="blank__name">Immunoferment derňeiniň netijesi №</h1>
+        </v-col>
+        <v-col class="col-2">
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__input"
+            autocomplete="none"
+            type="text"
+          ></v-text-field>
+        </v-col>
+        <v-col class="col-3 offset-3">
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__input2"
+            autocomplete="none"
+            type="date"
+          ></v-text-field>
+        </v-col>
+      </v-row>
 <!--Cabinet, Toleg belgisi-->
-        <v-row>
-          <v-col>
-            <h4 class="ms-4">Töleg belgisi</h4>
-            <v-autocomplete
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              placeholder="Выберите"
-              no-data-text="Нет данных"
-              required
-            >
-            </v-autocomplete>
-          </v-col>
-          <v-col>
-            <h4 class="ms-4">Kabinet</h4>
-            <v-autocomplete
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              placeholder="Выберите"
-              no-data-text="Нет данных"
-              :items="cabinetCheck"
-            >
-            </v-autocomplete>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col>
+          <h4 class="ms-4">Töleg belgisi</h4>
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            placeholder="Выберите"
+            no-data-text="Нет данных"
+            required
+          >
+          </v-autocomplete>
+        </v-col>
+        <v-col>
+          <h4 class="ms-4">Kabinet</h4>
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            placeholder="Выберите"
+            no-data-text="Нет данных"
+            :items="cabinetCheck"
+          >
+          </v-autocomplete>
+        </v-col>
+      </v-row>
 <!--Nasag-->
-        <v-row>
-          <v-col class="col-6">
-            <h4 class="ms-4">Näsag</h4>
-            <v-autocomplete
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              append-icon="mdi-magnify"
-              placeholder="Lukman gözlegi"
-              no-data-text="Нет данных"
-              :items="elementByNameSurnameOfPatient"
-            >
-            </v-autocomplete>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col class="col-6">
+          <h4 class="ms-4">Näsag</h4>
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            append-icon="mdi-magnify"
+            placeholder="Lukman gözlegi"
+            no-data-text="Нет данных"
+            :items="elementByNameSurnameOfPatient"
+          >
+          </v-autocomplete>
+        </v-col>
+      </v-row>
 <!--Spisok-->
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Testiň gönüşi</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Anti-HCV Ig G</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Anti-HCV-NS</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">HBs Ag</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Anti-HBe (anti- CORE)</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Anti-HBs Ag</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Anti-HDV</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">HIV</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Helicobacter pylori Ig G</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Chlamydia trachomatis IgM</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Chlamydia trachomatis IgG</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Toxoplazma IgM</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Toxoplazma IgG</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">CMV IgM</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">CMV IgG</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Ureaplazma Ig G</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-4">
-            <h1 class="ms-4 main-name">Mycoplazma Ig G</h1>
-          </v-col>
-          <v-col>        
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              type="text"
-            ></v-text-field>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Testiň gönüşi</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Anti-HCV Ig G</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Anti-HCV-NS</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">HBs Ag</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Anti-HBe (anti- CORE)</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Anti-HBs Ag</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Anti-HDV</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">HIV</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Helicobacter pylori Ig G</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Chlamydia trachomatis IgM</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Chlamydia trachomatis IgG</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Toxoplazma IgM</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Toxoplazma IgG</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">CMV IgM</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">CMV IgG</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Ureaplazma Ig G</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-4">
+          <h1 class="ms-4 blank__name">Mycoplazma Ig G</h1>
+        </v-col>
+        <v-col>        
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            type="text"
+          ></v-text-field>
+        </v-col>
+      </v-row>
 <!--Result-->
-        <v-row>
-          <v-col>
-            <h1 class="ms-4 main-name">Netije</h1>
-            <v-textarea
-              filled
-              rounded
-              auto-grow
-              dense
-              type="text"
-              color="#6AC3EF"
-              rows="10"
-              row-height="20"
-              class="create-main-textarea"
-            ></v-textarea>
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col>
+          <h1 class="ms-4 blank__name">Netije</h1>
+          <v-textarea
+            filled
+            rounded
+            auto-grow
+            dense
+            type="text"
+            color="#6AC3EF"
+            rows="10"
+            row-height="20"
+            class="blank__textarea"
+          ></v-textarea>
+        </v-col>
+      </v-row>
 <!--Doctor-->
-        <v-row>
-          <v-col class="col-1">
-            <h1 class="ms-4 mt-2 main-name">Lukman</h1>
-          </v-col>
-          <v-col class="col-6">
-            <v-autocomplete
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-list"
-              append-icon="mdi-magnify"
-              placeholder="Lukman gözlegi"
-              no-data-text="Нет данных"
-              :items="elementByNameSurname"
-            >
-            </v-autocomplete>
-          </v-col>
-        </v-row>
-      </div>
+      <v-row>
+        <v-col class="col-1">
+          <h1 class="ms-4 mt-2 blank__name">Lukman</h1>
+        </v-col>
+        <v-col class="col-6">
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="#6AC3EF"
+            class="blank__create-input"
+            append-icon="mdi-magnify"
+            placeholder="Lukman gözlegi"
+            no-data-text="Нет данных"
+            :items="elementByNameSurname"
+          >
+          </v-autocomplete>
+        </v-col>
+      </v-row>
     </v-form>
   </section>
 </template>

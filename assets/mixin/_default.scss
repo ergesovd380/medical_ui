@@ -1,23 +1,19 @@
-// BackGround Colors
-$bcgWhite: #fff;
-$bcgSecondary: rgb(235, 235, 235);
-$bcgButton: #6AC3EF;
-
 %menu-items {
   font-size: 14px;
   margin: 0 15px;
   cursor: pointer;
 }
+
 //btn
 %main-btn {
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   height: 48px;
   border-radius: 13px;
   font-size: 14px;
   width: 150px;
 }
 %main-filter-btn {
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   height: 48px;
   border-radius: 13px;
   font-size: 14px;
@@ -29,51 +25,55 @@ $bcgButton: #6AC3EF;
   width: 150px;
   height: 42px;
   margin-top: 10px;
-  background-color: $bcgSecondary;
+  background-color: var(--secondary-color);
 }
+
 //search input
 %main-search {
   max-width: 404px;
   height: 42px;
   border-radius: 15px;
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   display: inline-block;
 }
+
 //table
 %main-table-head-th {
-  background-color: $bcgButton;
+  background-color: var(--blue-color);
   font-size: 14px;
   font-weight: normal;
-  border-right: 2px solid $bcgWhite;
+  border-right: 2px solid var(--light-color);
 }
 %main-data-table-td {
   border-bottom: none !important;
-  border-right: 3px solid  $bcgSecondary;
+  border-right: 3px solid  var(--secondary-color);
   padding: 10px;
   font-size: 14px;
   cursor: pointer;
 }
+
 // create page
 %name-of-create-page {
   width: 404px;
   margin-top: 7px;
   padding: 10px 0;
   border-radius: 15px;
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   text-align: center;
   align-items: center;
 }
 %full-section {
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   height: 86vh;
   border-radius: 15px;
   padding: 4rem 4rem;
 }
 %not-full-section {
-  background-color: $bcgWhite;
+  background-color: var(--light-color);
   border-radius: 15px;
   padding: 2rem 3rem;
 }
+
 // input
 %main-input-without-width {
   margin-top: 10px;
@@ -98,7 +98,7 @@ $bcgButton: #6AC3EF;
   margin-top: 12px;
   padding: 0 15px;
   border-radius: 10px;
-  background-color: $bcgSecondary;
+  background-color: var(--secondary-color);
 }
 %main-textarea {
   margin-top: 10px;
@@ -109,59 +109,12 @@ $bcgButton: #6AC3EF;
   height: 42px;
   border-radius: 10px;
   width: 100%;
-  background-color: $bcgSecondary;
+  background-color: var(--secondary-color);
   padding: 10px 25px;
 }
 
 section {
   margin-top: 10px;
-
-//Index Cabinet page
-// Header fo all
-  .main-search {
-    @extend %main-search;
-  }
-  .main-btn {
-    @extend %main-btn;
-    &:hover{
-      background-color: $bcgButton;
-    }
-  }
-  .main-filter-btn {
-    @extend %main-filter-btn;
-    &:hover{
-      background-color: $bcgButton;
-    }
-  }
-
-// Table
-  .main-table-head-th {
-    @extend %main-table-head-th;
-    &:first-child {
-      border-end-start-radius: 15px;
-      border-start-start-radius: 15px;
-    }
-    &:last-child {
-      border-end-end-radius: 15px;
-      border-start-end-radius: 15px;
-      border: none;
-    }
-  }
-  .v-data-table td {
-    @extend %main-data-table-td;
-    &:first-child {
-      text-align: center;
-    }
-    &:last-child {
-      border: none;
-    }
-  } 
-  .main-table-pagination{
-    padding: 15px;
-  }
-  .main-table-btn{
-    @extend %secondary-btn;
-  }
 
 // Create default
 // Header
@@ -190,7 +143,7 @@ section {
   .create-value-personal{
     @extend %not-full-section;
     .image-personal{
-      background-color: $bcgSecondary;
+      background-color: var(--secondary-color);
       border-radius: 10px;
     }
     .create-main-input {
@@ -208,41 +161,6 @@ section {
     .complaint-value-btn{
       @extend %secondary-btn;
     }
-  }
-
-// ID page Blank
-  .main-element{
-    @extend %main-input-width-200;
-  }
-  .column-time-blank{
-    margin-top: -20px;
-  }
-  .create-value-blank{
-    @extend %not-full-section;
-      .main-name{
-        font-size: 16px;
-      }
-      .main-input-blank {
-        @extend %main-input-width-200;
-      }
-      .blank-time-input{
-        @extend %blank-time-input;
-        &:focus{
-          outline-width: 0;
-        }
-      }
-      .main-input-blank-2{
-        max-width: 330px;
-        height: 42px;
-        border-radius: 10px;
-      }
-      .create-main-list{
-        height: 42px;
-        border-radius: 10px;
-      }
-      .create-main-textarea{
-        @extend %main-textarea;
-      }
   }
 
 // Patient Complaint Page 
@@ -268,15 +186,6 @@ section {
     .create-main-input{
       @extend %main-input-without-width;
     }
-  }
-}
-
-// Dropdown main index page
-.menu-items{
-  @extend %menu-items;
-  &:hover {
-    background-color: $bcgSecondary;
-    border-radius: 15px;
   }
 }
 

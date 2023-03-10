@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="index">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
@@ -16,12 +16,12 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/cabinet/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/cabinet/create" class="index__btn mt-2 ms-2">Добавить</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
           <template v-slot:activator="{ on, attrs }">
-              <v-btn icon v-bind="attrs" v-on="on" class="main-filter-btn">
+              <v-btn icon v-bind="attrs" v-on="on" class="index__filter-btn">
                 <v-icon>
                   mdi-filter-variant
                 </v-icon>
@@ -69,7 +69,7 @@
             <th 
               v-for="h in headers" 
               style="color: white;" 
-              :class="'main-table-head-th'"
+              :class="'table-head-th'"
               class="text-center"
             >
               <span>{{h.text}}</span>
@@ -85,7 +85,7 @@
           :total-visible="4"
           circle
           color="#6AC3EF"
-          class="main-table-pagination"
+          class="table-pagination"
         ></v-pagination>
       </template>
     </v-data-table>

@@ -1,0 +1,22 @@
+// Main scss files 
+@import './vars';
+@import './mixin/setting';
+@import './mixin/default';
+@import './components/navigation';
+
+
+// Pages scss files
+@import './components/table';
+@import './components/blank';
+@import './components/./bulletin';
+@import './components/cabinet';
+@import './components/calendar';
+@import './components/index';
+@import './components/patient';
+@import './components/personal';
+@import './components/records';
+@import './components/review';
+@import './components/statistic';
+@import './components/survey';
+@import './components/tolerance'
+

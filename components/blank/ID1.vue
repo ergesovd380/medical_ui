@@ -1,16 +1,16 @@
 <template>
-  <section>
+  <section class="blank">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Header-->
-      <nuxt-link no-prefetch tag="button" to="/blank" class="main-btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link no-prefetch tag="button" to="/blank" class="blank__back-btn mt-2 ms-2">Назад</nuxt-link>
       <v-spacer></v-spacer>
       <label class="mx-3">Görnüşiň şertli belgisi</label>
       <v-text-field
-        class="main-element"
+        class="blank__element"
         autocomplete="none"
         color="#6AC3EF"
         type="text"
@@ -19,14 +19,14 @@
       ></v-text-field>
       <label class="mx-3">Edaranyň şertli belgisi</label>
       <v-text-field
-        class="main-element"
+        class="blank__element"
         color="#6AC3EF"
         autocomplete="none"
         type="text"
         solo
         flat
       ></v-text-field>
-      <v-btn icon class="mt-2 ms-2 main-filter-btn">
+      <v-btn icon class="mt-2 ms-2 blank__filter-btn">
         <v-icon>
           mdi-printer-outline
         </v-icon>
@@ -34,7 +34,7 @@
     </v-app-bar>
 <!-- Form create -->
     <v-form 
-      class="create-value-blank"
+      class="blank__value"
       ref="form"
       v-model="valid"
       lazy-validation
@@ -42,20 +42,20 @@
 <!--Shapka-->
       <v-row>
         <v-col class="text-center">
-          <h1 class="main-name">Türkmenistanyň Saglygy goraýyş we derman <br> senagaty ministrligi</h1>
-          <h1 class="mt-5 main-name">Şikesleri bejeriş halkara merkezi</h1>
+          <h1 class="blank__name">Türkmenistanyň Saglygy goraýyş we derman <br> senagaty ministrligi</h1>
+          <h1 class="mt-5 blank__name">Şikesleri bejeriş halkara merkezi</h1>
         </v-col>
         <v-col class="text-center">
           <img src="@/images/logo.png" width="103px" height="101px">
         </v-col>
         <v-col>
-          <h1 class="main-name">499/h görnüşli saglygy goraýyş resminamasy Türkmenistanyň SD we DS ministrligi tarapyndan 18.11.2006ý. №230-njy buýruk esasynda tassyklanan</h1>
+          <h1 class="blank__name">499/h görnüşli saglygy goraýyş resminamasy Türkmenistanyň SD we DS ministrligi tarapyndan 18.11.2006ý. №230-njy buýruk esasynda tassyklanan</h1>
         </v-col>
       </v-row>
 <!--Название болезни-->
       <v-row>
           <v-col class="col-4">
-          <h1 class="main-name">AÝAKLARYŇ WENALARYNYŇ DUPLEKS <br> SKAN BARLAGYNYŇ BEÝANY</h1>
+          <h1 class="blank__name">AÝAKLARYŇ WENALARYNYŇ DUPLEKS <br> SKAN BARLAGYNYŇ BEÝANY</h1>
           </v-col>
           <v-col class="col-2">
             <v-text-field
@@ -63,7 +63,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="main-input-blank"
+              class="blank__input"
               autocomplete="none"
               type="text"
             ></v-text-field>
@@ -74,7 +74,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="main-input-blank-2"
+              class="blank__input2"
               autocomplete="none"
               type="date"
             ></v-text-field>
@@ -89,7 +89,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               placeholder="Выберите"
               no-data-text="Нет данных"
             >
@@ -102,7 +102,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               placeholder="Выберите"
               no-data-text="Нет данных"
               :items="cabinetCheck"
@@ -119,7 +119,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               append-icon="mdi-magnify"
               placeholder="Näsag gözlegi"
               no-data-text="Нет данных"
@@ -140,7 +140,7 @@
 <!--Spiok-->
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Aşaky boş wenasy</h1>
+            <h1 class="ms-4 blank__name">Aşaky boş wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -148,7 +148,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -158,14 +158,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Daşky gasyk wenasy</h1>
+            <h1 class="ms-4 blank__name">Daşky gasyk wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -173,7 +173,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -183,14 +183,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Umumy but wenasy</h1>
+            <h1 class="ms-4 blank__name">Umumy but wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -198,7 +198,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -208,14 +208,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Çun but wenasy</h1>
+            <h1 class="ms-4 blank__name">Çun but wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -223,7 +223,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -233,14 +233,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">But wenasy</h1>
+            <h1 class="ms-4 blank__name">But wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -248,7 +248,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -258,14 +258,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Uly deriasty wenasy</h1>
+            <h1 class="ms-4 blank__name">Uly deriasty wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -273,7 +273,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -283,14 +283,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Dyzçanakasty wenasy</h1>
+            <h1 class="ms-4 blank__name">Dyzçanakasty wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -298,7 +298,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -308,14 +308,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Kiçi deriasty wenasy</h1>
+            <h1 class="ms-4 blank__name">Kiçi deriasty wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -323,7 +323,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -333,14 +333,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Öňki tailis wenasy</h1>
+            <h1 class="ms-4 blank__name">Öňki tailis wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -348,7 +348,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -358,14 +358,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Yzky tabialis wenasy</h1>
+            <h1 class="ms-4 blank__name">Yzky tabialis wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -373,7 +373,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -383,14 +383,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Kiçi daban wenasy</h1>
+            <h1 class="ms-4 blank__name">Kiçi daban wenasy</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -398,7 +398,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -408,14 +408,14 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
       </v-row>
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Aýratynlyklary</h1>
+            <h1 class="ms-4 blank__name">Aýratynlyklary</h1>
           </v-col>
           <v-col>        
             <v-text-field
@@ -423,7 +423,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -433,7 +433,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               type="text"
             ></v-text-field>
           </v-col>
@@ -441,7 +441,7 @@
 <!--Result-->
       <v-row>
           <v-col>
-            <h1 class="ms-4 main-name">Netije</h1>
+            <h1 class="ms-4 blank__name">Netije</h1>
             <v-textarea
               filled
               rounded
@@ -451,14 +451,14 @@
               color="#6AC3EF"
               rows="10"
               row-height="20"
-              class="create-main-textarea"
+              class="blank__textarea"
             ></v-textarea>
           </v-col>
       </v-row>
 <!--Doctor-->
       <v-row>
           <v-col class="col-1">
-            <h1 class="ms-4 mt-2 main-name">Lukman</h1>
+            <h1 class="ms-4 mt-2 blank__name">Lukman</h1>
           </v-col>
           <v-col class="col-6">
             <v-autocomplete
@@ -466,7 +466,7 @@
               rounded
               dense
               color="#6AC3EF"
-              class="create-main-list"
+              class="blank__create-input"
               append-icon="mdi-magnify"
               placeholder="Lukman gözlegi"
               no-data-text="Нет данных"
