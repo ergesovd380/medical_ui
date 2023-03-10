@@ -1,7 +1,7 @@
 <template>
   <section class="bulletin">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -26,7 +26,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="bulletin__input"
             type="text"
             autocomplete="none"
@@ -43,7 +43,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="bulletin__input"
             type="text"
             autocomplete="none"
@@ -61,7 +61,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="bulletin__input"
             autocomplete="none"
             type="text"
@@ -69,7 +69,7 @@
             readonly
           ></v-text-field>
         </v-col>
-        <v-col class="mt-4">
+        <v-col class="mt-6">
           <v-btn class="bulletin__secondary-btn" elevation="1" @click="triggerFile">Выбрать</v-btn>
           <input
             type="file"
@@ -101,14 +101,14 @@
           <v-checkbox
             v-model="readed"
             label="Галочка Прочитал"
-            color="#6AC3EF"
+            color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
         <v-col>
           <v-checkbox
             v-model="show"
             label="Скрыть"
-            color="#6AC3EF"
+            color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
       </v-row>

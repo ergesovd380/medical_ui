@@ -1,7 +1,7 @@
 <template>
   <section class="patient">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -166,7 +166,7 @@
             <v-checkbox
               readonly
               label="VIP"
-              color="#6AC3EF"
+              color="var(--blue-color)"
               v-model="vip"
             ></v-checkbox>
           </v-col>
@@ -282,7 +282,7 @@
         v-model="active"
         readonly
         :label="active ? 'Активный' : 'Не активный'"
-        color="#6AC3EF"
+        color="var(--blue-color)"
       ></v-checkbox>
     </v-form>
   </section>

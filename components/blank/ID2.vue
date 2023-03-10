@@ -1,7 +1,7 @@
 <template>
   <section class="blank">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -12,7 +12,7 @@
       <v-text-field
         class="blank__element"
         autocomplete="none"
-        color="#6AC3EF"
+        color="var(--blue-color)"
         type="text"
         solo
         flat
@@ -20,7 +20,7 @@
       <label class="mx-3">Edaranyň şertli belgisi</label>
       <v-text-field
         class="blank__element"
-        color="#6AC3EF"
+        color="var(--blue-color)"
         autocomplete="none"
         type="text"
         solo
@@ -62,7 +62,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__input"
               autocomplete="none"
               type="text"
@@ -73,7 +73,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__input2"
               autocomplete="none"
               type="date"
@@ -88,7 +88,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__create-input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -102,7 +102,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__create-input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -119,7 +119,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__create-input"
               append-icon="mdi-magnify"
               placeholder="Näsag gözlegi"
@@ -166,7 +166,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -176,7 +176,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -186,7 +186,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -200,7 +200,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -210,7 +210,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -220,7 +220,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -239,7 +239,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -249,7 +249,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -259,7 +259,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -273,7 +273,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -283,7 +283,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -293,7 +293,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -312,7 +312,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -322,7 +322,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -332,7 +332,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -346,7 +346,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -356,7 +356,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -366,7 +366,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -385,7 +385,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -395,7 +395,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -405,7 +405,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -419,7 +419,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -429,7 +429,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -439,7 +439,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -458,7 +458,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -468,7 +468,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -478,7 +478,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -492,7 +492,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -502,7 +502,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -512,7 +512,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -531,7 +531,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -541,7 +541,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -551,7 +551,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -565,7 +565,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -575,7 +575,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -585,7 +585,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -604,7 +604,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -614,7 +614,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -624,7 +624,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -638,7 +638,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -648,7 +648,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -658,7 +658,7 @@
                   filled
                   rounded
                   dense
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   class="blank__create-input"
                   type="text"
                 ></v-text-field>
@@ -676,7 +676,7 @@
               auto-grow
               dense
               type="text"
-              color="#6AC3EF"
+              color="var(--blue-color)"
               rows="10"
               row-height="20"
               class="blank__textarea"
@@ -693,7 +693,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="blank__create-input"
               append-icon="mdi-magnify"
               placeholder="Lukman gözlegi"

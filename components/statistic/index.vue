@@ -31,8 +31,8 @@ export default {
           {
             label: '',
             data: [2, 1, 16, 3, 2],
-            backgroundColor: '#6AC3EF',
-            borderColor: '#6AC3EF',
+            backgroundColor: 'var(--blue-color)',
+            borderColor: 'var(--blue-color)',
             borderWidth: 2,
           },
         ],
@@ -45,8 +45,8 @@ export default {
           {
             label: '',
             data: [2, 4, 13, 5, 2],
-            backgroundColor: '#6AC3EF',
-            borderColor: '#6AC3EF',
+            backgroundColor: 'var(--blue-color)',
+            borderColor: 'var(--blue-color)',
             borderWidth: 2,
           },
         ],

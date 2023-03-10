@@ -1,7 +1,7 @@
 <template>
   <section class="patient">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -25,7 +25,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="patient__input"
             placeholder="Номер мед карты"
             v-model="numberofcard"
@@ -38,7 +38,7 @@
         <v-col class="mt-4">
           <v-checkbox
           label="Личные данные неизвестны"
-          color="#6AC3EF"
+          color="var(--blue-color)"
           v-model="checkbox"
           ></v-checkbox>
         </v-col>
@@ -52,7 +52,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="Фамилия"
               autocomplete="none"
@@ -66,7 +66,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input mt-6"
               placeholder="Имя"
               autocomplete="none"
@@ -80,7 +80,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input mt-6"
               placeholder="Отчество"
               autocomplete="none"
@@ -99,7 +99,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -131,7 +131,7 @@
               rounded
               dense
               class="patient__input"
-              color="#6AC3EF"
+              color="var(--blue-color)"
               placeholder="I-AS 000000"
               v-model="passportSerai"
               :rules="rulesInput"
@@ -149,7 +149,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -166,7 +166,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="+993"
               type="number"
@@ -183,7 +183,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="+993"
               type="number"
@@ -204,7 +204,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -226,7 +226,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
               no-data-text="Нет данных"
@@ -239,7 +239,7 @@
           <v-col class="mt-4">
             <v-checkbox
             label="VIP"
-            color="#6AC3EF"
+            color="var(--blue-color)"
             v-model="vip"
             ></v-checkbox>
           </v-col>
@@ -253,7 +253,7 @@
               auto-grow
               dense
               type="text"
-              color="#6AC3EF"
+              color="var(--blue-color)"
               rows="10"
               row-height="10"
               class="patient__textarea"
@@ -272,7 +272,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="region"
@@ -285,7 +285,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="city"
@@ -298,7 +298,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="area"
@@ -314,7 +314,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="street"
@@ -327,7 +327,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="home"
@@ -340,7 +340,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="patient__input"
               type="text"
               v-model="flat"
@@ -357,7 +357,7 @@
               auto-grow
               dense
               type="text"
-              color="#6AC3EF"
+              color="var(--blue-color)"
               rows="10"
               row-height="10"
               class="patient__textarea"
@@ -372,7 +372,7 @@
         <v-checkbox
           v-model="active"
           :label="active ? 'Активный' : 'Не активный'"
-          color="#6AC3EF"
+          color="var(--blue-color)"
         ></v-checkbox>
     </v-form>
     <slot name="dialog"></slot>

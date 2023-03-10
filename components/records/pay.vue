@@ -34,12 +34,12 @@
               <v-radio
                 label="Без страховки (TMT)"
                 value="Без страховки (TMT)"
-                color="#6AC3EF"
+                color="var(--blue-color)"
               ></v-radio>
               <v-radio
                 label="Со страховки (TMT)"
                 value="Со страховки (TMT)"
-                color="#6AC3EF"
+                color="var(--blue-color)"
               ></v-radio>
             </v-radio-group>
             <hr>
@@ -50,8 +50,8 @@
                   v-model="wantPay"
                   label="Невропатолог"
                   value="Невропатолог"
-                  color="#6AC3EF"
-                  class="check-box-for-pay"
+                  color="var(--blue-color)"
+                  class="records__checkbox-for-pay"
                 ></v-checkbox>
               </v-col>
               <v-col class="col-3">
@@ -62,8 +62,8 @@
                   v-model="wantPay"
                   label="Офтальмолог"
                   value="Офтальмолог"
-                  color="#6AC3EF"
-                  class="check-box-for-pay"
+                  color="var(--blue-color)"
+                  class="records__checkbox-for-pay"
                 ></v-checkbox>
               </v-col>
               <v-col class="col-3">
@@ -74,8 +74,8 @@
                   v-model="wantPay"
                   label="Нейрохирург"
                   value="Нейрохирург"
-                  color="#6AC3EF"
-                  class="check-box-for-pay"
+                  color="var(--blue-color)"
+                  class="records__checkbox-for-pay"
                 ></v-checkbox>
               </v-col>
               <v-col class="col-3">
@@ -95,10 +95,10 @@
           </v-card-text>
 <!--Pay buttons-->
           <div class="my-5 text-center">
-            <v-btn class="btn-for-pay" color="rgb(235, 235, 235)" @click="dialog = !dialog">
+            <v-btn class="records__btn-for-pay" color="var(--secondary-color)" @click="dialog = !dialog">
               Оплатить
             </v-btn>
-            <v-btn class="btn-for-pay" color="rgb(235, 235, 235)" @click="dialog = !dialog">
+            <v-btn class="records__btn-for-pay" color="rgb(--secondary-color)" @click="dialog = !dialog">
               Отмена
             </v-btn>
           </div>
@@ -120,17 +120,7 @@
   }
 </script>
 <style scoped lang="scss">
-  .check-box-for-pay{
-    margin-top: -7px;
-  }
-  .btn-for-pay{
-    width: 150px;
-    height: 42px;
-    margin: 10px 20px;
-  }
-</style>
-<style scoped lang="scss">
-  .main-btn{
-    margin-right: -100px;
-  }
+.main-btn {
+  margin-right: -100px;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="cabinet">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -25,7 +25,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="cabinet__input"
             placeholder="Trawmatolog"
             autocomplete="none"
@@ -43,7 +43,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="cabinet__input"
             type="number"
             placeholder="+993612345678"
@@ -62,7 +62,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="cabinet__child-input"
             placeholder="401"
             autocomplete="none"
@@ -78,7 +78,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="cabinet__child-input"
             type="number"
             placeholder="4"
@@ -92,7 +92,7 @@
       <v-checkbox
           v-model="checkbox"
           :label="checkbox ? 'Активный' : 'Не активный'"
-          color="#6AC3EF"
+          color="var(--blue-color)"
       ></v-checkbox>
     </v-form>
     <slot name="dialog"></slot>

@@ -1,7 +1,7 @@
 <template>
   <section class="patient">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -10,7 +10,7 @@
         v-model="search"
         append-icon="mdi-magnify"
         class="main-search"
-        color="#6AC3EF"
+        color="var(--blue-color)"
         solo
         flat
       ></v-text-field>
@@ -82,7 +82,7 @@
           :length="pageCount"
           :total-visible="4"
           circle
-          color="#6AC3EF"
+          color="var(--blue-color)"
           class="table-pagination"
         ></v-pagination>
       </template>

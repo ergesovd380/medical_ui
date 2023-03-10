@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -26,7 +26,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="create-main-input-cassa"
             autocomplete="none"
             v-model="numberOfCassa"
@@ -43,7 +43,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="create-main-input"
             type="text"
             placeholder="Içki organlaryň ultrases barlagy"
@@ -62,7 +62,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="create-child-input"
               autocomplete="none"
               type="number"
@@ -75,7 +75,7 @@
               filled
               rounded
               dense
-              color="#6AC3EF"
+              color="var(--blue-color)"
               class="create-child-input"
               type="number"
               autocomplete="none"
@@ -88,7 +88,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="create-child-input"
             type="number"
             autocomplete="none"
@@ -101,7 +101,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="create-child-input"
             type="number"
             autocomplete="none"

@@ -1,7 +1,7 @@
 <template>
   <section class="personal">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -44,7 +44,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Фамилия"
             v-model="surnamePersonal"
@@ -57,7 +57,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input mt-6"
             placeholder="Имя"
             v-model="namePersonal"
@@ -70,7 +70,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input mt-6"
             placeholder="Отчество"
             v-model="fathNamePersonal"
@@ -82,7 +82,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Номер телефона"
             v-model="phoneNumberPersonal"
@@ -103,7 +103,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Пн"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Pn"
                 ></v-checkbox>
                 </v-col>
@@ -112,7 +112,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -125,7 +125,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Вт"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Vt"
                 ></v-checkbox>
                 </v-col>
@@ -134,7 +134,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -147,7 +147,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Ср"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   V-model="Sr"
                 ></v-checkbox>
                 </v-col>
@@ -156,7 +156,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -169,7 +169,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Чт"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Cht"
                 ></v-checkbox>
                 </v-col>
@@ -178,7 +178,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -193,7 +193,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Пт"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Pt"
                 ></v-checkbox>
                 </v-col>
@@ -202,7 +202,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -215,7 +215,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Сб"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Sb"
                 ></v-checkbox>
                 </v-col>
@@ -224,7 +224,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -237,7 +237,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Вс"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   v-model="Vs"
                 ></v-checkbox>
                 </v-col>
@@ -246,7 +246,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     autocomplete="none"
                     type="time"
@@ -267,7 +267,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Пароль"
             v-model="passwordPersonal"
@@ -283,7 +283,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Подтвердите пароль"
             v-model="confPasswordPersonal"
@@ -303,7 +303,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
@@ -319,7 +319,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
@@ -339,7 +339,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
@@ -360,7 +360,7 @@
             filled
             rounded
             dense
-            color="#6AC3EF"
+            color="var(--blue-color)"
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
@@ -370,7 +370,7 @@
           <v-checkbox
             v-model="checkbox"
             :label="checkbox ? 'Активный' : 'Не активный'"
-            color="#6AC3EF"
+            color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
       </v-row>

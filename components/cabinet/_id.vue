@@ -1,7 +1,7 @@
 <template>
   <section class="cabinet">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -80,7 +80,7 @@
         v-model="checkbox"
         :label="checkbox ? 'Активный' : 'Не активный'"
         readonly
-        color="#6AC3EF"
+        color="var(--blue-color)"
       ></v-checkbox>
     </v-form>
   </section>

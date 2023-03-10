@@ -1,7 +1,7 @@
 <template>
   <section class="personal">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -84,7 +84,7 @@
                   <v-col class="col-3">
                     <v-checkbox
                     label="Пн"
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     v-model="Pn"
                     readonly
                   ></v-checkbox>
@@ -94,7 +94,7 @@
                       filled
                       rounded
                       dense
-                      color="#6AC3EF"
+                      color="var(--blue-color)"
                       class="personal__input"
                       type="time"
                       readonly
@@ -107,7 +107,7 @@
                   <v-col class="col-3">
                     <v-checkbox
                     label="Вт"
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     v-model="Vt"
                     readonly
                   ></v-checkbox>
@@ -117,7 +117,7 @@
                       filled
                       rounded
                       dense
-                      color="#6AC3EF"
+                      color="var(--blue-color)"
                       class="personal__input"
                       type="time"
                       readonly
@@ -130,7 +130,7 @@
                   <v-col class="col-3">
                     <v-checkbox
                     label="Ср"
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     readonly
                     V-model="Sr"
                   ></v-checkbox>
@@ -140,7 +140,7 @@
                       filled
                       rounded
                       dense
-                      color="#6AC3EF"
+                      color="var(--blue-color)"
                       class="personal__input"
                       type="time"
                       readonly
@@ -153,7 +153,7 @@
                   <v-col class="col-3">
                     <v-checkbox
                     label="Чт"
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     readonly
                     v-model="Cht"
                   ></v-checkbox>
@@ -163,7 +163,7 @@
                       filled
                       rounded
                       dense
-                      color="#6AC3EF"
+                      color="var(--blue-color)"
                       class="personal__input"
                       type="time"
                       readonly
@@ -178,7 +178,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Пт"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   readonly
                   v-model="Pt"
                 ></v-checkbox>
@@ -188,7 +188,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     type="time"
                     readonly
@@ -201,7 +201,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Сб"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   readonly
                   v-model="Sb"
                 ></v-checkbox>
@@ -211,7 +211,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     type="time"
                     readonly
@@ -224,7 +224,7 @@
                 <v-col class="col-3">
                   <v-checkbox
                   label="Вс"
-                  color="#6AC3EF"
+                  color="var(--blue-color)"
                   readonly
                   v-model="Vs"
                 ></v-checkbox>
@@ -234,7 +234,7 @@
                     filled
                     rounded
                     dense
-                    color="#6AC3EF"
+                    color="var(--blue-color)"
                     class="personal__input"
                     type="time"
                     readonly
@@ -331,7 +331,7 @@
               v-model="checkbox"
               :label="checkbox ? 'Активный' : 'Не активный'"
               readonly
-              color="#6AC3EF"
+              color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
       </v-row>

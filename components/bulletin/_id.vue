@@ -1,7 +1,7 @@
 <template>
   <section class="bulletin">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
@@ -89,7 +89,7 @@
           <v-checkbox
             v-model="readed"
             label="Галочка Прочитал"
-            color="#6AC3EF"
+            color="var(--blue-color)"
             readonly
           ></v-checkbox>
         </v-col>
@@ -97,7 +97,7 @@
           <v-checkbox
             v-model="show"
             label="Скрыть"
-            color="#6AC3EF"
+            color="var(--blue-color)"
             readonly
           ></v-checkbox>
         </v-col>

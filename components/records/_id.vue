@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <section class="records">
     <v-app-bar
-      style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
+      style="background-color: var(--secondary-color); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ $route.params.id }} / {{ elementByNumberOfCardRecord.numberofrecord }}</h3>
+      <h3 class="records__title red--text">{{ $route.params.id }} / {{ elementByNumberOfCardRecord.numberofrecord }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
@@ -21,9 +21,8 @@
         </v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-form 
-      class="create-value-personal mt-5"
+      class="records__value mt-5"
       ref="form"
       v-model="valid"
       lazy-validation
@@ -47,7 +46,7 @@
                   <th 
                     v-for="h in headersRecordCreate" 
                     style="color: white;" 
-                    :class="'main-table-head-th'"
+                    :class="'table-head-th'"
                     class="text-center"
                   >
                     <span>{{h.text}}</span>
@@ -61,54 +60,54 @@
 <!--Addtional-->
       <h3 class="ms-4">Дополнительно</h3>
       <v-row>
-          <v-col class="col-6">
-            <h4 class="ms-4">Название</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-input"
-              type="text"
-              v-model="name"
-              readonly
-            ></v-text-field>
-          </v-col>
+        <v-col class="col-6">
+          <h4 class="ms-4">Название</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="var(--blue-color)"
+            class="records__input"
+            type="text"
+            v-model="name"
+            readonly
+          ></v-text-field>
+        </v-col>
       </v-row>
 <!--Price-->
       <v-row>
-          <v-col class="col-3">
-            <h4 class="ms-4">Сумма</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              color="#6AC3EF"
-              class="create-main-input"
-              type="text"
-              v-model="price"
-              readonly
-            ></v-text-field>
-          </v-col>
+        <v-col class="col-3">
+          <h4 class="ms-4">Сумма</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            color="var(--blue-color)"
+            class="records__input"
+            type="text"
+            v-model="price"
+            readonly
+          ></v-text-field>
+        </v-col>
       </v-row>
 <!--Приечания-->
       <v-row>
-          <v-col>
-            <h4 class="ms-4">Примечание</h4>
-            <v-textarea
-              filled
-              rounded
-              auto-grow
-              dense
-              type="text"
-              color="#6AC3EF"
-              rows="10"
-              row-height="10"
-              class="create-main-textarea"
-              readonly
-              v-model="notes2"
-            ></v-textarea>
-          </v-col>
+        <v-col>
+          <h4 class="ms-4">Примечание</h4>
+          <v-textarea
+            filled
+            rounded
+            auto-grow
+            dense
+            type="text"
+            color="var(--blue-color)"
+            rows="10"
+            row-height="10"
+            class="records__textarea"
+            readonly
+            v-model="notes2"
+          ></v-textarea>
+        </v-col>
       </v-row>
     </v-form>
   </section>

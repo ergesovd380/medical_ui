@@ -1,0 +1,41 @@
+.records {
+  margin-top: 10px;
+
+  &__title {
+    @include name-of-create-page;
+  }
+
+  &__value {
+    @include not-full-section;
+  }
+
+  &__element {
+    @include main-input-width-200;
+  }
+
+  &__input {
+    @include main-input-without-width;
+  }
+
+  &__secondary-btn {
+    @include secondary-btn; 
+  }
+
+  &__textarea {
+    @include main-textarea;
+  }
+
+  &__name {
+    @include name-of-survey;
+  }
+
+  &__checkbox-for-pay{
+    margin-top: -7px;
+  }
+  
+  &__btn-for-pay{
+    width: 150px;
+    height: 42px;
+    margin: 10px 20px;
+  }
+}
