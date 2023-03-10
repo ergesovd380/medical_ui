@@ -1,20 +1,20 @@
 <template>
-  <section>
+  <section class="personal">
     <v-app-bar
       style="background-color: rgb(235, 235, 235); margin: 15px -15px;"
       dense
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="create-id red--text">{{ $route.params.id }}</h3>
+      <h3 class="personal__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
       <nuxt-link 
         tag="button" 
         to="/personal" 
-        class="main-btn main-create-back-btn mt-2 ms-2"
+        class="main-btn mt-2 ms-2"
       >Назад</nuxt-link>
       <v-spacer></v-spacer>
-      <v-btn icon class="main-btn main-filter-btn mt-2" :to="'/personal/' + id + '/edit'">
+      <v-btn icon class="main-filter-btn mt-2" :to="'/personal/' + id + '/edit'">
         <v-icon>
           mdi-pencil
         </v-icon>
@@ -22,7 +22,7 @@
     </v-app-bar>
 <!-- Form edit -->
     <v-form 
-      class="create-value-personal mt-5"
+      class="personal__value mt-5"
       ref="form"
     >
 <!--Image Personal-->
@@ -30,8 +30,8 @@
         <v-col>
           <v-layout>
             <v-flex xs12>
-              <img  :src="imageSrc" height="230" width="230" class="image-personal my-3" v-if="image">
-              <img  height="230" width="230" class="image-personal my-3" v-else>
+              <img  :src="imageSrc" height="230" width="230" class="personal__img my-3" v-if="image">
+              <img  height="230" width="230" class="personal__img my-3" v-else>
             </v-flex>
           </v-layout>
         </v-col>
@@ -44,7 +44,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               v-model="surnamePersonal"
               readonly
             ></v-text-field>
@@ -52,7 +52,7 @@
               filled
               rounded
               dense
-              class="create-main-input mt-6"
+              class="personal__input mt-6"
               v-model="namePersonal"
               readonly
             ></v-text-field>
@@ -60,7 +60,7 @@
               filled
               rounded
               dense
-              class="create-main-input mt-6"
+              class="personal__input mt-6"
               v-model="fathNamePersonal"
               readonly
             ></v-text-field>
@@ -69,7 +69,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               v-model="phoneNumberPersonal"
               readonly
             ></v-text-field>
@@ -95,7 +95,7 @@
                       rounded
                       dense
                       color="#6AC3EF"
-                      class="create-main-input"
+                      class="personal__input"
                       type="time"
                       readonly
                       v-model="pnInput"
@@ -103,7 +103,7 @@
                   </v-col>
                 </v-row>
 <!--Вт-->
-                <v-row class="personal-createP-day">
+                <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
                     label="Вт"
@@ -118,7 +118,7 @@
                       rounded
                       dense
                       color="#6AC3EF"
-                      class="create-main-input"
+                      class="personal__input"
                       type="time"
                       readonly
                       v-model="vtInput"
@@ -126,7 +126,7 @@
                   </v-col>
                 </v-row>
 <!--Ср-->
-                <v-row class="personal-createP-day">
+                <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
                     label="Ср"
@@ -141,7 +141,7 @@
                       rounded
                       dense
                       color="#6AC3EF"
-                      class="create-main-input"
+                      class="personal__input"
                       type="time"
                       readonly
                       v-model="srInput"
@@ -149,7 +149,7 @@
                   </v-col>
                 </v-row>
 <!--Чт-->
-                <v-row class="personal-createP-day">
+                <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
                     label="Чт"
@@ -164,7 +164,7 @@
                       rounded
                       dense
                       color="#6AC3EF"
-                      class="create-main-input"
+                      class="personal__input"
                       type="time"
                       readonly
                       v-model="chtInput"
@@ -175,72 +175,72 @@
               <v-col>
 <!--Пт-->
                 <v-row>
-                  <v-col class="col-3">
-                    <v-checkbox
-                    label="Пт"
+                <v-col class="col-3">
+                  <v-checkbox
+                  label="Пт"
+                  color="#6AC3EF"
+                  readonly
+                  v-model="Pt"
+                ></v-checkbox>
+                </v-col>
+                <v-col class="col-7">
+                  <v-text-field
+                    filled
+                    rounded
+                    dense
                     color="#6AC3EF"
+                    class="personal__input"
+                    type="time"
                     readonly
-                    v-model="Pt"
-                  ></v-checkbox>
-                  </v-col>
-                  <v-col class="col-7">
-                    <v-text-field
-                      filled
-                      rounded
-                      dense
-                      color="#6AC3EF"
-                      class="create-main-input"
-                      type="time"
-                      readonly
-                      v-model="ptInput"
-                    ></v-text-field>
-                  </v-col>
+                    v-model="ptInput"
+                  ></v-text-field>
+                </v-col>
                 </v-row>
 <!--Сб-->
-                <v-row class="personal-createP-day">
-                  <v-col class="col-3">
-                    <v-checkbox
-                    label="Сб"
+                <v-row class="personal__day-margin">
+                <v-col class="col-3">
+                  <v-checkbox
+                  label="Сб"
+                  color="#6AC3EF"
+                  readonly
+                  v-model="Sb"
+                ></v-checkbox>
+                </v-col>
+                <v-col class="col-7">
+                  <v-text-field
+                    filled
+                    rounded
+                    dense
                     color="#6AC3EF"
+                    class="personal__input"
+                    type="time"
                     readonly
-                    v-model="Sb"
-                  ></v-checkbox>
-                  </v-col>
-                  <v-col class="col-7">
-                    <v-text-field
-                      filled
-                      rounded
-                      dense
-                      color="#6AC3EF"
-                      class="create-main-input"
-                      type="time"
-                      readonly
-                      v-model="sbInput"
-                    ></v-text-field>
-                  </v-col>
+                    v-model="sbInput"
+                  ></v-text-field>
+                </v-col>
                 </v-row>
 <!--Вс-->
-                <v-row class="personal-createP-day">
-                  <v-col class="col-3">
-                    <v-checkbox
-                    label="Вс"
+                <v-row class="personal__day-margin">
+                <v-col class="col-3">
+                  <v-checkbox
+                  label="Вс"
+                  color="#6AC3EF"
+                  readonly
+                  v-model="Vs"
+                ></v-checkbox>
+                </v-col>
+                <v-col class="col-7">
+                  <v-text-field
+                    filled
+                    rounded
+                    dense
                     color="#6AC3EF"
+                    class="personal__input"
+                    type="time"
                     readonly
-                    v-model="Vs"
-                  ></v-checkbox>
-                  </v-col>
-                  <v-col class="col-7">
-                    <v-text-field
-                      filled
-                      rounded
-                      dense
-                      color="#6AC3EF"
-                      class="create-main-input"
-                      type="time"
-                      readonly
-                      v-model="vsInput"
-                    ></v-text-field>
-                  </v-col>
+                    v-model="vsInput"
+                  ></v-text-field>
+                </v-col>
                 </v-row>
               </v-col>
             </v-row>
@@ -255,7 +255,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               v-model="passwordPersonal"
               readonly
             ></v-text-field>
@@ -266,7 +266,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               v-model="confPasswordPersonal"
               readonly
             ></v-text-field>
@@ -281,7 +281,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               readonly
               v-model="personalCabinet"
             >
@@ -293,7 +293,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               readonly
             >
             </v-text-field>
@@ -307,7 +307,7 @@
               filled
               rounded
               dense
-              class="create-main-input"
+              class="personal__input"
               v-model="survey"
               readonly
             >
@@ -318,20 +318,21 @@
 <!--Access rights-->
       <v-row>
         <v-col class="col-6">
-            <h4 class="ms-4">Права доступа</h4>
-            <v-text-field
-              filled
-              rounded
-              dense
-              readonly
-            >
-            </v-text-field>
-            <v-checkbox
+          <h4 class="ms-4">Права доступа</h4>
+          <v-text-field
+            filled
+            rounded
+            dense
+            readonly
+            class="personal__input"
+          >
+          </v-text-field>
+          <v-checkbox
               v-model="checkbox"
               :label="checkbox ? 'Активный' : 'Не активный'"
               readonly
               color="#6AC3EF"
-            ></v-checkbox>
+          ></v-checkbox>
         </v-col>
       </v-row>
     </v-form>
