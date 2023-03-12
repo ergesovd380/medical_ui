@@ -2,14 +2,27 @@
   <div class="container">
     <div class="row">
       <div class="col-5">
+        <h4>Клиенты</h4>
         <client-only>
-          <LineChart :data="chartData" />
+          <BarChart :data="chartData" />
         </client-only>
+        <button>Knopka</button>
       </div>
       <div class="offset-1 col-5">
+        <h4>Бараны</h4>
         <client-only>
-          <LineChart :data="chartData2" />
+          <BarChart :data="chartData2" />
         </client-only>
+        <button>Knopka</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <h4>Касса</h4>
+        <client-only>
+          <BarChart :data="chartData2" />
+        </client-only>
+        <button>Knopka</button>
       </div>
     </div>
   </div>
