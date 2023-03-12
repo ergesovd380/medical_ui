@@ -25,6 +25,7 @@
 </template>
 <script>
 import cabinetCreate from '@/components/cabinet/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     cabinetCreate

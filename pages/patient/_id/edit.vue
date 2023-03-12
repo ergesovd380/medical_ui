@@ -25,6 +25,7 @@
 </template>
 <script>
 import patienEdit from '@/components/patient/edit.vue'
+import dialog from '~/mixins/dialog'
 export default {
   data() { 
     return { 

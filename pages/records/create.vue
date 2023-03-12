@@ -25,6 +25,7 @@
 </template>
 <script>
 import recordsCreate from '@/components/records/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     recordsCreate

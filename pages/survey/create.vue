@@ -25,6 +25,7 @@
 </template>
 <script>
 import surveyCreate from '@/components/survey/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     surveyCreate

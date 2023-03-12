@@ -25,6 +25,7 @@
 </template>
 <script>
 import personalCreate from '@/components/personal/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     personalCreate

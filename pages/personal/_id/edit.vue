@@ -25,6 +25,7 @@
 </template>
 <script>
 import personalEdit from '@/components/personal/edit.vue'
+import dialog from '~/mixins/dialog'
 export default {
   data() { 
     return { 

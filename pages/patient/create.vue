@@ -25,6 +25,7 @@
 </template>
 <script>
 import patientCreate from '@/components/patient/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     patientCreate

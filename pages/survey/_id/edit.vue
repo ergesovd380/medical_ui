@@ -25,6 +25,7 @@
 </template>
 <script>
 import surveyEdit from '@/components/survey/edit.vue'
+import dialog from '~/mixins/dialog'
 export default {
   data() { 
     return { 

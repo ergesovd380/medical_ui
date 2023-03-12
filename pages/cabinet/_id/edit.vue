@@ -25,6 +25,7 @@
 </template>
 <script>
 import cabinetEdit from '@/components/cabinet/edit.vue'
+import dialog from '~/mixins/dialog'
 export default {
   data() { 
     return { 
