@@ -25,31 +25,11 @@
 </template>
 <script>
 import bulletinCreate from '@/components/bulletin/create.vue'
+import dialog from '~/mixins/dialog'
 export default {
   components: {
     bulletinCreate
   },
-  data() { 
-    return { 
-      openDialog: false, 
-      functionResolve: null 
-    } 
-  },
-  beforeRouteLeave(to, from, next) {
-      this.openDialog = true
-      this.createPromise().then(res => {
-        next(res)
-      })
-  },
-  methods: {
-    createPromise() {
-      return new Promise(resolve => {
-        this.functionResolve = resolve;
-      })
-    },
-    dialogResponse(response) {
-      this.functionResolve(response)
-    },
-  }
+  mixins: [dialog],
 }
 </script>

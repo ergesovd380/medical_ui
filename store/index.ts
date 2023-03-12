@@ -1013,7 +1013,7 @@ export const getters: GetterTree<RootState, RootState> = {
   elementsPersonal(state: any) {
     return state.elementsPersonal
   },
-  elementByCabinetName(state: any, nameofcabinet) {
+  elementByCabinetName(state: any, nameofcabinet: any) {
     let element = state.elementsPersonal
     nameofcabinet = 'nameofcabinet' 
     let output = []
@@ -1022,7 +1022,7 @@ export const getters: GetterTree<RootState, RootState> = {
     }
     return output
   },
-  elementByNameSurname(state: any, namesurname) {
+  elementByNameSurname(state: any, namesurname: any) {
     let element = state.elementsPersonal
     namesurname = 'namesurname' 
     let output = []
@@ -1031,7 +1031,7 @@ export const getters: GetterTree<RootState, RootState> = {
     }
     return output
   },
-  elementByJob(state: any, job) {
+  elementByJob(state: any, job: any) {
     let element = state.elementsPersonal
     job = 'job' 
     let output = []
@@ -1057,7 +1057,7 @@ export const getters: GetterTree<RootState, RootState> = {
   elementsBlank(state: any) {
     return state.elementsBlank
   },
-  elementByBlank(state: any, blank) {
+  elementByBlank(state: any, blank: any) {
     let element = state.elementsBlank
     blank = 'blank' 
     let output = []
@@ -1078,7 +1078,7 @@ export const getters: GetterTree<RootState, RootState> = {
       return state.elementsSurvey.find((element: any) => element.id === elementId)
     }
   },
-  elementBySurvey(state: any, pod) {
+  elementBySurvey(state: any, pod: any) {
     let element = state.elementsSurvey
     pod = 'pod' 
     let output = []
@@ -1094,7 +1094,7 @@ export const getters: GetterTree<RootState, RootState> = {
   elementsPatient(state: any) {
     return state.elementsPatient
   },
-  elementByNameSurnameOfPatient(state: any, namesurname) {
+  elementByNameSurnameOfPatient(state: any, namesurname: any) {
     let element = state.elementsPatient
     namesurname = 'namesurnameofpatient' 
     let output = []

@@ -28,27 +28,10 @@ import personalEdit from '@/components/personal/edit.vue'
 export default {
   data() { 
     return { 
-      openDialog: false, 
-      functionResolve: null,
       id: this.$route.params.id
     } 
   },
-  beforeRouteLeave(to, from, next) {
-      this.openDialog = true
-      this.createPromise().then(res => {
-        next(res)
-      })
-  },
-  methods: {
-    createPromise() {
-      return new Promise(resolve => {
-        this.functionResolve = resolve;
-      })
-    },
-    dialogResponse(response) {
-      this.functionResolve(response)
-    },
-  },
+  mixins: [dialog],
   components: {
     personalEdit
   },

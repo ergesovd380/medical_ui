@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-6">
+      <div class="col-5">
         <client-only>
-          <BarChart :data="chartData" />
+          <LineChart :data="chartData" />
         </client-only>
       </div>
-      <div class="col-6">
+      <div class="offset-1 col-5">
         <client-only>
-          <BarChart :data="chartData2" />
+          <LineChart :data="chartData2" />
         </client-only>
       </div>
     </div>
@@ -17,22 +17,16 @@
 
 <script>
 export default {
-  props: {
-    penilaian: {
-      type: Object,
-      required: true,
-    },
-  },
   computed: {
     chartData() {
       return {
-        labels: [1, 2, 3, 4, 5],
+        labels: ['', '', '', '', '', '', '', '', '', 'Янв 1', '', '', '', '', '', '', '', '', '', '10', '', '', '', '', '', '', '', '', '', '20','', '', '', '', '', '', '', '', '', ''],
         datasets: [
           {
             label: '',
-            data: [2, 1, 16, 3, 2],
-            backgroundColor: 'var(--blue-color)',
-            borderColor: 'var(--blue-color)',
+            data: [2, 1, 14, 3, 5, 2, 7, 16, 3, 8, 2, 3, 11, 3, 4, 8, 9, 10, 6, 5, 2, 1, 15, 4, 2, 2, 5, 4, 6, 8, 9, 5, 17, 6, 8, 9, 11, 14, 8, 9],
+            backgroundColor: '#6AC3EF',
+            borderColor: '#6AC3EF',
             borderWidth: 2,
           },
         ],
@@ -40,13 +34,13 @@ export default {
     },
     chartData2() {
       return {
-        labels: [1, 2, 3, 4, 5],
+        labels: ['', '', '', '', '', '', '', '', '', 'Янв 1', '', '', '', '', '', '', '', '', '', '10', '', '', '', '', '', '', '', '', '', '20','', '', '', '', '', '', '', '', '', ''],
         datasets: [
           {
             label: '',
-            data: [2, 4, 13, 5, 2],
-            backgroundColor: 'var(--blue-color)',
-            borderColor: 'var(--blue-color)',
+            data: [2, 1, 14, 3, 5, 2, 7, 16, 3, 8, 2, 3, 11, 3, 4, 8, 9, 10, 6, 5, 2, 1, 15, 4, 2, 2, 5, 4, 6, 8, 9, 5, 17, 6, 8, 9, 11, 14, 8, 9],
+            backgroundColor: '#6AC3EF',
+            borderColor: '#6AC3EF',
             borderWidth: 2,
           },
         ],

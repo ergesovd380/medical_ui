@@ -13,8 +13,9 @@ export default {
     surveyId
   },
   computed: {
-    element() {
-      return this.$store.getters.elementByIDSurvey(this.id)
+    element(): any {
+      const id: any = this.id
+      return this.$store.getters.elementByIDSurvey(id)
     }
   }
 }
