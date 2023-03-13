@@ -1,0 +1,15 @@
+.statistic {
+  margin-top: 10px;
+
+  &__title {
+    @include name-of-create-page;
+  }
+
+  &__value {
+    @include not-full-section;
+  }
+
+  &__secondary-btn {
+    @include secondary-btn;
+  }
+}

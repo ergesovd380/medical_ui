@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="records__title my-2">Новый запись</h3>
 <!--Button add-->
-      <nuxt-link tag="button" to="/records" class="main-btn my-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" to="/records" class="main-btn my-2 ms-2">Отмениить</nuxt-link>
+      <button @click="back" class="main-btn my-2 ms-2">Сохранить</button>
+      <button @click="back" class="main-btn my-2 ms-2">Отмениить</button>
     </v-app-bar>
     <v-form 
       class="records__value mt-5"
@@ -324,8 +324,9 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
       })
     },
-    showConsole() {
-      console.log(this.elementsRecordCreate)
+    back() {
+      window.history.go(-1)
+      return false
     }
   }
 }

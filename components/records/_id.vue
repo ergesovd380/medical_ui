@@ -8,11 +8,7 @@
 <!--Page name-->
       <h3 class="records__title red--text">{{ $route.params.id }} / {{ elementByNumberOfCardRecord.numberofrecord }}</h3>
 <!--Button back-->
-      <nuxt-link 
-        tag="button" 
-        to="/records" 
-        class="main-btn mt-2 ms-2"
-      >Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <app-pay :dataOfCard="elementByNumberOfCardRecord" />
       <v-btn icon class="mt-2 main-filter-btn">
@@ -128,6 +124,10 @@ export default {
       const survey = item[1].item.id
       this.$router.push('/records/' + this.id + '/' + survey)
     },
+    back() {
+      window.history.go(-1)
+      return false
+    }
   },
   computed: {
     elementByNumberOfCardRecord() {

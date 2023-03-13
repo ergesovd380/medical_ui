@@ -8,12 +8,7 @@
 <!--Page name-->
       <h3 class="cabinet__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <nuxt-link 
-        tag="button" 
-        to="/cabinet" 
-        class="main-btn mt-2 ms-2"
-        no-prefetch
-      >Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <v-btn :to="'/cabinet/' + id + '/edit'" icon class="main-filter-btn mt-2">
         <v-icon>
@@ -95,7 +90,7 @@ export default {
       phoneNumber: this.element.phonenumber,
       numberofCabinet: this.element.numberofcabinet,
       floor: this.element.floor,
-      id: this.element.id
+      id: this.$route.params.id
     }
   },
   computed: {
@@ -107,5 +102,11 @@ export default {
       }
     }
   },
+  methods: {
+    back() {
+      window.history.go(-1)
+      return false
+    }
+  }
 }
 </script>

@@ -103,7 +103,7 @@
     },
     methods:   {
       openRow(...item: any) {
-        const id = item[1].item.id
+        const id = item[1].item.pod
         this.$router.push('/survey/' + id)
       },
       sortByFilter(e: any) {

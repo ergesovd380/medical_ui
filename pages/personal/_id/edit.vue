@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     element() {
-      return this.$store.getters.elementByIDPersonal(this.id)
+      return this.$store.getters.elementByNamePersonal(this.id)
     }
   }
 }

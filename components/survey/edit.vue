@@ -118,7 +118,7 @@ export default {
   props: ['element'],
   data(): any {
     return {
-      id: this.element.id,
+      id: this.$route.params.id,
       valid: true,
       name: this.element.pod,
       numberOfCassa: this.element.id,

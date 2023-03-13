@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="bulletin__title">Бюллетень</h3>
 <!--Button back-->
-      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">Статистика</nuxt-link>
       <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/view'">
@@ -126,6 +126,12 @@ export default {
   },
   components: {
     Editor
+  },
+  methods: {
+    back() {
+      window.history.go(-1)
+      return false
+    }
   }
 }
 </script>

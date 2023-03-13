@@ -1003,7 +1003,7 @@ export const getters: GetterTree<RootState, RootState> = {
   },
   elementByIDCabinet(state: any) {
     return (elementId: any) => {
-      return state.elementsCabinet.find((element: any) => element.id === elementId)
+      return state.elementsCabinet.find((element: any) => element.nameofcabinet === elementId)
     }
   },
 // Personal Page
@@ -1045,11 +1045,6 @@ export const getters: GetterTree<RootState, RootState> = {
       return state.elementsPersonal.find((element: any) => element.namesurname === elementId)
     }
   },
-  elementByIDPersonal(state: any) {
-    return (elementId: any) => {
-      return state.elementsPersonal.find((element: any) => element.id === elementId)
-    }
-  },
 // Blank Page
   headersBlank(state: any) {
     return state.headersBlank
@@ -1075,7 +1070,7 @@ export const getters: GetterTree<RootState, RootState> = {
   },
   elementByIDSurvey(state: any) {
     return (elementId: any) => {
-      return state.elementsSurvey.find((element: any) => element.id === elementId)
+      return state.elementsSurvey.find((element: any) => element.pod === elementId)
     }
   },
   elementBySurvey(state: any, pod: any) {

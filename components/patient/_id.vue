@@ -8,11 +8,7 @@
 <!--Page name-->
       <h3 class="patient__title red--text">{{ numberofcard }}</h3>
 <!--Button back-->
-      <nuxt-link 
-        tag="button" 
-        to="/patient" 
-        class="main-btn mt-2 ms-2"
-      >Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <div class="me-5">
         <nuxt-link tag="button" :to="'/patient/' + numberofcard + '/complaint'" class="main-btn mt-2 ms-2">Жалобы</nuxt-link>
@@ -313,6 +309,12 @@ export default {
       sex: '',
       cityzenStatus: '',
       poliklinika: '',
+    }
+  },
+  methods: {
+    back() {
+      window.history.go(-1)
+      return false
     }
   }
 }

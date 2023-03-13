@@ -8,11 +8,7 @@
 <!--Page name-->
       <h3 class="personal__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <nuxt-link 
-        tag="button" 
-        to="/personal" 
-        class="main-btn mt-2 ms-2"
-      >Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <v-btn icon class="main-filter-btn mt-2" :to="'/personal/' + id + '/edit'">
         <v-icon>
@@ -345,7 +341,7 @@ export default {
   data(): any {
     return {
       checkbox: false,
-      id: this.element.id,
+      id: this.$route.params.id,
 // time checkbox and input
       Pn: false,
       Vt: false,
@@ -373,6 +369,12 @@ export default {
       personalCabinet: this.element.cabinet,
       passwordPersonal: '',
       confPasswordPersonal: '',
+    }
+  },
+  methods: {
+    back() {
+      window.history.go(-1)
+      return false
     }
   }
 }

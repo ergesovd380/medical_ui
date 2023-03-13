@@ -386,7 +386,7 @@ export default {
     return {
       valid: true,
       checkbox: false,
-      id: this.element.id,
+      id: this.$route.params.id,
 // time checkbox and input
       Pn: false,
       Vt: false,

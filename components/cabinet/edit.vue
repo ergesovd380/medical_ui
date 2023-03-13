@@ -105,7 +105,7 @@ export default {
     return {
       valid: true,
       nameOfCabinet: this.element.nameofcabinet,
-      id: this.element.id,
+      id: this.$route.params.id,
       phoneNumber: this.element.phonenumber,
       numberofCabinet: this.element.numberofcabinet,
       floor: this.element.floor,

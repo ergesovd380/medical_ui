@@ -8,11 +8,7 @@
 <!--Page name-->
       <h3 class="survey__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <nuxt-link 
-        tag="button" 
-        to="/survey" 
-        class="main-btn mt-2 ms-2"
-      >Назад</nuxt-link>
+      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
       <v-spacer></v-spacer>
       <v-btn icon class="main-filter-btn mt-2 ms-2" :to="'/survey/' + id + '/edit'">
         <v-icon>
@@ -107,13 +103,19 @@ export default {
   props: ['element'],
   data(): any {
     return {
-      id: this.element.id,
+      id: this.$route.params.id,
       name: this.element.pod,
       numberOfCassa: this.element.id,
       foreigner: '',
       withInsurance: '',
       withoutInsurance: '',
       diplomat: ''
+    }
+  },
+  methods: {
+    back() {
+      window.history.go(-1)
+      return false
     }
   }
 }

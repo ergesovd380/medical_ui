@@ -106,7 +106,7 @@
     },
     methods: {
       openRow(...item: any) {
-        const id = item[1].item.id
+        const id = item[1].item.nameofcabinet
         this.$router.push('/cabinet/' + id)
       },
       sortByFilter(e: any) {
