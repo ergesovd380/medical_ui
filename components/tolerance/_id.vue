@@ -72,8 +72,8 @@
 <!--Btns-->
         <v-col class="col-1 tolerance__btn-group">
           <div class="tolerance__btns">
-            <v-btn class="tolerance__btn" @click="addTolerance" icon><v-icon>mdi-arrow-right</v-icon></v-btn>
-            <v-btn class="tolerance__btn" @click="removeTolerance" icon><v-icon>mdi-arrow-left</v-icon></v-btn>
+            <v-btn class="tolerance__btn" @click="addTolerance" icon><v-icon>mdi-chevron-right</v-icon></v-btn>
+            <v-btn class="tolerance__btn" @click="removeTolerance" icon><v-icon>mdi-chevron-left</v-icon></v-btn>
           </div>
         </v-col>
 <!--Checked-->

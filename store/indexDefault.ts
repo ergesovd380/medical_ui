@@ -61,6 +61,11 @@ export const  state = () => ({
       to: '/tolerance'
     },
     {
+      icon: 'mdi-wrench',
+      title: 'Инфо.страница',
+      to: '/setup'
+    },
+    {
       icon: 'mdi-information-outline',
       title: 'Инфо.страница',
       to: '/'
