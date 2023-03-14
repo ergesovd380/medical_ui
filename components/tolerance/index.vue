@@ -38,53 +38,53 @@
     </v-app-bar>
 <!--Table-->
     <v-data-table
-      :headers="headers"
-      hide-default-header
-      :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
-        disablePagination: true,
-        nextIcon: '',
-        prevIcon: '',
-        itemsPerPageOptions: [ 10, 15, 20, -1]
-      }"
-      :items="elements"
-      :items-per-page="itemsPerPage"
-      :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
-      :page.sync="page"
-      @page-count="pageCount = $event"
-      @dblclick:row="openRow"
-      :sort-by="sortBy.toLowerCase()"
-      :sort-desc="sortDesc"
-    >
-<!--Table header-->
-      <template v-slot:header="{ props: { headers } }">
-        <thead>
-          <tr>
-            <th 
-              v-for="h in headers" 
-              style="color: white;" 
-              :class="'table-head-th'"
-              class="text-center"
-            >
-              <span>{{h.text}}</span>
-            </th>
-          </tr>
-        </thead>
-      </template>
-<!--Table footer-->
-      <template #footer.page-text="props">
-        <v-pagination
-          v-model="page"
-          :length="pageCount"
-          :total-visible="4"
-          circle
-          color="var(--blue-color)"
-          class="table-pagination"
-        ></v-pagination>
-      </template>
+        :headers="headers"
+        hide-default-header
+        :footer-props="{
+          itemsPerPageAllText: 'Все',
+          itemsPerPageText: 'Строк в странице',
+          disablePagination: true,
+          nextIcon: '',
+          prevIcon: '',
+          itemsPerPageOptions: [ 10, 15, 20, -1]
+        }"
+        :items="elements"
+        :items-per-page="itemsPerPage"
+        :search="search"
+        no-data-text="Нет данных"
+        no-results-text="Нет данных"
+        :page.sync="page"
+        @page-count="pageCount = $event"
+        @dblclick:row="openRow"
+        :sort-by="sortBy.toLowerCase()"
+        :sort-desc="sortDesc"
+      >
+  <!--Table header-->
+        <template v-slot:header="{ props: { headers } }">
+          <thead>
+            <tr>
+              <th 
+                v-for="h in headers" 
+                style="color: white;" 
+                :class="'table-head-th'"
+                class="text-center"
+              >
+                <span>{{h.text}}</span>
+              </th>
+            </tr>
+          </thead>
+        </template>
+  <!--Table footer-->
+        <template #footer.page-text="props">
+          <v-pagination
+            v-model="page"
+            :length="pageCount"
+            :total-visible="4"
+            circle
+            color="var(--blue-color)"
+            class="table-pagination"
+          ></v-pagination>
+        </template>
     </v-data-table>
   </section>
 </template>

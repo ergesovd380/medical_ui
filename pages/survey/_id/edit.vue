@@ -10,10 +10,10 @@
           <div class="dialog__title">
             <h3 class="text-center">Вы хотите отменить внесенные изменения?</h3>
             <div class="mt-10 text-center">
-              <v-btn class="dialog__btn" color="rgb(235, 235, 235)" @click="dialogResponse(true)">
+              <v-btn class="dialog__btn" color="var(--secondary-color)" @click="dialogResponse(true)">
                 Да
               </v-btn>
-              <v-btn class="dialog__btn" color="rgb(235, 235, 235)" @click="openDialog = !openDialog">
+              <v-btn class="dialog__btn" color="var(--secondary-color)" @click="openDialog = !openDialog">
                 Нет
               </v-btn>
             </div>
