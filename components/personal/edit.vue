@@ -323,7 +323,6 @@
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
-            :readonly="disabled"
             required
             :items="jobCheck"
           >
@@ -331,7 +330,6 @@
         </v-col>
       </v-row>
 <!--Проводимые приемы, обследования, диагностика-->
-<!--Используемые бланки-->
       <v-row>
         <v-col>
           <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
@@ -351,8 +349,28 @@
           </v-autocomplete>
         </v-col>
       </v-row>
+<!--Используемые бланки-->
+      <v-row>
+        <v-col>
+          <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="var(--blue-color)"
+            class="personal__input"
+            placeholder="Выберите"
+            no-data-text="Нет данных"
+            required
+            v-model="blank"
+            :items="blankCheck"
+            multiple
+          >
+          </v-autocomplete>
+        </v-col>
+      </v-row>
       <hr class="my-10">
-<!--Access rights-->
+<!--Tolerance-->
       <v-row>
         <v-col class="col-6">
           <h4 class="ms-4">Права доступа</h4>
@@ -364,6 +382,8 @@
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
+            :items="toleranceCheck"
+            v-model="tolerance"
             required
           >
           </v-autocomplete>
@@ -402,12 +422,9 @@ export default {
       ptInput: '',
       sbInput: '',
       vsInput: '',
-      survey1: '',
-      survey2: '',
-      survey3: '',
-      blank1: '',
-      blank2: '',
-      blank3: '',
+      survey: '',
+      blank: '',
+      tolerance: '',
 // image
       image: null,
       imageSrc: '',
@@ -450,7 +467,10 @@ export default {
     },
     blankCheck(): any {
       return this.$store.getters.elementByBlank
-    }
+    },
+    toleranceCheck(): any {
+      return this.$store.getters.elementByNameTolerance
+    },
   },
   methods: {
     triggerFile () {

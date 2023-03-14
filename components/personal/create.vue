@@ -335,7 +335,6 @@
         </v-col>
       </v-row>
 <!--Проводимые приемы, обследования, диагностика-->
-<!--Используемые бланки-->
       <v-row>
         <v-col>
           <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
@@ -355,6 +354,26 @@
           </v-autocomplete>
         </v-col>
       </v-row>
+<!--Используемые бланки-->
+      <v-row>
+        <v-col>
+          <h4 class="ms-4">Используемые бланки</h4>
+          <v-autocomplete
+            filled
+            rounded
+            dense
+            color="var(--blue-color)"
+            class="personal__input"
+            placeholder="Выберите"
+            no-data-text="Нет данных"
+            required
+            :items="blankCheck"
+            v-model="blank"
+            multiple
+          >
+          </v-autocomplete>
+        </v-col>
+      </v-row>
       <hr class="my-10">
 <!--Access rights-->
       <v-row>
@@ -368,13 +387,15 @@
             class="personal__input"
             placeholder="Выберите"
             no-data-text="Нет данных"
+            :items="toleranceCheck"
+            v-model="personalTolerance"
             required
           >
           </v-autocomplete>
           <v-checkbox
-          v-model="checkbox"
-          :label="checkbox ? 'Активный' : 'Не активный'"
-          color="var(--blue-color)"
+            v-model="checkbox"
+            :label="checkbox ? 'Активный' : 'Не активный'"
+            color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
       </v-row>
@@ -413,13 +434,9 @@ export default {
       phoneNumberPersonal: '',
       passwordPersonal: '',
       confPasswordPersonal: '',
-      survey1: '',
-      survey2: '',
-      survey3: '',
-      blank1: '',
-      blank2: '',
-      blank3: '',
+      personalTolerance: '',
       survey: '',
+      blank: '',
 // Rules for inputs
       rulesInput: [
         (v: any) => !!v || 'Нельзя оставить пустым',
@@ -451,6 +468,9 @@ export default {
     },
     blankCheck(): any {
       return this.$store.getters.elementByBlank
+    },
+    toleranceCheck(): any {
+      return this.$store.getters.elementByNameTolerance
     },
   },
   methods: {

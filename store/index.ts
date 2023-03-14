@@ -1180,5 +1180,14 @@ export const getters: GetterTree<RootState, RootState> = {
     return (elementId: any) => {
       return state.elementsTolerance.find((element: any) => element.nametolerance === elementId)
     }
-  }
+  },
+  elementByNameTolerance (state: any, tolerance: any) {
+    let element = state.elementsTolerance
+    tolerance = 'nametolerance' 
+    let output = []
+    for(let i=0; i < element.length; ++i) {
+      output.push(element[i][tolerance]);
+    }
+    return output
+  },
 }

@@ -310,6 +310,21 @@
           </v-text-field>
         </v-col>
       </v-row>
+<!---Используемые бланки-->
+      <v-row>
+        <v-col>
+          <h4 class="ms-4">Используемые бланки</h4>
+          <v-text-field
+              filled
+              rounded
+              dense
+              class="personal__input"
+              v-model="blank"
+              readonly
+            >
+          </v-text-field>
+        </v-col>
+      </v-row>
       <hr class="my-10">
 <!--Access rights-->
       <v-row>
@@ -358,6 +373,7 @@ export default {
       sbInput: '',
       vsInput: '',
       survey: '',
+      blank: '',
 // image
       image: null,
       imageSrc: '',
