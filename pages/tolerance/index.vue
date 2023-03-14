@@ -2,7 +2,7 @@
   <toleranceIndex />
 </template>
 <script lang="ts">
-import toleranceIndex from '@/components/tolerance_groups/index.vue'
+import toleranceIndex from '@/components/tolerance/index.vue'
 export default {
   components: {
     toleranceIndex

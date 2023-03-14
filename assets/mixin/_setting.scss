@@ -10,7 +10,7 @@
 }
 @mixin full-section {
   background-color: var(--light-color);
-  height: 86vh;
+  min-height: 86vh;
   border-radius: 15px;
   padding: 4rem 4rem;
 }

@@ -989,6 +989,40 @@ export const state = () => ({
       readed: 'дд/ммм/гггг',
     }
   ],
+//Tolerance Group
+  headersTolerance: [
+    { text: 'ID', value: 'id' },
+    { text: 'Название группы доступа', value: 'nametolerance' },
+    { text: 'Количество сотрудников', value: 'personalnumber' },
+    { text: 'Сотрудники', value: 'personal' }
+  ],
+  elementsTolerance: [
+    {
+      id: '1',
+      nametolerance: 'Главный администратор',
+      personalnumber: '1',
+    },
+    {
+      id: '2',
+      nametolerance: 'Доктор',
+      personalnumber: '55',
+    },
+    {
+      id: '3',
+      nametolerance: 'Бухгалтер',
+      personalnumber: '2',
+    },
+    {
+      id: '4',
+      nametolerance: 'Касса',
+      personalnumber: '4',
+    },
+    {
+      id: '5',
+      nametolerance: 'Модератор',
+      personalnumber: '1',
+    },
+  ]
 })
 
 export type RootState = ReturnType<typeof state>;
@@ -1135,4 +1169,16 @@ export const getters: GetterTree<RootState, RootState> = {
       return state.elementsBulletinRecord.find((element: any) => element.nameturkmen === elementId)
     }
   },
+// Tolerance Group
+  headersTolerance(state: any) {
+    return state.headersTolerance
+  },
+  elementsTolerance(state: any) {
+    return state.elementsTolerance
+  },
+  elementByIDTolerance(state: any) {
+    return (elementId: any) => {
+      return state.elementsTolerance.find((element: any) => element.nametolerance === elementId)
+    }
+  }
 }

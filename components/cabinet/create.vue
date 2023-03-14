@@ -116,11 +116,6 @@ export default {
       numberofCabinet: '',
       floor: ''
     }
-  },
-  methods: {
-    showConsole() {
-      console.log(this.nameOfCabinet)
-    }
   }
 }
 </script>

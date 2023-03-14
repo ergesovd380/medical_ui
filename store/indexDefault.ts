@@ -55,11 +55,11 @@ export const  state = () => ({
       title: 'Статистика',
       to: '/statistic'
     },
-    // {
-    //   icon: 'mdi-shield-account',
-    //   title: 'Группы допуска',
-    //   to: '/tolerance_groups'
-    // }
+    {
+      icon: 'mdi-shield-account',
+      title: 'Группы допуска',
+      to: '/tolerance'
+    },
     {
       icon: 'mdi-information-outline',
       title: 'Инфо.страница',

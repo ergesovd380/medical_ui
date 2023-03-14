@@ -1,0 +1,30 @@
+.tolerance {
+  margin-top: 10px;
+
+  &__title {
+    @include name-of-create-page;
+  }
+
+  &__value {
+    @include full-section;
+  }
+
+  &__input {
+    @include main-input-without-width;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: block;
+    margin: 20px auto;
+    width: 62px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+  }
+}
