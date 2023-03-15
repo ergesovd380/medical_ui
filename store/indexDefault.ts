@@ -62,17 +62,12 @@ export const  state = () => ({
     },
     {
       icon: 'mdi-wrench',
-      title: 'Инфо.страница',
+      title: 'Настройки',
       to: '/setup'
     },
-    {
-      icon: 'mdi-information-outline',
-      title: 'Инфо.страница',
-      to: '/'
-    },
-        // {
-    //   icon: 'mdi-web',
-    //   title: 'Язык',
+    // {
+    //   icon: 'mdi-information-outline',
+    //   title: 'Инфо.страница',
     //   to: '/'
     // }
   ],

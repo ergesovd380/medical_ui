@@ -1,4 +1,6 @@
 .dialog {
+  border-radius: 10px;
+  
   &__title {
     padding-top: 80px;
   }
@@ -7,5 +9,9 @@
     width: 150px;
     height: 42px;
     margin: 10px 20px;
+  }
+
+  &__input {
+    @include main-input-without-width;
   }
 }

@@ -76,10 +76,11 @@
     </v-data-table>
 
 <!--Delete Dialog-->
-    <div slot="dialog" class="dialog">
+    <div>
       <v-dialog
         v-model="deleteDialog"
         width="600"
+        class="dialog"
       >
         <v-card height="256">
           <div class="dialog__title">
@@ -98,15 +99,16 @@
     </div>
 
 <!--Add Dialog-->
-    <div slot="dialog" class="dialog">
+    <div>
       <v-dialog
         v-model="addDialog"
-        width="600"
+        width="650"
+        class="dialog"
       >
         <v-card height="256">
-          <div class="dialog__title">
-            <div class="mt-10 text-center">
-              <h4 class="ms-4">Название</h4>
+          <div class="text-center">
+            <div class="container">
+              <h4 class="mt-8 ms-4 mb-2">Название</h4>
               <v-text-field
                 filled
                 rounded
@@ -114,16 +116,41 @@
                 color="var(--blue-color)"
                 class="dialog__input"
                 autocomplete="none"
-                v-model="nameOfTolerance"
+                v-model="editedItem.nameMedia"
                 type="text"
               ></v-text-field>
-              <v-btn class="dialog__btn" color="var(--secondary-color)" @click="deleteMedia">
-                Сохранить
-              </v-btn>
-              <v-btn class="dialog__btn" color="var(--secondary-color)" @click="addDialog = !addDialog">
-                Отмена
-              </v-btn>
+              <v-row>
+                <v-col class="col-8 mt-2">
+                  <v-text-field
+                    filled
+                    rounded
+                    dense
+                    color="var(--blue-color)"
+                    class="dialog__input"
+                    autocomplete="none"
+                    v-model="image"
+                    type="text"
+                    readonly
+                  ></v-text-field>
+                </v-col>
+                <v-col class="col-4">
+                  <v-btn class="dialog__btn" color="var(--secondary-color)" @click="triggerFile">Выбрать</v-btn>
+                  <input
+                    type="file"
+                    class="d-none"
+                    accept="image/*"
+                    @change="changeFile"
+                    ref="fileRef"
+                  >
+                </v-col>
+              </v-row>
             </div>
+            <v-btn class="dialog__btn" color="var(--secondary-color)" :disabled="editedItem.nameMedia.length < 3 || image === null" @click="addMedia">
+              Сохранить
+            </v-btn>
+            <v-btn class="dialog__btn" color="var(--secondary-color)" @click="cancelMedia">
+              Отмена
+            </v-btn>
           </div>
         </v-card>
       </v-dialog>
@@ -142,6 +169,7 @@
         selected: [],
         deleteDialog: false,
         addDialog: false,
+        image: null,
         headers: [
           {
             text: 'ID',
@@ -150,28 +178,22 @@
           },
           {
             text: 'Название',
-            value: 'name',
+            value: 'nameMedia',
             
           },
         ],
         elements: [
           {
-            id: '1',
-            name: 'Главный администратор'
-          },
-          {
-            id: '2',
-            name: 'Администратор'
-          },
-          {
-            id: '3',
-            name: 'Администратор помощник'
-          },
-          {
-            id: '4',
-            name: 'Администратор помощник помощника'
-          },
-        ]
+            id: 1,
+            nameMedia: 'Главный администратор'
+          }
+        ],
+        editedItem: {
+          nameMedia: '',
+        },
+        defaultItem: {
+          nameMedia: '',
+        }
       }
     },
     methods: {
@@ -183,6 +205,34 @@
         media.push(...med)
         selected.splice(0, selected.length)
         this.deleteDialog = !this.deleteDialog
+      },
+      addMedia() {
+        this.editedItem.id = this.elements[this.elements.length - 1].id + 1
+        this.elements.push(this.editedItem)
+        this.$nextTick(() => {
+          this.editedItem = Object.assign({}, this.defaultItem)
+          this.image = null
+        })
+        this.addDialog = !this.addDialog
+      },
+      cancelMedia() {
+        this.$nextTick(() => {
+          this.editedItem = Object.assign({}, this.defaultItem)
+          this.image = null
+        })
+        this.addDialog = !this.addDialog
+      },
+      triggerFile() {
+        this.$refs.fileRef.click()
+      },
+      changeFile(event: any) {
+        const file = event.target.files[0]
+        const reader = new FileReader()
+        reader.onload = e => {
+          this.imageSrc = reader.result
+        }
+        reader.readAsDataURL(file)
+        this.image = file.name
       }
     }
   }

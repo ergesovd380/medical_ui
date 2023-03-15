@@ -70,7 +70,7 @@
           ></v-text-field>
         </v-col>
         <v-col class="mt-6">
-          <v-btn class="bulletin__secondary-btn" elevation="1" @click="triggerFile">Выбрать</v-btn>
+          <v-btn class="bulletin__secondary-btn" @click="triggerFile">Выбрать</v-btn>
           <input
             type="file"
             class="d-none"

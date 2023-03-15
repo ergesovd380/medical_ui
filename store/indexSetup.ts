@@ -32,7 +32,7 @@ export const  state = () => ({
     },
     {
       icon: 'mdi-book-open-page-variant-outline',
-      title: 'Инфоюстраница',
+      title: 'Инфо.страница',
       to: '/setup/info'
     }
   ],
