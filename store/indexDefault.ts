@@ -65,11 +65,11 @@ export const  state = () => ({
       title: 'Настройки',
       to: '/setup'
     },
-    // {
-    //   icon: 'mdi-information-outline',
-    //   title: 'Инфо.страница',
-    //   to: '/'
-    // }
+    {
+      icon: 'mdi-information-outline',
+      title: 'Инфо.страница',
+      to: '/'
+    }
   ],
 })
 

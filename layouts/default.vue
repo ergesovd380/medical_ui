@@ -18,7 +18,7 @@
         v-if="!miniVariant" 
         class="text-center"
       >
-        <nuxt-link no-prefetch to="/"><img src="@/images/logo.png" width="103px" height="101px" /></nuxt-link>
+        <img src="@/images/logo.png" width="103px" height="101px" />
         <h1 class="nav__logo">Международный <br> центр травматологии</h1>
         <h1 class="nav__title text-left">Главный администратор</h1>
       </div>
@@ -43,6 +43,7 @@
           <v-icon class="me-2">mdi-exit-to-app</v-icon>
           <span v-if="!miniVariant"> Выйти</span>
       </v-btn>
+      <v-select :items="locale" v-model="activeLang" @change="onChange(selectedValue)"></v-select>
     </v-navigation-drawer>
     <v-main>
       <v-container fluid>
@@ -53,16 +54,33 @@
 </template>
 
 <script lang="ts">
-export default {
-  data () {
-    return {
-      miniVariant: false,
-    }
-  },
-  computed: {
-    items(): any {
-      return this.$store.getters['indexDefault/items']
-    }
+  export default {
+    data () {
+      return {
+        miniVariant: false,
+        activeLang: this.$i18n.locale,
+        locale: [
+          { text: "Turkmen", value: "tm" },
+          { text: "Русский", value: "ru" },
+        ]
+      }
+    },
+    methods: {
+      onChange(event: any) {
+        this.$router.replace(this.switchLocalePath(event));
+      }
+    },
+    computed: {
+      items(): any {
+        return this.$store.getters['indexDefault/items']
+      }
+    },
+    watch: {
+      activeLang: function changeLang(val) {
+        this.$i18n.setLocaleCookie(val);
+        console.log(this.$i18n.setLocaleCookie(val))
+        window.location.href = this.switchLocalePath(val);
+      },
+    },
   }
-}
 </script>

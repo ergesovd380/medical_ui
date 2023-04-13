@@ -26,7 +26,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/TiptapVuetify',
-    '~/plugins/chart.js'
+    '~/plugins/chart.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -44,6 +44,41 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    [
+      "nuxt-i18n",
+      {
+        locales: [
+          {
+          name: "Turkmen",
+          code: "tm",
+          iso: "tm-TM",
+          file: "tm-TM.ts"
+          },
+          {
+            name: 'Русский',
+            code: 'ru',
+            iso: 'ru-RU',
+            file: 'ru-RU.ts'
+        },
+      ],
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: "locale",
+          alwaysRedirect: true,
+          fallbackLocale: "tk-TM"
+        },
+        strategy: "no_prefix",
+        lazy: true,
+        langDir: "lang/",
+        defaultLocale: "tk-TM",
+        vuex: {
+          moduleName: "i18n",
+          syncLocale: true,
+          syncMessages: true,
+          syncRouteParams: true
+        }
+      }
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

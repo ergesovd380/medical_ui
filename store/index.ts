@@ -1189,5 +1189,5 @@ export const getters: GetterTree<RootState, RootState> = {
       output.push(element[i][tolerance]);
     }
     return output
-  },
+  }
 }
