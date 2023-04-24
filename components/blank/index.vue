@@ -28,9 +28,9 @@
           </template>
           <v-card class="mx-auto" width="222px" tile>
               <v-list dense>
-                  <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                  <v-subheader @click="sortByFilter('blank')" class="menu-items">По бланкам</v-subheader>
-                  <v-subheader @click="sortByFilter('nameofcabinet')" class="menu-items">По названию кабинета</v-subheader>
+                  <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t("Default") }}</v-subheader>
+                  <v-subheader @click="sortByFilter('blank')" class="menu-items">{{ $t('By_blanks') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('nameofcabinet')" class="menu-items">{{ $t('By_name_cabinet') }}</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -40,8 +40,8 @@
       :headers="headers"
       hide-default-header
       :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
+        itemsPerPageAllText: $t('All'),
+        itemsPerPageText: $t('Rows_page'),
         disablePagination: true,
         nextIcon: '',
         prevIcon: '',
@@ -50,8 +50,8 @@
       :items="elements"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      :no-data-text="$t('No_data')"
+      :no-results-text="$t('No_data')"
       :page.sync="page"
       @page-count="pageCount = $event"
       @dblclick:row="openRow"

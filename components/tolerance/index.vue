@@ -16,7 +16,7 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/tolerance/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/tolerance/create" class="main-btn mt-2 ms-2">{{ $t("Add") }}</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
@@ -51,8 +51,8 @@
         :items="elements"
         :items-per-page="itemsPerPage"
         :search="search"
-        no-data-text="Нет данных"
-        no-results-text="Нет данных"
+        no-data-text="Нет Данных"
+        no-results-text="Нет Данных"
         :page.sync="page"
         @page-count="pageCount = $event"
         @dblclick:row="openRow"

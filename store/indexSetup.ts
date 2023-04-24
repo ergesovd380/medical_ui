@@ -17,7 +17,7 @@ export const  state = () => ({
     },
     {
       icon: 'mdi-account-details-outline',
-      title: 'Гражданский статус',
+      title: 'ГражДанский статус',
       to: '/setup/cityzenStatus'
     },
     {

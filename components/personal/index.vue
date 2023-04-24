@@ -16,7 +16,7 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/personal/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/personal/create" class="main-btn mt-2 ms-2">{{ $t("Add") }}</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
@@ -29,12 +29,12 @@
           </template>
           <v-card class="mx-auto" width="222px" tile>
               <v-list dense>
-                  <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                  <v-subheader @click="sortByFilter('phonenumber')" class="menu-items">По номеру телефона</v-subheader>
-                  <v-subheader @click="sortByFilter('namesurname')" class="menu-items">По Ф.И.О</v-subheader>
-                  <v-subheader @click="sortByFilter('job')" class="menu-items">По должности</v-subheader>
-                  <v-subheader @click="sortByFilter('nameofcabinet')" class="menu-items">По кабинету</v-subheader>
-                  <v-subheader @click="sortByFilter('tolerance')" class="menu-items">По допуску</v-subheader>
+                  <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t('Default') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('phonenumber')" class="menu-items">{{ $t('By_phone_number') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('namesurname')" class="menu-items">{{ $t('By_NSF') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('job')" class="menu-items">{{ $t('By_job') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('nameofcabinet')" class="menu-items">{{ $t('By_name_cabinet') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('tolerance')" class="menu-items">{{ $t('By_admission') }}</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -44,8 +44,8 @@
       :headers="headers"
       hide-default-header
       :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
+        itemsPerPageAllText: $t('All'),
+        itemsPerPageText: $t('Rows_page'),
         disablePagination: true,
         nextIcon: '',
         prevIcon: '',
@@ -54,8 +54,8 @@
       :items="elements"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      :no-data-text="$t('No_data')"
+      :no-results-text="$t('No_data')"
       :page.sync="page"
       @page-count="pageCount = $event"
       @dblclick:row="openRow"

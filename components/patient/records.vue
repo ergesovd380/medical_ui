@@ -15,9 +15,9 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/records/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/records/create" class="main-btn mt-2 ms-2">{{ $t("Add") }}</nuxt-link>
 <!--Button back-->
-      <nuxt-link tag="button" :to="'/patient/' + id" class="main-btn mt-2 ms-2" no-prefetch>Назад</nuxt-link>
+      <nuxt-link tag="button" :to="'/patient/' + id" class="main-btn mt-2 ms-2" no-prefetch>{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
@@ -51,8 +51,8 @@
         prevIcon: ''
       }"
       :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      no-data-text="Нет Данных"
+      no-results-text="Нет Данных"
       :items="[elements]"
       :page.sync="page"
       @page-count="pageCount = $event"

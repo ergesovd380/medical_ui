@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="cabinet__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <nuxt-link tag="button" to="/cabinet" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
       <v-btn :to="'/cabinet/' + id + '/edit'" icon class="main-filter-btn mt-2">
         <v-icon>
@@ -23,7 +23,7 @@
     >
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название кабинета</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Name_cabinet') }}</h4>
           <v-text-field
             filled
             rounded
@@ -36,7 +36,7 @@
       </v-row>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Номер телефона</h4>
+          <h4 class="ms-4">{{ $t('Phone_number') }}</h4>
           <v-text-field
             filled
             rounded
@@ -49,7 +49,7 @@
       </v-row>
       <v-row>
         <v-col class="col-2">
-          <h4 class="ms-4">Номер кабинета</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Number_cabinet') }}</h4>
           <v-text-field
             filled
             rounded
@@ -60,7 +60,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Этаж</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Floor') }}</h4>
           <v-text-field
             filled
             rounded
@@ -73,7 +73,7 @@
       </v-row>
       <v-checkbox
         v-model="checkbox"
-        :label="checkbox ? 'Активный' : 'Не активный'"
+        :label="checkbox ? $t('Active') : $t('Not_active')"
         readonly
         color="var(--blue-color)"
       ></v-checkbox>
@@ -100,12 +100,6 @@ export default {
       } else {
         return false
       }
-    }
-  },
-  methods: {
-    back() {
-      window.history.go(-1)
-      return false
     }
   }
 }

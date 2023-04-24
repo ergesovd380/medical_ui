@@ -16,7 +16,7 @@
         flat
       ></v-text-field>
 <!--Button add-->
-      <nuxt-link tag="button" to="/patient/create" class="main-btn mt-2 ms-2">Добавить</nuxt-link>
+      <nuxt-link tag="button" to="/patient/create" class="main-btn mt-2 ms-2">{{ $t("Add") }}</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
@@ -32,7 +32,7 @@
                   <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
                   <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">По номеру мед.карты</v-subheader>
                   <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">По Ф.И.О пациента</v-subheader>
-                  <v-subheader @click="sortByFilter('birthday')" class="menu-items">По дате рождения</v-subheader>
+                  <v-subheader @click="sortByFilter('birthday')" class="menu-items">По Дате рождения</v-subheader>
                   <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">По номеру телефона</v-subheader>
                   <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">По статусу</v-subheader>
               </v-list>
@@ -54,8 +54,8 @@
       :items="elements"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      no-data-text="Нет Данных"
+      no-results-text="Нет Данных"
       :page.sync="page"
       @page-count="pageCount = $event"
       @dblclick:row="openRow"

@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="bulletin__title">Бюллетень</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
       <v-spacer></v-spacer>
       <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">Статистика</nuxt-link>
       <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/view'">

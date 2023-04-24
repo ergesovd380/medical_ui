@@ -6,10 +6,10 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="cabinet__title">Новый кабинет</h3>
+      <h3 class="cabinet__title">{{ $t('CabinetData.New_cabinet') }}</h3>
 <!--Button add-->
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/cabinet" class="main-btn mt-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
@@ -20,7 +20,7 @@
     >
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название кабинета</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Name_cabinet') }}</h4>
           <v-text-field
             filled
             rounded
@@ -38,7 +38,7 @@
       </v-row>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Номер телефона</h4>
+          <h4 class="ms-4">{{ $t('Phone_number') }}</h4>
           <v-text-field
             filled
             rounded
@@ -57,7 +57,7 @@
       </v-row>
       <v-row>
         <v-col class="col-2">
-          <h4 class="ms-4">Номер кабинета</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Number_cabinet') }}</h4>
           <v-text-field
             filled
             rounded
@@ -73,7 +73,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Этаж</h4>
+          <h4 class="ms-4">{{ $t('CabinetData.Floor') }}</h4>
           <v-text-field
             filled
             rounded
@@ -91,7 +91,7 @@
       </v-row>
       <v-checkbox
           v-model="checkbox"
-          :label="checkbox ? 'Активный' : 'Не активный'"
+          :label="checkbox ? $t('Active') : $t('Not_active')"
           color="var(--blue-color)"
       ></v-checkbox>
     </v-form>
@@ -106,11 +106,11 @@ export default {
       checkbox: false,
       nameOfCabinet: '',
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
       rulesInputForPhone: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
-        (v: any) => v.length == 11 || 'Должен быть 11 цифр',
+        (v: any) => !!v || this.$t('Not_empty'),
+        (v: any) => v.length == 11 || this.$t('Symbols_11'),
       ],
       phoneNumber: '',
       numberofCabinet: '',

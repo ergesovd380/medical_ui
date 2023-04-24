@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="personal__title red--text">{{ $route.params.id }}</h3>
 <!--Button add-->
-      <nuxt-link tag="button" :to="'/personal/' + id" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" :to="'/personal/' + id" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" :to="'/personal/' + id" class="main-btn mt-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" :to="'/personal/' + id" class="main-btn mt-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
 <!-- Form edit -->
     <v-form 
@@ -39,14 +39,14 @@
       <v-row>
 <!--F.I.O personal-->
         <v-col>
-          <h4 class="ms-4">Ф.И.О сотрудника</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.NSF_personal') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Фамилия"
+            :placeholder="$t('Surname')"
             v-model="surnamePersonal"
             autocomplete="none"
             type="text"
@@ -59,7 +59,7 @@
             dense
             color="var(--blue-color)"
             class="personal__input mt-6"
-            placeholder="Имя"
+            :placeholder="$t('Name')"
             v-model="namePersonal"
             autocomplete="none"
             type="text"
@@ -72,19 +72,19 @@
             dense
             color="var(--blue-color)"
             class="personal__input mt-6"
-            placeholder="Отчество"
+            :placeholder="$t('Fath_name')"
             v-model="fathNamePersonal"
             autocomplete="none"
             type="text"
           ></v-text-field>
-          <h4 class="ms-4 mt-8">Контактные данные</h4>
+          <h4 class="ms-4 mt-8">{{ $t('PersonalData.Contact_data') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Номер телефона"
+            :placeholder="$t('Phone_number')"
             v-model="phoneNumberPersonal"
             autocomplete="none"
             type="number"
@@ -95,14 +95,14 @@
         </v-col>
 <!--Work day and time-->
         <v-col>
-          <h4 class="ms-4">Рабичие дни и часы приема</h4>
+          <h4 class="ms-4">{{ $t('Work_days') }}</h4>
           <v-row>
             <v-col>
 <!--Пн-->
               <v-row>
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Пн"
+                  :label="$t('PersonalData.Monday')"
                   color="var(--blue-color)"
                   v-model="Pn"
                 ></v-checkbox>
@@ -124,7 +124,7 @@
               <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Вт"
+                  :label="$t('PersonalData.Tuesday')"
                   color="var(--blue-color)"
                   v-model="Vt"
                 ></v-checkbox>
@@ -146,7 +146,7 @@
               <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Ср"
+                  :label="$t('PersonalData.Wednesday')"
                   color="var(--blue-color)"
                   V-model="Sr"
                 ></v-checkbox>
@@ -168,7 +168,7 @@
               <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Чт"
+                  :label="$t('PersonalData.Thursday')"
                   color="var(--blue-color)"
                   v-model="Cht"
                 ></v-checkbox>
@@ -192,7 +192,7 @@
               <v-row>
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Пт"
+                  :label="$t('PersonalData.Friday')"
                   color="var(--blue-color)"
                   v-model="Pt"
                 ></v-checkbox>
@@ -214,7 +214,7 @@
               <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Сб"
+                  :label="$t('PersonalData.Saturday')"
                   color="var(--blue-color)"
                   v-model="Sb"
                 ></v-checkbox>
@@ -236,7 +236,7 @@
               <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Вс"
+                  :label="$t('PersonalData.Sunday')"
                   color="var(--blue-color)"
                   v-model="Vs"
                 ></v-checkbox>
@@ -262,14 +262,14 @@
 <!--Password and Confirm Password-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Пароль</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Pass') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Пароль"
+            :placeholder="$t('PersonalData.Pass')"
             v-model="passwordPersonal"
             :counter="6"
             :rules="passRules"
@@ -278,14 +278,14 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Подтвердите пароль</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Confirm_pass') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Подтвердите пароль"
+            :placeholder="$t('PersonalData.Confirm_pass')"
             v-model="confPasswordPersonal"
             :counter="6"
             :rules="confPassRules"
@@ -298,15 +298,15 @@
 <!--Cabinet and Job-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Кабинет</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Cabinet') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Выберите"
-            no-data-text="Нет данных"
+            :placeholder="$t('PersonalData.Cabinet')"
+            no-data-text="Нет Данных"
             required
             :items="cabinetCheck"
             v-model="personalCabinet"
@@ -314,15 +314,15 @@
           </v-autocomplete>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Должность</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Job') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Выберите"
-            no-data-text="Нет данных"
+            :placeholder="$t('PersonalData.Job')"
+            no-data-text="Нет Данных"
             required
             :items="jobCheck"
           >
@@ -332,15 +332,15 @@
 <!--Проводимые приемы, обследования, диагностика-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Survey_a_diagnostics') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Выберите"
-            no-data-text="Нет данных"
+            :placeholder="$t('PersonalData.Survey_a_diagnostics')"
+            no-data-text="Нет Данных"
             required
             v-model="survey"
             :items="surveyCheck"
@@ -352,15 +352,15 @@
 <!--Используемые бланки-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Use_blanks') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Выберите"
-            no-data-text="Нет данных"
+            :placeholder="$t('PersonalData.Use_blanks')"
+            no-data-text="Нет Данных"
             required
             v-model="blank"
             :items="blankCheck"
@@ -373,15 +373,15 @@
 <!--Tolerance-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Права доступа</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Access') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            placeholder="Выберите"
-            no-data-text="Нет данных"
+            :placeholder="$t('PersonalData.Access')"
+            no-data-text="Нет Данных"
             :items="toleranceCheck"
             v-model="tolerance"
             required
@@ -389,7 +389,7 @@
           </v-autocomplete>
           <v-checkbox
             v-model="checkbox"
-            :label="checkbox ? 'Активный' : 'Не активный'"
+            :label="checkbox ? $t('Active') : $t('Not_active')"
             color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
@@ -438,20 +438,20 @@ export default {
       confPasswordPersonal: '',
       // Rules for inputs
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
       rulesInputForPhone: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
-        (v: any) => v.length === 11 || 'Должен быть 11 цифр',
+        (v: any) => !!v || this.$t('Not_empty'),
+        (v: any) => v.length === 11 || this.$t('Symbols_11'),
       ],
       passRules: [
-      (v: any) => !!v || 'Нельзя оставить пустым',
-        (v: any) => v.length >= 6 || 'Должен минимум быть 6 элементов',
+      (v: any) => !!v || this.$t('Not_empty'),
+        (v: any) => v.length >= 6 || this.$t('Symbols_6'),
       ],
       confPassRules: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
-        (v: any) => v && v.length >= 6 || 'Должен минимум быть 6 элементов',
-        (v: any) => v === this.passwordPersonal || ' Пароли не совподают',
+        (v: any) => !!v || this.$t('Not_empty'),
+        (v: any) => v && v.length >= 6 || this.$t('Symbols_6'),
+        (v: any) => v === this.passwordPersonal || this.$t('Pass_not_conf'),
       ],
     }
   },

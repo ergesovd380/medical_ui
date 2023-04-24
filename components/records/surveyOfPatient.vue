@@ -11,7 +11,7 @@
       <button
         @click="goBack"
         class="main-btn mt-2 ms-2"
-      >Назад</button>
+      >{{ $t("Back") }}</button>
       <v-spacer></v-spacer>
       <v-btn icon class="mt-2 main-filter-btn">
         <v-icon>
@@ -53,7 +53,7 @@
             color="var(--blue-color)"
             class="records__input"
             placeholder="Выберите"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
           >
           </v-autocomplete>
         </v-col>
@@ -77,7 +77,7 @@
             class="records__textarea"
             v-model="notes2"
           ></v-textarea>
-          <v-btn class="records__secondary-btn" elevation="1">Добавить</v-btn>
+          <v-btn class="records__secondary-btn" elevation="1">{{ $t("Add") }}</v-btn>
         </v-col>
       </v-row>
 <!--Comments-->

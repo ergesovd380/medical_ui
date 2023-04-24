@@ -6,7 +6,7 @@
       elevation="0"
     >
 <!--Header-->
-      <nuxt-link tag="button" to="/blank" class="main-btn mt-2 ms-2">Назад</nuxt-link>
+      <nuxt-link tag="button" to="/blank" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
       <label class="mx-3">Görnüşiň şertli belgisi</label>
       <v-text-field
@@ -91,7 +91,7 @@
           color="var(--blue-color)"
           class="blank__create-input"
           placeholder="Выберите"
-          no-data-text="Нет данных"
+          no-data-text="Нет Данных"
           required
         >
         </v-autocomplete>
@@ -105,7 +105,7 @@
           color="var(--blue-color)"
           class="blank__create-input"
           placeholder="Выберите"
-          no-data-text="Нет данных"
+          no-data-text="Нет Данных"
           :items="cabinetCheck"
         >
         </v-autocomplete>
@@ -123,7 +123,7 @@
             class="blank__create-input"
             append-icon="mdi-magnify"
             placeholder="Näsag gözlegi"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
             :items="elementByNameSurnameOfPatient"
           >
           </v-autocomplete>

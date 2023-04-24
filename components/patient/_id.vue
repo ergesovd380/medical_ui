@@ -8,10 +8,10 @@
 <!--Page name-->
       <h3 class="patient__title red--text">{{ numberofcard }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
       <v-spacer></v-spacer>
       <div class="me-5">
-        <nuxt-link tag="button" :to="'/patient/' + numberofcard + '/complaint'" class="main-btn mt-2 ms-2">Жалобы</nuxt-link>
+        <nuxt-link tag="button" :to="'/patient/' + numberofcard + '/complaint'" class="main-btn mt-2 ms-2">{{ $t("Complaints") }}</nuxt-link>
         <nuxt-link tag="button" :to="'/patient/' + numberofcard + '/records'" class="main-btn mt-2 ms-2">Записи</nuxt-link>
       </div>
       <v-btn icon class="main-filter-btn mt-2" :to="'/patient/' + id + '/edit'">
@@ -94,7 +94,7 @@
 <!--Status and phonenumber-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Гражданский статус</h4>
+          <h4 class="ms-4">ГражДанский статус</h4>
           <v-text-field
             filled
             rounded

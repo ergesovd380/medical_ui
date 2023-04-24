@@ -8,13 +8,13 @@
       >
         <v-card height="256">
           <div class="dialog__title">
-            <h3 class="text-center">Вы хотите отменить внесенные изменения?</h3>
+            <h3 class="text-center">{{ $t("Cancel_changes") }}</h3>
             <div class="mt-10 text-center">
               <v-btn class="dialog__btn" color="var(--secondary-color)" @click="dialogResponse(true)">
-                Да
+                {{ $t("Yes") }}
               </v-btn>
               <v-btn class="dialog__btn" color="var(--secondary-color)" @click="openDialog = !openDialog">
-                Нет
+                {{ $t("No") }}
               </v-btn>
             </div>
           </div>

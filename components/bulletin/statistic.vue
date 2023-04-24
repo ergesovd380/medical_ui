@@ -34,7 +34,7 @@
                   <v-subheader @click="sortByFilter('namerussian')" class="menu-items">По названию на русском</v-subheader>
                   <v-subheader @click="sortByFilter('personal')" class="menu-items">По персоналу</v-subheader>
                   <v-subheader @click="sortByFilter('cabinet')" class="menu-items">По кабинетам</v-subheader>
-                  <v-subheader @click="sortByFilter('readed')" class="menu-items">По дате</v-subheader>
+                  <v-subheader @click="sortByFilter('readed')" class="menu-items">По Дате</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -54,8 +54,8 @@
       :items="[elements]"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      no-data-text="Нет Данных"
+      no-results-text="Нет Данных"
       :page.sync="page"
       @page-count="pageCount = $event"
       :sort-by="sortBy.toLowerCase()"

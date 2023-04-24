@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="patient__title my-2">Новый пациент</h3>
 <!--Button add-->
-      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" to="/patient" class="main-btn my-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
     <v-form 
       class="patient__value mt-5"
@@ -37,7 +37,7 @@
         </v-col>
         <v-col class="mt-4">
           <v-checkbox
-          label="Личные данные неизвестны"
+          label="Личные Данные неизвестны"
           color="var(--blue-color)"
           v-model="checkbox"
           ></v-checkbox>
@@ -102,7 +102,7 @@
               color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
-              no-data-text="Нет данных"
+              no-data-text="Нет Данных"
               :rules="rulesInput"
               required
               :items="['Мужской', 'Женский']"
@@ -144,7 +144,7 @@
 <!--Status and phonenumber-->
         <v-row>
           <v-col>
-            <h4 class="ms-4">Гражданский статус</h4>
+            <h4 class="ms-4">ГражДанский статус</h4>
             <v-autocomplete
               filled
               rounded
@@ -152,10 +152,10 @@
               color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
-              no-data-text="Нет данных"
+              no-data-text="Нет Данных"
               :rules="rulesInput"
               required
-              :items="['Гражданин Туркменистана', 'Иностранец', 'Иностранец-дипломат']"
+              :items="['ГражДанин Туркменистана', 'Иностранец', 'Иностранец-дипломат']"
               :disabled="checkbox"
             >
             </v-autocomplete>
@@ -207,7 +207,7 @@
               color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
-              no-data-text="Нет данных"
+              no-data-text="Нет Данных"
               :items="['Поликлиника номер1', 'Поликлиника номер2', 'Поликлиника номер3', 'Поликлиника номер4']"
               :disabled="checkbox"
             >
@@ -229,7 +229,7 @@
               color="var(--blue-color)"
               class="patient__input"
               placeholder="Выберите"
-              no-data-text="Нет данных"
+              no-data-text="Нет Данных"
               :rules="rulesInput"
               :disabled="checkbox"
               required

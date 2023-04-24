@@ -21,8 +21,8 @@
           class="text-center"
         >
           <img src="@/images/logo.png" width="103px" height="101px" />
-          <h1 class="nav__logo">Международный <br> центр травматологии</h1>
-          <h1 class="nav__title text-left">Главный администратор</h1>
+          <h1 class="nav__logo">{{ $t("International") }}<br>{{ $t("Hospital") }}</h1>
+          <h1 class="nav__title text-left">{{ $t("Administrator") }}</h1>
         </div>
         <v-list
           nav
@@ -40,12 +40,16 @@
             <v-icon class="me-2 nav__icon">{{ item.icon }}</v-icon>
             <v-list-item-title  class="ms-2 nav__item">{{ item.title }}</v-list-item-title>
           </v-list-item>
+          <v-list-item>
+          <v-icon class="me-2 nav__icon">mdi-earth</v-icon>
+          <v-list-item-title class="nav__item">
+            <v-select rounded :items="locale" v-model="activeLang" @change="onChange(selectedValue)" color="var(--blue-color)"></v-select>
+          </v-list-item-title>
+          </v-list-item>
         </v-list>
-        <v-select :items="locale" v-model="activeLang" @change="onChange(selectedValue)"></v-select>
-
         <v-btn class="white nav__exit-btn" fixed bottom>
             <v-icon class="me-2">mdi-exit-to-app</v-icon>
-            <span v-if="!miniVariant"> Выйти</span>
+            <span v-if="!miniVariant">{{ $t("Out") }}</span>
         </v-btn>
       </v-navigation-drawer>
 <!--Second Navigation-->

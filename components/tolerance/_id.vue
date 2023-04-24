@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="tolerance__title">{{ id }}</h3>
 <!--Button add-->
-      <nuxt-link tag="button" no-prefetch to="/tolerance" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" no-prefetch to="/tolerance" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/tolerance" class="main-btn mt-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" no-prefetch to="/tolerance" class="main-btn mt-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
@@ -60,8 +60,8 @@
             :items="elementtolerance"
             :items-per-page="100"
             :search="searchTolerance"
-            no-data-text="Нет данных"
-            no-results-text="Нет данных"
+            no-data-text="Нет Данных"
+            no-results-text="Нет Данных"
             item-key="name"
             show-select
             class="elevation-1"
@@ -101,8 +101,8 @@
             hide-default-footer
             :items="elementsToleranceCreate"
             :items-per-page="100"
-            no-data-text="Нет данных"
-            no-results-text="Нет данных"
+            no-data-text="Нет Данных"
+            no-results-text="Нет Данных"
             item-key="name"
             :search="searchCreate"
             show-select
@@ -139,37 +139,37 @@ export default {
           name: 'Кабинеты - Просмотр',
         },
         {
-          name: 'Кабинеты - Создавать',
+          name: 'Кабинеты - СозДавать',
         },
         {
           name: 'Кабинеты - Изменять',
         },
         {
-          name: 'Кабинеты - Удалять',
+          name: 'Кабинеты - УДалять',
         },
         {
           name: 'Сотрудники - Просмотр',
         },
         {
-          name: 'Сотрудники - Создавать',
+          name: 'Сотрудники - СозДавать',
         },
         {
           name: 'Сотрудники - Изменять',
         },
         {
-          name: 'Сотрудники - Удалять',
+          name: 'Сотрудники - УДалять',
         },
         {
           name: 'Обследования - Просмотр',
         },
         {
-          name: 'Обследования - Создавать',
+          name: 'Обследования - СозДавать',
         },
         {
           name: 'Обследования - Изменять',
         },
         {
-          name: 'Обследования - Удалять',
+          name: 'Обследования - УДалять',
         },
       ],
       elementsToleranceCreate: [],

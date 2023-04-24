@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="personal__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <nuxt-link tag="button" to="/personal" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
       <v-btn icon class="main-filter-btn mt-2" :to="'/personal/' + id + '/edit'">
         <v-icon>
@@ -35,13 +35,14 @@
       <v-row>
 <!--F.I.O personal-->
         <v-col>
-            <h4 class="ms-4">Ф.И.О сотрудника</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.NSF_personal') }}</h4>
             <v-text-field
               filled
               rounded
               dense
               class="personal__input"
               v-model="surnamePersonal"
+              :placeholder="$t('Name')"
               readonly
             ></v-text-field>
             <v-text-field
@@ -50,6 +51,7 @@
               dense
               class="personal__input mt-6"
               v-model="namePersonal"
+              :placeholder="$t('Surname')"
               readonly
             ></v-text-field>
             <v-text-field
@@ -58,28 +60,30 @@
               dense
               class="personal__input mt-6"
               v-model="fathNamePersonal"
+              :placeholder="$t('Fath_name')"
               readonly
             ></v-text-field>
-            <h4 class="ms-4 mt-8">Контактные данные</h4>
+            <h4 class="ms-4 mt-8">{{ $t('PersonalData.Contact_data') }}</h4>
             <v-text-field
               filled
               rounded
               dense
               class="personal__input"
               v-model="phoneNumberPersonal"
+              :placeholder="$t('Phone_number')"
               readonly
             ></v-text-field>
         </v-col>
 <!--Work day and time-->
         <v-col>
-            <h4 class="ms-4">Рабичие дни и часы приема</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.Work_days') }}</h4>
             <v-row>
               <v-col>
 <!--Пн-->
                 <v-row>
                   <v-col class="col-3">
                     <v-checkbox
-                    label="Пн"
+                    :label="$t('PersonalData.Monday')"
                     color="var(--blue-color)"
                     v-model="Pn"
                     readonly
@@ -102,7 +106,7 @@
                 <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
-                    label="Вт"
+                    :label="$t('PersonalData.Tuesday')"
                     color="var(--blue-color)"
                     v-model="Vt"
                     readonly
@@ -125,7 +129,7 @@
                 <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
-                    label="Ср"
+                    :label="$t('PersonalData.Wednesday')"
                     color="var(--blue-color)"
                     readonly
                     V-model="Sr"
@@ -148,7 +152,7 @@
                 <v-row class="personal__day-margin">
                   <v-col class="col-3">
                     <v-checkbox
-                    label="Чт"
+                    :label="$t('PersonalData.Thursday')"
                     color="var(--blue-color)"
                     readonly
                     v-model="Cht"
@@ -173,7 +177,7 @@
                 <v-row>
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Пт"
+                  :label="$t('PersonalData.Friday')"
                   color="var(--blue-color)"
                   readonly
                   v-model="Pt"
@@ -196,7 +200,7 @@
                 <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Сб"
+                  :label="$t('PersonalData.Saturday')"
                   color="var(--blue-color)"
                   readonly
                   v-model="Sb"
@@ -219,7 +223,7 @@
                 <v-row class="personal__day-margin">
                 <v-col class="col-3">
                   <v-checkbox
-                  label="Вс"
+                  :label="$t('PersonalData.Sunday')"
                   color="var(--blue-color)"
                   readonly
                   v-model="Vs"
@@ -246,24 +250,26 @@
 <!--Password and Confirm Password-->
       <v-row>
         <v-col>
-            <h4 class="ms-4">Пароль</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.Pass') }}</h4>
             <v-text-field
               filled
               rounded
               dense
               class="personal__input"
               v-model="passwordPersonal"
+              :placeholder="$t('PersonalData.Pass')"
               readonly
             ></v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Подтвердите пароль</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.Confirm_pass') }}</h4>
             <v-text-field
               filled
               rounded
               dense
               class="personal__input"
               v-model="confPasswordPersonal"
+              :placeholder="$t('PersonalData.Confirm_pass')"
               readonly
             ></v-text-field>
         </v-col>
@@ -272,7 +278,7 @@
 <!--Cabinet and Job-->
       <v-row>
         <v-col>
-            <h4 class="ms-4">Кабинет</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.Cabinet') }}</h4>
             <v-text-field
               filled
               rounded
@@ -280,17 +286,19 @@
               class="personal__input"
               readonly
               v-model="personalCabinet"
+              :placeholder="$t('PersonalData.Cabinet')"
             >
             </v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Должность</h4>
+            <h4 class="ms-4">{{ $t('PersonalData.Job') }}</h4>
             <v-text-field
               filled
               rounded
               dense
               class="personal__input"
               readonly
+              :placeholder="$t('PersonalData.Job')"
             >
             </v-text-field>
         </v-col>
@@ -298,7 +306,7 @@
 <!--Проводимые приемы, обследования, диагностика-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Survey_a_diagnostics') }}</h4>
           <v-text-field
               filled
               rounded
@@ -306,6 +314,7 @@
               class="personal__input"
               v-model="survey"
               readonly
+              :placeholder="$t('PersonalData.Survey_a_diagnostics')"
             >
           </v-text-field>
         </v-col>
@@ -313,7 +322,7 @@
 <!---Используемые бланки-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Используемые бланки</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Use_blanks') }}</h4>
           <v-text-field
               filled
               rounded
@@ -321,6 +330,7 @@
               class="personal__input"
               v-model="blank"
               readonly
+              :placeholder="$t('PersonalData.Use_blanks')"
             >
           </v-text-field>
         </v-col>
@@ -329,18 +339,19 @@
 <!--Access rights-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Права доступа</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Access') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             readonly
             class="personal__input"
+            :placeholder="$t('PersonalData.Access')"
           >
           </v-text-field>
           <v-checkbox
               v-model="checkbox"
-              :label="checkbox ? 'Активный' : 'Не активный'"
+              :label="checkbox ? $t('Active') : $t('Not_active')"
               readonly
               color="var(--blue-color)"
           ></v-checkbox>
@@ -385,12 +396,6 @@ export default {
       personalCabinet: this.element.cabinet,
       passwordPersonal: '',
       confPasswordPersonal: '',
-    }
-  },
-  methods: {
-    back() {
-      window.history.go(-1)
-      return false
     }
   }
 }

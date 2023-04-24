@@ -13,7 +13,7 @@
         :to="'/patient/' + id" 
         class="main-btn mt-2 ms-2"
         no-prefetch
-      >Назад</nuxt-link>
+      >{{ $t("Back") }}</nuxt-link>
     </v-app-bar>
     <div class="patient__complaint-value mt-5">
       <v-row>
@@ -32,7 +32,7 @@
             placeholder="Примечания"
             v-model="notes2"
           ></v-textarea>
-          <v-btn class="patient__secondary-btn" elevation="1">Добавить</v-btn>
+          <v-btn class="patient__secondary-btn" elevation="1">{{ $t("Add") }}</v-btn>
         </v-col>
       </v-row>
       <v-row>

@@ -21,9 +21,9 @@
         :class="selected.length < 1 ? 'd-none' : 'd-block'" 
         @click="deleteDialog = !deleteDialog"
       >
-        Удалить
+        {{ $t("Delete") }}
       </button>
-      <button class="main-btn mt-2 ms-2" @click="addDialog = !addDialog">Добавить</button>
+      <button class="main-btn mt-2 ms-2" @click="addDialog = !addDialog">{{ $t("Add") }}</button>
     </v-app-bar>
 <!--Table-->
     <v-data-table
@@ -42,8 +42,8 @@
       :search="search"
       show-select
       v-model="selected"
-      no-data-text="Нет данных"
-      no-results-text="Нет данных"
+      no-data-text="Нет Данных"
+      no-results-text="Нет Данных"
       :page.sync="page"
       @page-count="pageCount = $event"
     >
@@ -83,7 +83,7 @@
       >
         <v-card height="256">
           <div class="dialog__title">
-            <h3 class="text-center">Вы хотите удалить выбранные гражданские статусы?</h3>
+            <h3 class="text-center">Вы хотите {{ $t("Delete") }} выбранные гражДанские статусы?</h3>
             <div class="mt-10 text-center">
               <v-btn class="dialog__btn" color="var(--secondary-color)" @click="deleteCityzen">
                 Да
@@ -120,7 +120,7 @@
           </div>
           <div class="mt-10 text-center">
             <v-btn class="dialog__btn" color="var(--secondary-color)" :disabled="editedItem.nameCityzen.length < 3" @click="addCityzen">
-              Сохранить
+              {{ $t("Save") }}
             </v-btn>
             <v-btn class="dialog__btn" color="var(--secondary-color)" @click="cancelMedia">
               Отмена
@@ -158,7 +158,7 @@
         elements: [
           {
             id: 1,
-            nameCityzen: 'Гражданин Туркменистана'
+            nameCityzen: 'ГражДанин Туркменистана'
           },
           {
             id: 2,

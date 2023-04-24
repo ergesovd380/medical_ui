@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="records__title red--text">{{ $route.params.id }} / {{ elementByNumberOfCardRecord.numberofrecord }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
       <v-spacer></v-spacer>
       <app-pay :dataOfCard="elementByNumberOfCardRecord" />
       <v-btn icon class="mt-2 main-filter-btn">
@@ -31,8 +31,8 @@
             hide-default-header
             hide-default-footer
             :items="elementsRecordCreate"
-            no-data-text="Нет данных"
-            no-results-text="Нет данных"
+            no-data-text="Нет Данных"
+            no-results-text="Нет Данных"
             @dblclick:row="openRow"
           >
 <!--Table header-->

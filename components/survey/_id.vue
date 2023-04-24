@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="survey__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">Назад</button>
+      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
       <v-spacer></v-spacer>
       <v-btn icon class="main-filter-btn mt-2 ms-2" :to="'/survey/' + id + '/edit'">
         <v-icon>

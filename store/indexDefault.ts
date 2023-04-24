@@ -20,21 +20,6 @@ export const  state = () => ({
       title: 'Обследования',
       to: '/survey'
     },
-    // {
-    //   icon: 'mdi-folder-open',
-    //   title: 'Обзор Доктор',
-    //   to: '/review'
-    // },
-    // {
-    //   icon: 'mdi-calendar',
-    //   title: 'Календарь доктор',
-    //   to: '/calendar'
-    // },
-    // {
-    //   icon: 'mdi-table-edit',
-    //   title: 'Записи Доктор',
-    //   to: '/recordsDoctor'
-    // },
     {
       icon: 'mdi-card-account-details',
       title: 'Пациенты',

@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="records__title my-2">Новый запись</h3>
 <!--Button add-->
-      <button @click="back" class="main-btn my-2 ms-2">Сохранить</button>
-      <button @click="back" class="main-btn my-2 ms-2">Отмениить</button>
+      <button @click="back" class="main-btn my-2 ms-2">{{ $t("Save") }}</button>
+      <button @click="back" class="main-btn my-2 ms-2">{{ $t("Cancel") }}</button>
     </v-app-bar>
     <v-form 
       class="records__value mt-5"
@@ -47,7 +47,7 @@
             class="records__input"
             append-icon="mdi-magnify"
             placeholder="Поиск пациента"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
             v-model="patient"
             :items="elementByNameSurnameOfPatient"
           >
@@ -69,7 +69,7 @@
             color="var(--blue-color)"
             class="records__input"
             placeholder="Выберите"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
             v-model="editedItem.personal"
             :items="elementByNameSurname"
           >
@@ -84,7 +84,7 @@
             color="var(--blue-color)"
             class="records__input"
             placeholder="Выберите"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
             v-model="editedItem.nameofcabinet"
             :items="elementCabinetByNamePersonal"
           >
@@ -102,7 +102,7 @@
             color="var(--blue-color)"
             class="records__input"
             placeholder="Выберите"
-            no-data-text="Нет данных"
+            no-data-text="Нет Данных"
             v-model="editedItem.survey"
             :items="elementSurveyByNamePersonal"
             multiple
@@ -124,7 +124,7 @@
             v-model="editedItem.date"
           ></v-text-field>
           <v-btn class="records__secondary-btn mt-3" @click="save">
-          Добавить
+            {{ $t("Add") }}
         </v-btn>
         </v-col>
         <v-col class="col-4">
@@ -158,7 +158,7 @@
             v-model="notes"
           ></v-textarea>
           <v-btn class="records__secondary-btn" @click="showConsole">
-            Добавить
+            {{ $t("Add") }}
           </v-btn>
         </v-col>
       </v-row>
@@ -170,8 +170,8 @@
           hide-default-header
           hide-default-footer
           :items="elementsRecordCreate"
-          no-data-text="Нет данных"
-          no-results-text="Нет данных"
+          no-data-text="Нет Данных"
+          no-results-text="Нет Данных"
         >
 <!--Table header-->
           <template v-slot:header="{ props: { headers } }">

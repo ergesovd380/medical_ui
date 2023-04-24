@@ -8,8 +8,8 @@
 <!--Page name-->
       <h3 class="survey__title red--text">{{ $route.params.id }}</h3>
       <!--Button add-->
-      <nuxt-link tag="button" :to="'/survey/' + id" class="main-btn mt-2 ms-2">Сохранить</nuxt-link>
-      <nuxt-link tag="button" :to="'/survey/' + id" class="main-btn mt-2 ms-2">Отмениить</nuxt-link>
+      <nuxt-link tag="button" :to="'/survey/' + id" class="main-btn mt-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" :to="'/survey/' + id" class="main-btn mt-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
 <!-- Form create -->
     <v-form 
