@@ -1,11 +1,13 @@
 import { LocaleMessageObject } from "vue-i18n/types";
 import CabinetData from "./Ru_ru/Cabinet";
 import PersonalData from "./Ru_ru/Personal";
+import SurveyData from "./Ru_ru/Survey";
 
 let messages: LocaleMessageObject = {
 // Pages
     CabinetData,
     PersonalData,
+    SurveyData,
 
 // Table
     Default: 'По умолчанию',
@@ -18,6 +20,7 @@ let messages: LocaleMessageObject = {
     By_job: 'По должности',
     By_admission: 'По допуску',
     By_blanks: 'По бланкам',
+    By_survey_diagnostic: 'По названию приема, об...',
 
     All: 'Все',
     Rows_page:'Строк в странице',

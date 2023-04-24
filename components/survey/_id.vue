@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="survey__title red--text">{{ $route.params.id }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
+      <nuxt-link tag="button" to="/survey" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
       <v-btn icon class="main-filter-btn mt-2 ms-2" :to="'/survey/' + id + '/edit'">
         <v-icon>
@@ -24,7 +24,7 @@
 <!--Header inputs-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Кассовый номер</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Cassa_number') }}</h4>
           <v-text-field
               filled
               rounded
@@ -37,7 +37,7 @@
       </v-row>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Name_survey') }}</h4>
           <v-text-field
             filled
             rounded
@@ -51,7 +51,7 @@
 <!--Chid inputs-->
       <v-row>
         <v-col>
-            <h4 class="ms-4">Без страховки (TMT)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.Not_insurance') }}</h4>
             <v-text-field
                 filled
                 rounded
@@ -62,7 +62,7 @@
             ></v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Со страховкой (TMT)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.With_insurance') }}</h4>
             <v-text-field
                 filled
                 rounded
@@ -73,7 +73,7 @@
             ></v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Иностранец ($)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.Forigner') }}</h4>
             <v-text-field
               filled
               rounded
@@ -84,7 +84,7 @@
             ></v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Дипломат (TMT)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.Diplomat') }}</h4>
             <v-text-field
               filled
               rounded
@@ -110,12 +110,6 @@ export default {
       withInsurance: '',
       withoutInsurance: '',
       diplomat: ''
-    }
-  },
-  methods: {
-    back() {
-      window.history.go(-1)
-      return false
     }
   }
 }

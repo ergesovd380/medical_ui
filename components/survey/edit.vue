@@ -21,7 +21,7 @@
 <!--Header inputs-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Кассовый номер</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Cassa_number') }}</h4>
           <v-text-field
             filled
             rounded
@@ -33,12 +33,13 @@
             :rules="rulesInput"
             required
             type="number"
+            :placeholder="$t('SurveyData.Cassa_number')"
           ></v-text-field>
         </v-col>
       </v-row>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Name_survey') }}</h4>
           <v-text-field
             filled
             rounded
@@ -46,7 +47,7 @@
             color="var(--blue-color)"
             class="survey__input-cassa"
             type="text"
-            placeholder="Içki organlaryň ultrases barlagy"
+            :placeholder="$t('SurveyData.Name_survey')"
             autocomplete="none"
             v-model="name"
             :rules="rulesInput"
@@ -57,7 +58,7 @@
 <!--Chid inputs-->
       <v-row>
         <v-col>
-            <h4 class="ms-4">Без страховки (TMT)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.Not_insurance') }}</h4>
             <v-text-field
               filled
               rounded
@@ -70,7 +71,7 @@
             ></v-text-field>
         </v-col>
         <v-col>
-            <h4 class="ms-4">Со страховкой (TMT)</h4>
+            <h4 class="ms-4">{{ $t('SurveyData.With_insurance') }}</h4>
             <v-text-field
               filled
               rounded
@@ -83,7 +84,7 @@
             ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Иностранец ($)</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Forigner') }}</h4>
           <v-text-field
             filled
             rounded
@@ -96,7 +97,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Дипломат (TMT)</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Diplomat') }}</h4>
           <v-text-field
             filled
             rounded
@@ -129,7 +130,7 @@ export default {
       disabled: false,
       dialog: false,
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ]
     }
   }

@@ -1,11 +1,13 @@
 import { LocaleMessageObject } from "vue-i18n/types";
 import CabinetData from "./TM_tm/Cabinet";
 import PersonalData from "./TM_tm/Personal";
+import SurveyData from "./TM_tm/Survey";
 
 let messages: LocaleMessageObject = {
 // Pages
     CabinetData,
     PersonalData,
+    SurveyData,
 
 // Table
     // Filter
@@ -19,6 +21,7 @@ let messages: LocaleMessageObject = {
     By_job: 'Wezipesi boýunça',
     By_admission: 'Rugsady boýunça',
     By_blanks: 'Blankalar boýunça',
+    By_survey_diagnostic: 'Diagnostika we barlag boýunça',
 
     All: 'Ählisi',
     Rows_page:'Sahypada setir',
