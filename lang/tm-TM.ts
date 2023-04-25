@@ -5,6 +5,7 @@ import SurveyData from "./TM_tm/Survey";
 import PatientData from "./TM_tm/Patient";
 import BulletinData from "./TM_tm/Bulletin";
 import RecordData from "./TM_tm/Records";
+import StatisticData from "./TM_tm/Statistic";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -14,6 +15,7 @@ let messages: LocaleMessageObject = {
     PatientData,
     BulletinData,
     RecordData,
+    StatisticData,
 
 // Table
     // Filter
@@ -88,6 +90,8 @@ let messages: LocaleMessageObject = {
     Flat: 'Öý/Ofis',
     Date: 'Sene',
     Patient: 'Hassa',
+    Patients: 'Hassalar',
+    Cassa: 'Kassa',
     Status: 'Status',
     Time: 'Wagt',
     Sum: 'Bahasy',

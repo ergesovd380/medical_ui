@@ -7,53 +7,53 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="statistic__title">Пациенты</h3>
+      <h3 class="statistic__title">{{ $t('Patients') }}</h3>
 <!--Button add-->
       <nuxt-link tag="button" to="/statistic" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
         <template v-slot:activator="{ on, attrs }">
-            <button v-bind="attrs" color="var(--light-color)" v-on="on" class="main-btn mr-3">
-              Экспорт отчета
-              <v-icon
-                right
-              >
-                mdi-chevron-down
-              </v-icon>
-            </button>
+          <button v-bind="attrs" color="var(--light-color)" v-on="on" class="main-btn mr-3">
+            {{ $t('StatisticData.Eks_report')}}
+            <v-icon
+              right
+            >
+              mdi-chevron-down
+            </v-icon>
+          </button>
         </template>
         <v-card class="mx-auto" width="222px" tile>
-            <v-list dense>
-                <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">По номеру мед.карты</v-subheader>
-                <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">По Ф.И.О пациента</v-subheader>
-                <v-subheader @click="sortByFilter('birthday')" class="menu-items">По Дате рождения</v-subheader>
-                <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">По номеру телефона</v-subheader>
-                <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">По статусу</v-subheader>
-            </v-list>
+          <v-list dense>
+            <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t('Default') }}</v-subheader>
+            <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">{{ $t('By_number_card') }}</v-subheader>
+            <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">{{ $t('By_NSF') }}</v-subheader>
+            <v-subheader @click="sortByFilter('birthday')" class="menu-items">{{ $t('By_birthday') }}</v-subheader>
+            <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">{{ $t('By_phone_number') }}</v-subheader>
+            <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">{{ $t('By_status') }}</v-subheader>
+          </v-list>
         </v-card>
       </v-menu>
       <v-menu open-on-click transition="slide-x-transition" offset-y>
         <template v-slot:activator="{ on, attrs }">
-            <button v-bind="attrs" v-on="on" class="main-btn">
-              Посл. 30 дней
-              <v-icon
-                right
-              >
-                mdi-chevron-down
-              </v-icon>
-            </button>
+          <button v-bind="attrs" v-on="on" class="main-btn">
+            {{ $t('StatisticData.Last_30')}}
+            <v-icon
+              right
+            >
+              mdi-chevron-down
+            </v-icon>
+          </button>
         </template>
         <v-card class="mx-auto" width="222px" tile>
-            <v-list dense>
-                <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">По номеру мед.карты</v-subheader>
-                <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">По Ф.И.О пациента</v-subheader>
-                <v-subheader @click="sortByFilter('birthday')" class="menu-items">По Дате рождения</v-subheader>
-                <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">По номеру телефона</v-subheader>
-                <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">По статусу</v-subheader>
-            </v-list>
+          <v-list dense>
+            <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t('Default') }}</v-subheader>
+            <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">{{ $t('By_number_card') }}</v-subheader>
+            <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">{{ $t('By_NSF') }}</v-subheader>
+            <v-subheader @click="sortByFilter('birthday')" class="menu-items">{{ $t('By_birthday') }}</v-subheader>
+            <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">{{ $t('By_phone_number') }}</v-subheader>
+            <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">{{ $t('By_status') }}</v-subheader>
+          </v-list>
         </v-card>
       </v-menu>
     </v-app-bar>
@@ -73,8 +73,8 @@
             :headers="headers"
             hide-default-header
             :footer-props="{
-              itemsPerPageAllText: 'Все',
-              itemsPerPageText: 'Строк в странице',
+              itemsPerPageAllText: $t('All'),
+              itemsPerPageText: $t('Rows_page'),
               disablePagination: true,
               nextIcon: '',
               prevIcon: '',
@@ -83,8 +83,8 @@
             :items="elements"
             :items-per-page="itemsPerPage"
             :search="search"
-            no-data-text="Нет Данных"
-            no-results-text="Нет Данных"
+            :no-data-text="$t('No_data')"
+            :no-results-text="$t('No_data')"
             :page.sync="page"
             @page-count="pageCount = $event"
             @dblclick:row="openRow"

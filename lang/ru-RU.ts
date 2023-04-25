@@ -5,6 +5,7 @@ import SurveyData from "./Ru_ru/Survey";
 import PatientData from "./Ru_ru/Patient";
 import BulletinData from "./Ru_ru/Bulletin";
 import RecordData from "./Ru_ru/Records";
+import StatisticData from "./Ru_ru/Statistic";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -14,6 +15,7 @@ let messages: LocaleMessageObject = {
     PatientData,
     BulletinData,
     RecordData,
+    StatisticData,
 
 // Table
     Default: 'По умолчанию',
@@ -87,6 +89,8 @@ let messages: LocaleMessageObject = {
     Flat: 'Квартира/Офис',
     Date: 'Дата',
     Patient: 'Больной',
+    Patients: 'Пациенты',
+    Cassa: 'Касса',
     Status: 'Статус',
     Time: 'Время',
     Sum: 'Сумма',

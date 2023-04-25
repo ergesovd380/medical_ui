@@ -7,7 +7,7 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="statistic__title">Статистика</h3>
+      <h3 class="statistic__title">{{ $t('StatisticData.Statistic') }}</h3>
       <v-spacer></v-spacer>
       <v-btn icon class="mt-2 ms-2 main-filter-btn">
         <v-icon>
@@ -21,7 +21,7 @@
           <div class="col-5">
             <div class="row">
               <div class="col text-center">
-                <h4>Пациенты</h4>
+                <h4>{{ $t('Patients') }}</h4>
               </div>
             </div>
             <client-only>
@@ -29,14 +29,14 @@
             </client-only>
             <div class="row">
               <div class="col text-center">
-                <nuxt-link tag="v-btn" to="/statistic/patient" class="statistic__secondary-btn">Посмотреть</nuxt-link>
+                <nuxt-link tag="v-btn" to="/statistic/patient" class="statistic__secondary-btn">{{ $t('Show') }}</nuxt-link>
               </div>
             </div>
           </div>
           <div class="offset-1 col-5">
             <div class="row">
               <div class="col text-center">
-                <h4>Записы</h4>
+                <h4>{{ $t('Records') }}</h4>
               </div>
             </div>
             <client-only>
@@ -44,7 +44,7 @@
             </client-only>
             <div class="row">
               <div class="col text-center">
-                <nuxt-link tag="v-btn" to="/statistic/records" class="statistic__secondary-btn">Посмотреть</nuxt-link>
+                <nuxt-link tag="v-btn" to="/statistic/records" class="statistic__secondary-btn">{{ $t('Show') }}</nuxt-link>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@
           <div class="col-5">
             <div class="row">
               <div class="col text-center">
-                <h4>Касса</h4>
+                <h4>{{ $t('Cassa') }}</h4>
               </div>
             </div>
             <client-only>
@@ -61,7 +61,7 @@
             </client-only>
             <div class="row">
               <div class="col text-center">
-                <v-btn class="statistic__secondary-btn">Посмотреть</v-btn>
+                <v-btn class="statistic__secondary-btn">{{ $t('Show') }}</v-btn>
               </div>
             </div>
           </div>
