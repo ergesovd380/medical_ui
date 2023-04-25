@@ -18,7 +18,7 @@
     <div class="patient__complaint-value mt-5">
       <v-row>
         <v-col>
-          <h4 class="ms-4">Жалоба</h4>
+          <h4 class="ms-4">{{ $t('Complaints') }}</h4>
           <v-textarea
             filled
             rounded
@@ -29,16 +29,16 @@
             rows="10"
             row-height="10"
             class="patient__textarea"
-            placeholder="Примечания"
+            :placeholder="$t('Notes')"
             v-model="notes2"
           ></v-textarea>
           <v-btn class="patient__secondary-btn" elevation="1">{{ $t("Add") }}</v-btn>
         </v-col>
       </v-row>
       <v-row>
-        <v-col class="col-2">Дата: {{ element.birthday }}</v-col>
-        <v-col class="col-3">Больной: {{ element.namesurnameofpatient }}</v-col>
-        <v-col class="col-2">Статус: {{ element.statuspatient }}</v-col>
+        <v-col class="col-2">{{ $t('Date') }}: {{ element.birthday }}</v-col>
+        <v-col class="col-3">{{ $t('Patient') }}: {{ element.namesurnameofpatient }}</v-col>
+        <v-col class="col-2">{{ $t('Status') }}: {{ element.statuspatient }}</v-col>
       </v-row>
       <v-row>
         <v-col>

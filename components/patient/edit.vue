@@ -20,7 +20,7 @@
 <!--F.I.O patient-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Ф.И.О пациента</h4>
+          <h4 class="ms-4">{{ $t('PatientData.NSF_patient') }}</h4>
           <v-text-field
             v-model="surnamePatient"
             filled
@@ -28,7 +28,7 @@
             dense
             color="var(--blue-color)"
             class="patient__input"
-            placeholder="Фамилия"
+            :placeholder="$t('Surname')"
             autocomplete="none"
             type="text"
             :rules="rulesInput"
@@ -41,7 +41,7 @@
             dense
             color="var(--blue-color)"
             class="patient__input mt-6"
-            placeholder="Имя"
+            :placeholder="$t('Name')"
             autocomplete="none"
             type="text"
             :rules="rulesInput"
@@ -54,26 +54,24 @@
             dense
             color="var(--blue-color)"
             class="patient__input mt-6"
-            placeholder="Отчество"
+            :placeholder="$t('Fath_name')"
             autocomplete="none"
             type="text"
-            :rules="rulesInput"
-            required
           ></v-text-field>
         </v-col>
       </v-row>
 <!--Sex, birthday, PassportSeria-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Пол</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Sex') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="patient__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
             :rules="rulesInput"
             required
             :items="['Мужской', 'Женский']"
@@ -81,7 +79,7 @@
           </v-autocomplete>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Дата рождения</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Birthday') }}</h4>
           <v-text-field
             filled
             rounded
@@ -94,7 +92,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Пасспорт №</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Passport') }}</h4>
           <v-text-field
             filled
             rounded
@@ -112,14 +110,14 @@
 <!--Status and phonenumber-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">ГражДанский статус</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Citizen_status') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="patient__input"
-            placeholder="Выберите"
+            :placeholder="$t('Choose')"
             no-data-text="Нет Данных"
             :rules="rulesInput"
             required
@@ -128,7 +126,7 @@
           </v-autocomplete>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Номер телефона</h4>
+          <h4 class="ms-4">{{ $t('Phone_number') }}</h4>
           <v-text-field
             filled
             rounded
@@ -144,7 +142,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Номер телефона 2</h4>
+          <h4 class="ms-4">{{ $t('Phone_number') }}2</h4>
           <v-text-field
             filled
             rounded
@@ -154,9 +152,7 @@
             placeholder="+993"
             type="number"
             v-model="phonenumberOfPatient2"
-            :rules="rulesInputForPhone"
             :counter="11"
-            required
           ></v-text-field>
         </v-col>
       </v-row>
@@ -164,36 +160,36 @@
 <!--Poliklinika-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Поликлининка</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Policlinic') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="patient__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
             :items="['Поликлиника номер1', 'Поликлиника номер2', 'Поликлиника номер3', 'Поликлиника номер4']"
           >
           </v-autocomplete>
         </v-col>
         <v-col class="mt-6">
-          <v-btn class="personal-createP-btn">Нет в списке</v-btn>
+          <v-btn class="personal-createP-btn">{{ $t('No_list') }}</v-btn>
         </v-col>
       </v-row>
       <hr class="my-10">
 <!--Группа, vip-->
       <v-row>
         <v-col class="col-4">
-          <h4 class="ms-4">Группа</h4>
+          <h4 class="ms-4">{{ $t('PatientData.Group') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="patient__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
             :rules="rulesInput"
             required
           >
@@ -220,17 +216,17 @@
             rows="10"
             row-height="10"
             class="patient__textarea"
-            placeholder="Примечания"
+            :placeholder="$t('Notes')"
             v-model="notes"
           ></v-textarea>
         </v-col>
       </v-row>
       <hr class="my-10">
-      <h4 class="ms-4">Адрес</h4>
+      <h4 class="ms-4">{{ $t('Adress') }}</h4>
 <!--Region, City-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Регион</h4>
+          <h4 class="ms-4">{{ $t('Region') }}</h4>
           <v-text-field
             filled
             rounded
@@ -242,7 +238,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Город</h4>
+          <h4 class="ms-4">{{ $t('City') }}</h4>
           <v-text-field
             filled
             rounded
@@ -254,7 +250,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Район</h4>
+          <h4 class="ms-4">{{ $t('Area') }}</h4>
           <v-text-field
             filled
             rounded
@@ -269,7 +265,7 @@
 <!--Street, home-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Улица</h4>
+          <h4 class="ms-4">{{ $t('Street') }}</h4>
           <v-text-field
             filled
             rounded
@@ -281,7 +277,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Дом</h4>
+          <h4 class="ms-4">{{ $t('Home') }}</h4>
           <v-text-field
             filled
             rounded
@@ -293,7 +289,7 @@
           ></v-text-field>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Квартира/Офис</h4>
+          <h4 class="ms-4">{{ $t('Flat') }}</h4>
           <v-text-field
             filled
             rounded
@@ -318,16 +314,16 @@
             rows="10"
             row-height="10"
             class="patient__textarea"
-            placeholder="Примечания"
+            :placeholder="$t('Notes')"
             v-model="notes2"
           ></v-textarea>
         </v-col>
       </v-row>
-      <v-btn class="patient__secondary-btn" :class="{'d-none': checkbox}">Есть еще один?</v-btn>
+      <v-btn class="patient__secondary-btn" :class="{'d-none': checkbox}">{{ $t('Else_one') }}</v-btn>
       <hr class="my-10">
       <v-checkbox
         v-model="active"
-        :label="active ? 'Активный' : 'Не активный'"
+        :label="active ? $t('Active') : $t('Not_active')"
         color="var(--blue-color)"
       ></v-checkbox>
     </v-form>
@@ -360,12 +356,12 @@ export default {
       notes2: '',
 // Rules for inputs
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
       rulesInputForPhone: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
-        (v: any) => v.length === 11 || 'Должен быть 11 цифр',
-      ],
+        (v: any) => !!v || this.$t('Not_empty'),
+        (v: any) => v.length === 11 || this.$t('Symbols_11'),
+      ]
     }
   },
   computed: {

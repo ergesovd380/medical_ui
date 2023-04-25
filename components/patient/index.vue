@@ -29,12 +29,12 @@
           </template>
           <v-card class="mx-auto" width="222px" tile>
               <v-list dense>
-                  <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                  <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">По номеру мед.карты</v-subheader>
-                  <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">По Ф.И.О пациента</v-subheader>
-                  <v-subheader @click="sortByFilter('birthday')" class="menu-items">По Дате рождения</v-subheader>
-                  <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">По номеру телефона</v-subheader>
-                  <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">По статусу</v-subheader>
+                  <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t('Default') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('numberofcard')" class="menu-items">{{ $t('By_number_card') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('namesurnameofpatient')" class="menu-items">{{ $t('By_NSF') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('birthday')" class="menu-items">{{ $t('By_birthday') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('phonenumberpatient')" class="menu-items">{{ $t('By_phone_number') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('statuspatient')" class="menu-items">{{ $t('By_status') }}</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -44,8 +44,8 @@
       :headers="headers"
       hide-default-header
       :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
+        itemsPerPageAllText: $t('All'),
+        itemsPerPageText: $t('Rows_page'),
         disablePagination: true,
         nextIcon: '',
         prevIcon: '',
@@ -54,8 +54,8 @@
       :items="elements"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет Данных"
-      no-results-text="Нет Данных"
+      :no-data-text="$t('No_data')"
+      :no-results-text="$t('No_data')"
       :page.sync="page"
       @page-count="pageCount = $event"
       @dblclick:row="openRow"
