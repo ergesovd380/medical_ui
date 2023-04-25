@@ -6,10 +6,10 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="records__title my-2">Новый запись</h3>
+      <h3 class="records__title my-2">{{ $t('RecordData.New_record') }}</h3>
 <!--Button add-->
-      <button @click="back" class="main-btn my-2 ms-2">{{ $t("Save") }}</button>
-      <button @click="back" class="main-btn my-2 ms-2">{{ $t("Cancel") }}</button>
+      <nuxt-link tag="button" to="/records" class="main-btn my-2 ms-2">{{ $t("Save") }}</nuxt-link>
+      <nuxt-link tag="button" to="/records" class="main-btn my-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
     </v-app-bar>
     <v-form 
       class="records__value mt-5"
@@ -20,14 +20,14 @@
 <!--Number of card -->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Номер записи</h4>
+          <h4 class="ms-4">{{ $t('RecordData.Number_record') }}</h4>
           <v-text-field
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="records__element"
-            placeholder="Номер мед карты"
+            :placeholder="$t('RecordData.Number_record')"
             v-model="numberofcard"
             autocomplete="none"
             type="text"
@@ -46,29 +46,29 @@
             color="var(--blue-color)"
             class="records__input"
             append-icon="mdi-magnify"
-            placeholder="Поиск пациента"
-            no-data-text="Нет Данных"
+            :placeholder="$t('RecordData.Search_patient')"
+            :no-data-text="$t('No_data')"
             v-model="patient"
             :items="elementByNameSurnameOfPatient"
           >
           </v-autocomplete>
         </v-col>
         <v-col>
-          <nuxt-link tag="v-btn" no-prefetch :to="'/patient/create'" class="records__secondary-btn">Новый пациент?</nuxt-link>
+          <nuxt-link tag="v-btn" no-prefetch :to="'/patient/create'" class="records__secondary-btn">{{ $t('PatientData.New_patient') }}</nuxt-link>
         </v-col>
       </v-row>
       <hr class="my-10">
 <!--Cabnet and Doctor-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Доктор</h4>
+          <h4 class="ms-4">{{ $t('RecordData.Doctor') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="records__input"
-            placeholder="Выберите"
+            :placeholder="$t('Choose')"
             no-data-text="Нет Данных"
             v-model="editedItem.personal"
             :items="elementByNameSurname"
@@ -76,15 +76,15 @@
           </v-autocomplete>
         </v-col>
         <v-col>
-          <h4 class="ms-4">Кабинет</h4>
+          <h4 class="ms-4">{{ $t('Cabinet') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="records__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
             v-model="editedItem.nameofcabinet"
             :items="elementCabinetByNamePersonal"
           >
@@ -94,15 +94,15 @@
 <!--Surey-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Проводимые приемы, обследования, диагностика</h4>
+          <h4 class="ms-4">{{ $t('PersonalData.Survey_a_diagnostics') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="records__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
             v-model="editedItem.survey"
             :items="elementSurveyByNamePersonal"
             multiple
@@ -113,7 +113,7 @@
   <!--Date and time-->
       <v-row>
         <v-col class="col-4">
-          <h4 class="ms-4">Дата</h4>
+          <h4 class="ms-4">{{ $t('Date') }}</h4>
           <v-text-field
             filled
             rounded
@@ -128,7 +128,7 @@
         </v-btn>
         </v-col>
         <v-col class="col-4">
-          <h4 class="ms-4">Время</h4>
+          <h4 class="ms-4">{{ $t('Time') }}</h4>
           <v-text-field
             filled
             rounded
@@ -144,7 +144,7 @@
 <!--Приечания-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Примечание</h4>
+          <h4 class="ms-4">{{ $t('Notes') }}</h4>
           <v-textarea
             filled
             rounded
@@ -170,8 +170,8 @@
           hide-default-header
           hide-default-footer
           :items="elementsRecordCreate"
-          no-data-text="Нет Данных"
-          no-results-text="Нет Данных"
+          :no-data-text="$t('No_data')"
+          :no-results-text="$t('No_data')"
         >
 <!--Table header-->
           <template v-slot:header="{ props: { headers } }">
@@ -192,10 +192,10 @@
         </v-col>
       </v-row>
 <!--Addtional charges-->
-      <h3 class="ms-4">Дополнительная оплата</h3>
+      <h3 class="ms-4">{{ $t('RecordData.Aditional_charges') }}</h3>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Name_survey') }}</h4>
           <v-text-field
             filled
             rounded
@@ -210,7 +210,7 @@
 <!--Price-->
       <v-row>
         <v-col class="col-3">
-          <h4 class="ms-4">Сумма</h4>
+          <h4 class="ms-4">{{ $t('Sum') }}</h4>
           <v-text-field
             filled
             rounded
@@ -225,7 +225,7 @@
 <!--Приечания-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Примечание</h4>
+          <h4 class="ms-4">{{ $t('Notes') }}</h4>
           <v-textarea
             filled
             rounded
@@ -257,15 +257,15 @@ export default {
       notes2: '',
 // Rules for inputs
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
 //Table
       headersRecordCreate: [
-        { text: 'Кабинет', value: 'nameofcabinet' },
-        { text: 'Сотрудник', value: 'personal' },
-        { text: 'Дата', value: 'date' },
-        { text: 'Время', value: 'time' },
-        { text: 'Обследования', value: 'survey' },
+        { text: this.$t('Cabinet'), value: 'nameofcabinet' },
+        { text: this.$t('Personal'), value: 'personal' },
+        { text: this.$t('Date'), value: 'date' },
+        { text: this.$t('Time'), value: 'time' },
+        { text: this.$t('Survey'), value: 'survey' },
       ],
       elementsRecordCreate: [],
       editedItem: {
@@ -323,10 +323,6 @@ export default {
       this.$nextTick(() => {
         this.editedItem = Object.assign({}, this.defaultItem)
       })
-    },
-    back() {
-      window.history.go(-1)
-      return false
     }
   }
 }

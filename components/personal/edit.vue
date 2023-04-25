@@ -298,14 +298,14 @@
 <!--Cabinet and Job-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">{{ $t('PersonalData.Cabinet') }}</h4>
+          <h4 class="ms-4">{{ $t('Cabinet') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="personal__input"
-            :placeholder="$t('PersonalData.Cabinet')"
+            :placeholder="$t('Cabinet')"
             no-data-text="Нет Данных"
             required
             :items="cabinetCheck"

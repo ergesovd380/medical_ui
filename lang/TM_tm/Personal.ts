@@ -12,7 +12,6 @@ export default {
   Sunday: 'Ýekşenbe',
   Pass: 'Açar belgisi',
   Confirm_pass: 'Açar belgisini tassyklaň',
-  Cabinet: 'Kabinet',
   Job: 'Wezipe',
   Survey_a_diagnostics: 'Geçirilýän barlaglar we diagnostikalar',
   Use_blanks: 'Ulanylýan blankalar',

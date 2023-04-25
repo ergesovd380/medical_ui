@@ -278,7 +278,7 @@
 <!--Cabinet and Job-->
       <v-row>
         <v-col>
-            <h4 class="ms-4">{{ $t('PersonalData.Cabinet') }}</h4>
+            <h4 class="ms-4">{{ $t('Cabinet') }}</h4>
             <v-text-field
               filled
               rounded
@@ -286,7 +286,7 @@
               class="personal__input"
               readonly
               v-model="personalCabinet"
-              :placeholder="$t('PersonalData.Cabinet')"
+              :placeholder="$t('Cabinet')"
             >
             </v-text-field>
         </v-col>

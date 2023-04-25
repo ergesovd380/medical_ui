@@ -8,7 +8,7 @@
 <!--Page name-->
       <h3 class="records__title red--text">{{ $route.params.id }} / {{ elementByNumberOfCardRecord.numberofrecord }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
+      <nuxt-link tag="button" to="/records" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
       <app-pay :dataOfCard="elementByNumberOfCardRecord" />
       <v-btn icon class="mt-2 main-filter-btn">
@@ -31,8 +31,8 @@
             hide-default-header
             hide-default-footer
             :items="elementsRecordCreate"
-            no-data-text="Нет Данных"
-            no-results-text="Нет Данных"
+            :no-data-text="$t('No-data')"
+            :no-results-text="$t('No-data')"
             @dblclick:row="openRow"
           >
 <!--Table header-->
@@ -54,10 +54,10 @@
         </v-col>
       </v-row>
 <!--Addtional-->
-      <h3 class="ms-4">Дополнительно</h3>
+      <h3 class="ms-4">{{ $t('RecordData.Aditional') }}</h3>
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Name_survey') }}</h4>
           <v-text-field
             filled
             rounded
@@ -73,7 +73,7 @@
 <!--Price-->
       <v-row>
         <v-col class="col-3">
-          <h4 class="ms-4">Сумма</h4>
+          <h4 class="ms-4">{{ $t('Sum') }}</h4>
           <v-text-field
             filled
             rounded
@@ -89,7 +89,7 @@
 <!--Приечания-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Примечание</h4>
+          <h4 class="ms-4">{{ $t('Notes') }}</h4>
           <v-textarea
             filled
             rounded
@@ -123,10 +123,6 @@ export default {
     openRow(...item: any) {
       const survey = item[1].item.id
       this.$router.push('/records/' + this.id + '/' + survey)
-    },
-    back() {
-      window.history.go(-1)
-      return false
     }
   },
   computed: {

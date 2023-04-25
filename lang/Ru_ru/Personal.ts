@@ -12,7 +12,6 @@ export default {
   Sunday: 'Вс',
   Pass: 'Пароль',
   Confirm_pass: 'Подтвердите пароль',
-  Cabinet: 'Кабинет',
   Job: 'Должность',
   Survey_a_diagnostics: 'Проводимые приемы, обследования, диагностика',
   Use_blanks: 'Используемые бланки',

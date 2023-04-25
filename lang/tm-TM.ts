@@ -4,6 +4,7 @@ import PersonalData from "./TM_tm/Personal";
 import SurveyData from "./TM_tm/Survey";
 import PatientData from "./TM_tm/Patient";
 import BulletinData from "./TM_tm/Bulletin";
+import RecordData from "./TM_tm/Records";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -12,6 +13,7 @@ let messages: LocaleMessageObject = {
     SurveyData,
     PatientData,
     BulletinData,
+    RecordData,
 
 // Table
     // Filter
@@ -35,8 +37,14 @@ let messages: LocaleMessageObject = {
     By_personal: 'Lukman boýunça',
     By_date: 'Sene boýunça',
 
+    // Footer
     All: 'Ählisi',
     Rows_page:'Sahypada setir',
+
+    // Header
+    Cabinet: 'Kabinet',
+    Personal: 'Işgär',
+    Survey: 'Barlag',
 
 // Name of organization
     International: 'Halkara',
@@ -64,6 +72,7 @@ let messages: LocaleMessageObject = {
     Statistic: 'Statistika',
     Turkmen: 'Türkmençe',
     Russian: 'Rusça',
+    Show: 'Görmek',
 
 // Global words
     Phone_number: 'Telefon belgisi',
@@ -80,6 +89,9 @@ let messages: LocaleMessageObject = {
     Date: 'Sene',
     Patient: 'Hassa',
     Status: 'Status',
+    Time: 'Wagt',
+    Sum: 'Bahasy',
+    Result: 'Netije',
 
 // Input rules
     Not_empty: 'Boş goýmak gadagan',

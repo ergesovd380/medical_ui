@@ -23,48 +23,48 @@
 <!--Result of survey-->
       <v-row>
         <v-col class="col-10">
-          <h4 class="ms-4">Результат</h4>
+          <h4 class="ms-4">{{ $t('Result') }}</h4>
           <div class="records__name">{{ elementsRecordCreate[0].survey }}</div>
         </v-col>
         <v-col class="col-2 mt-8">
-          <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
+          <v-btn class="records__secondary-btn" elevation="1">{{ $t('Show') }}</v-btn>
         </v-col>
         <v-col class="col-10">
           <div class="records__name">{{ elementsRecordCreate[1].survey }}</div>
         </v-col>
         <v-col class="col-2 mt-2">
-          <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
+          <v-btn class="records__secondary-btn" elevation="1">{{ $t('Show') }}</v-btn>
         </v-col>
         <v-col class="col-10">
           <div class="records__name">{{ elementsRecordCreate[2].survey }}</div>
         </v-col>
         <v-col class="col-2 mt-2">
-          <v-btn class="records__secondary-btn" elevation="1">Посмотреть</v-btn>
+          <v-btn class="records__secondary-btn" elevation="1">{{ $t('Show') }}</v-btn>
         </v-col>
       </v-row>
 <!--Survey-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Диагноз</h4>
+          <h4 class="ms-4">{{ $t('RecordData.Diagnos') }}</h4>
           <v-autocomplete
             filled
             rounded
             dense
             color="var(--blue-color)"
             class="records__input"
-            placeholder="Выберите"
-            no-data-text="Нет Данных"
+            :placeholder="$t('Choose')"
+            :no-data-text="$t('No_data')"
           >
           </v-autocomplete>
         </v-col>
         <v-col class="mt-6">
-          <v-btn class="records__secondary-btn" elevation="1">Нет в списке?</v-btn>
+          <v-btn class="records__secondary-btn" elevation="1">{{ $t('No_list') }}</v-btn>
         </v-col>
       </v-row>
 <!--Lecheniye-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Лечение</h4>
+          <h4 class="ms-4">{{ $t('RecordData.Treatment') }}</h4>
           <v-textarea
             filled
             rounded
@@ -82,9 +82,9 @@
       </v-row>
 <!--Comments-->
       <v-row>
-        <v-col class="col-2">Дата: </v-col>
-        <v-col class="col-3">Больной: </v-col>
-        <v-col class="col-2">Статус: </v-col>
+        <v-col class="col-2">{{ $t('Date') }}: </v-col>
+        <v-col class="col-3">{{ $t('Patient') }}: </v-col>
+        <v-col class="col-2">{{ $t('Status') }}: </v-col>
       </v-row>
       <v-row>
         <v-col>

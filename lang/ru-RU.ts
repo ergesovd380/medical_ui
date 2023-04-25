@@ -4,6 +4,7 @@ import PersonalData from "./Ru_ru/Personal";
 import SurveyData from "./Ru_ru/Survey";
 import PatientData from "./Ru_ru/Patient";
 import BulletinData from "./Ru_ru/Bulletin";
+import RecordData from "./Ru_ru/Records";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -12,6 +13,7 @@ let messages: LocaleMessageObject = {
     SurveyData,
     PatientData,
     BulletinData,
+    RecordData,
 
 // Table
     Default: 'По умолчанию',
@@ -34,8 +36,14 @@ let messages: LocaleMessageObject = {
     By_personal: 'По персоналу',
     By_date: 'По дате',
 
+    // Footer
     All: 'Все',
     Rows_page:'Строк в странице',
+
+    // Header
+    Cabinet: 'Кабинет',
+    Personal: 'Сотрудник',
+    Survey: 'Обследования',
 
 // Name of organization
     International: 'Международный',
@@ -63,6 +71,7 @@ let messages: LocaleMessageObject = {
     Statistic: 'Статистика',
     Turkmen: 'Туркменский',
     Russian: 'Русский',
+    Show: 'Посмотреть',
 
 // Global words
     Phone_number: 'Номер телефона',
@@ -79,6 +88,9 @@ let messages: LocaleMessageObject = {
     Date: 'Дата',
     Patient: 'Больной',
     Status: 'Статус',
+    Time: 'Время',
+    Sum: 'Сумма',
+    Result: 'Результат',
 
 // Input rules
     Not_empty: 'Нельзя оставить пустым',
@@ -92,4 +104,5 @@ let messages: LocaleMessageObject = {
     Fath_name: 'Отчество'
 
 }
+
 export default messages

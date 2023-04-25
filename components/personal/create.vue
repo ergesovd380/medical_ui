@@ -304,7 +304,7 @@
       <v-row>
 <!--Cabinet and Job-->
         <v-col>
-          <h4 class="ms-4">{{ $t('PersonalData.Cabinet') }}</h4>
+          <h4 class="ms-4">{{ $t('Cabinet') }}</h4>
           <v-autocomplete
             filled
             rounded
@@ -440,20 +440,20 @@ export default {
       blank: '',
 // Rules for inputs
       rulesInput: [
-        (v: any) => !!v || this.$t('No_empty'),
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
       rulesInputForPhone: [
-        (v: any) => !!v || this.$t('No_empty'),
+        (v: any) => !!v || this.$t('Not_empty'),
         (v: any) => v.length === 11 || this.$t('Symbols_11'),
       ],
       passRules: [
-      (v: any) => !!v || this.$t('No_empty'),
+      (v: any) => !!v || this.$t('Not_empty'),
         (v: any) => v.length >= 6 || this.$t('Symbols_6'),
       ],
       confPassRules: [
-        (v: any) => !!v || this.$t('No_empty'),
+        (v: any) => !!v || this.$t('Not_empty'),
         (v: any) => v && v.length >= 6 || this.$t('Symbols_6'),
-        (v: any) => v === this.passwordPersonal || 'Пароли не совпо{{ $t("Yes") }}ют',
+        (v: any) => v === this.passwordPersonal || this.$t('Pass_not_conf'),
       ]
     }
   },
