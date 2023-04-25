@@ -17,7 +17,7 @@
       ></v-text-field>
 <!--Button add-->
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id" class="main-btn mt-2 me-2">Бюллетень</nuxt-link>
+      <nuxt-link tag="button" :to="'/bulletin/' + id" class="main-btn mt-2 me-2">{{ $t('Bulletin') }}</nuxt-link>
 <!--Button filter-->
       <v-menu open-on-click transition="slide-x-transition" offset-y>
           <template v-slot:activator="{ on, attrs }">
@@ -29,12 +29,12 @@
           </template>
           <v-card class="mx-auto" width="222px" tile>
               <v-list dense>
-                  <v-subheader @click="sortByFilter('id')" class="menu-items">По умолчанию</v-subheader>
-                  <v-subheader @click="sortByFilter('nameturkmen')" class="menu-items">По названию на туркменском</v-subheader>
-                  <v-subheader @click="sortByFilter('namerussian')" class="menu-items">По названию на русском</v-subheader>
-                  <v-subheader @click="sortByFilter('personal')" class="menu-items">По персоналу</v-subheader>
-                  <v-subheader @click="sortByFilter('cabinet')" class="menu-items">По кабинетам</v-subheader>
-                  <v-subheader @click="sortByFilter('readed')" class="menu-items">По Дате</v-subheader>
+                  <v-subheader @click="sortByFilter('id')" class="menu-items">{{ $t('Default') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('nameturkmen')" class="menu-items">{{ $t('By_name_turkmen') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('namerussian')" class="menu-items">{{ $t('By_name_russian') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('personal')" class="menu-items">{{ $t('By_personal') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('cabinet')" class="menu-items">{{ $t('By_name_cabinet') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('readed')" class="menu-items">{{ $t('By_date') }}</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -44,8 +44,8 @@
       :headers="headers"
       hide-default-header
       :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
+        itemsPerPageAllText: $t('All'),
+        itemsPerPageText: $t('Rows_page'),
         disablePagination: true,
         nextIcon: '',
         prevIcon: '',
@@ -54,8 +54,8 @@
       :items="[elements]"
       :items-per-page="itemsPerPage"
       :search="search"
-      no-data-text="Нет Данных"
-      no-results-text="Нет Данных"
+      :no-data-text="$t('No_data')"
+      :no-results-text="$t('No_data')"
       :page.sync="page"
       @page-count="pageCount = $event"
       :sort-by="sortBy.toLowerCase()"

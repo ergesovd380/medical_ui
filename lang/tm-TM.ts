@@ -3,6 +3,7 @@ import CabinetData from "./TM_tm/Cabinet";
 import PersonalData from "./TM_tm/Personal";
 import SurveyData from "./TM_tm/Survey";
 import PatientData from "./TM_tm/Patient";
+import BulletinData from "./TM_tm/Bulletin";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -10,6 +11,7 @@ let messages: LocaleMessageObject = {
     PersonalData,
     SurveyData,
     PatientData,
+    BulletinData,
 
 // Table
     // Filter
@@ -27,6 +29,11 @@ let messages: LocaleMessageObject = {
     By_admission: 'Rugsady boýunça',
     By_blanks: 'Blankalar boýunça',
     By_survey_diagnostic: 'Diagnostika we barlag boýunça',
+    By_name_turkmen: 'Türkmençe ady boýunça',
+    By_name_russian: 'Rusça ady boýunça',
+    By_requirments: 'Talaplar boýunça',
+    By_personal: 'Lukman boýunça',
+    By_date: 'Sene boýunça',
 
     All: 'Ählisi',
     Rows_page:'Sahypada setir',
@@ -53,6 +60,10 @@ let messages: LocaleMessageObject = {
     Not_active: 'Işjeň däl',
     Else_one: 'Ýene biri barmy?',
     No_list: 'Sanawda ýok',
+    Bulletin: 'Býulleten',
+    Statistic: 'Statistika',
+    Turkmen: 'Türkmençe',
+    Russian: 'Rusça',
 
 // Global words
     Phone_number: 'Telefon belgisi',

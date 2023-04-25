@@ -3,6 +3,7 @@ import CabinetData from "./Ru_ru/Cabinet";
 import PersonalData from "./Ru_ru/Personal";
 import SurveyData from "./Ru_ru/Survey";
 import PatientData from "./Ru_ru/Patient";
+import BulletinData from "./Ru_ru/Bulletin";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -10,6 +11,7 @@ let messages: LocaleMessageObject = {
     PersonalData,
     SurveyData,
     PatientData,
+    BulletinData,
 
 // Table
     Default: 'По умолчанию',
@@ -26,6 +28,11 @@ let messages: LocaleMessageObject = {
     By_admission: 'По допуску',
     By_blanks: 'По бланкам',
     By_survey_diagnostic: 'По названию приема, об...',
+    By_name_turkmen: 'По названию на туркменском',
+    By_name_russian: 'По названию на русском',
+    By_requirments: 'По требованиям',
+    By_personal: 'По персоналу',
+    By_date: 'По дате',
 
     All: 'Все',
     Rows_page:'Строк в странице',
@@ -52,6 +59,10 @@ let messages: LocaleMessageObject = {
     Not_active: 'Не активный',
     Else_one: 'Есть еще один?',
     No_list: 'Нет в списке',
+    Bulletin: 'Бюллетень',
+    Statistic: 'Статистика',
+    Turkmen: 'Туркменский',
+    Russian: 'Русский',
 
 // Global words
     Phone_number: 'Номер телефона',

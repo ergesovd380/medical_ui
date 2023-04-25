@@ -6,11 +6,11 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="bulletin__title">Бюллетень</h3>
+      <h3 class="bulletin__title">{{ $t('Bulletin') }}</h3>
 <!--Button back-->
-      <button @click="back" class="main-btn mt-2 ms-2">{{ $t("Back") }}</button>
+      <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">{{ $t("Back") }}</nuxt-link>
       <v-spacer></v-spacer>
-      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">Статистика</nuxt-link>
+      <nuxt-link tag="button" :to="'/bulletin/' + id + '/statistic'" class="main-btn mt-2 ms-2">{{ $t('Statistic') }}</nuxt-link>
       <v-btn icon class="ms-4 mt-2 main-filter-btn" :to="'/bulletin/' + id + '/view'">
         <v-icon>
           mdi-bulletin-board
@@ -30,7 +30,7 @@
 <!--Names inputs-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Название на туркменском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Name_bulletin_turkmen') }}</h4>
           <v-text-field
             filled
             rounded
@@ -43,7 +43,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <h4 class="ms-4">Название на русском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Name_bulletin_russian') }}</h4>
           <v-text-field
             filled
             rounded
@@ -57,7 +57,7 @@
 <!--Titul image-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Титульное фото</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Title_image') }}</h4>
           <v-text-field
             filled
             rounded
@@ -72,14 +72,14 @@
 <!--Turkmen Tekst-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Текст на туркменском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Text_turkmen') }}</h4>
           <editor v-model="editorTm" />
         </v-col>
       </v-row>
 <!--Russian Tekst-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Текст на русском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Text_russian') }}</h4>
           <editor v-model="editorRu"/>
         </v-col>
       </v-row>
@@ -88,7 +88,7 @@
         <v-col class="col-2">
           <v-checkbox
             v-model="readed"
-            label="Галочка Прочитал"
+            :label="$t('BulletinData.Checkbox_read')"
             color="var(--blue-color)"
             readonly
           ></v-checkbox>
@@ -96,7 +96,7 @@
         <v-col>
           <v-checkbox
             v-model="show"
-            label="Скрыть"
+            :label="$t('BulletinData.Visible')"
             color="var(--blue-color)"
             readonly
           ></v-checkbox>
@@ -126,12 +126,6 @@ export default {
   },
   components: {
     Editor
-  },
-  methods: {
-    back() {
-      window.history.go(-1)
-      return false
-    }
   }
 }
 </script>

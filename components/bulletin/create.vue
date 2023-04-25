@@ -6,7 +6,7 @@
       elevation="0"
     >
 <!--Page name-->
-      <h3 class="bulletin__title">Новый бюллетень</h3>
+      <h3 class="bulletin__title">{{ $t('BulletinData.New_bulletin') }}</h3>
 <!--Button add-->
       <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">{{ $t("Save") }}</nuxt-link>
       <nuxt-link tag="button" to="/bulletin" class="main-btn mt-2 ms-2">{{ $t("Cancel") }}</nuxt-link>
@@ -21,7 +21,7 @@
 <!--Names inputs-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Название на туркменском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Name_bulletin_turkmen') }}</h4>
           <v-text-field
             filled
             rounded
@@ -38,7 +38,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <h4 class="ms-4">Название на русском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Name_bulletin_russian') }}</h4>
           <v-text-field
             filled
             rounded
@@ -56,7 +56,7 @@
 <!--Titul image-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Титульное фото</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Title_image') }}</h4>
           <v-text-field
             filled
             rounded
@@ -70,7 +70,7 @@
           ></v-text-field>
         </v-col>
         <v-col class="mt-6">
-          <v-btn class="bulletin__secondary-btn" @click="triggerFile">Выбрать</v-btn>
+          <v-btn class="bulletin__secondary-btn" @click="triggerFile">{{ $t('Choose') }}</v-btn>
           <input
             type="file"
             class="d-none"
@@ -84,14 +84,14 @@
 <!--Turkmen Tekst-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Текст на туркменском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Text_turkmen') }}</h4>
           <editor v-model="editorTm"/>
         </v-col>
       </v-row>
 <!--Russian Tekst-->
       <v-row>
         <v-col>
-          <h4 class="ms-4">Текст на русском</h4>
+          <h4 class="ms-4">{{ $t('BulletinData.Text_russian') }}</h4>
           <editor v-model="editorRu"/>
         </v-col>
       </v-row>
@@ -100,14 +100,14 @@
         <v-col class="col-2">
           <v-checkbox
             v-model="readed"
-            label="Галочка Прочитал"
+            :label="$t('BulletinData.Checkbox_read')"
             color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
         <v-col>
           <v-checkbox
             v-model="show"
-            label="Скрыть"
+            :label="$t('BulletinData.Visible')"
             color="var(--blue-color)"
           ></v-checkbox>
         </v-col>
@@ -128,7 +128,7 @@ export default {
       image: null,
       imageSrc: '',
       rulesInput: [
-        (v: any) => !!v || 'Нельзя оставить пустым',
+        (v: any) => !!v || this.$t('Not_empty'),
       ],
 //Checkbox
       readed: false,
