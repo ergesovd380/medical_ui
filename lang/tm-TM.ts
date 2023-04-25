@@ -2,12 +2,14 @@ import { LocaleMessageObject } from "vue-i18n/types";
 import CabinetData from "./TM_tm/Cabinet";
 import PersonalData from "./TM_tm/Personal";
 import SurveyData from "./TM_tm/Survey";
+import PatientData from "./TM_tm/Patient";
 
 let messages: LocaleMessageObject = {
 // Pages
     CabinetData,
     PersonalData,
     SurveyData,
+    PatientData,
 
 // Table
     // Filter

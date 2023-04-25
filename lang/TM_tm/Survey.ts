@@ -4,6 +4,6 @@ export default {
   Not_insurance: 'Ätiýaçlandyryşsyz (TMT)',
   With_insurance: 'Ätiýaçlandyryşly (TMT)',
   Forigner: 'Daşary ýurtly ($)',
-  Diplomat: 'Diplomat (TMT)'
-
+  Diplomat: 'Diplomat (TMT)',
+  New_survey: 'Täze gözden geçiriş',
 }

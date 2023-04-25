@@ -4,5 +4,6 @@ export default {
   Not_insurance: 'Без страховки (TMT)',
   With_insurance: 'Со страховкой (TMT)',
   Forigner: 'Иностранец ($)',
-  Diplomat: 'Дипломат (TMT)'
+  Diplomat: 'Дипломат (TMT)',
+  New_survey: 'Новое обследование',
 }
