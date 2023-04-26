@@ -7,6 +7,7 @@ import BulletinData from "./TM_tm/Bulletin";
 import RecordData from "./TM_tm/Records";
 import StatisticData from "./TM_tm/Statistic";
 import ToleranceData from "./TM_tm/Tolerance";
+import SetupData from "./TM_tm/Setup";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -18,6 +19,7 @@ let messages: LocaleMessageObject = {
     RecordData,
     StatisticData,
     ToleranceData,
+    SetupData,
 
 // Table
     // Filter

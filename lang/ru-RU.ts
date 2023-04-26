@@ -7,6 +7,7 @@ import BulletinData from "./Ru_ru/Bulletin";
 import RecordData from "./Ru_ru/Records";
 import StatisticData from "./Ru_ru/Statistic";
 import ToleranceData from "./Ru_ru/Tolerance";
+import SetupData from "./Ru_ru/Setup";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -18,6 +19,7 @@ let messages: LocaleMessageObject = {
     RecordData,
     StatisticData,
     ToleranceData,
+    SetupData,
 
 // Table
     Default: 'По умолчанию',

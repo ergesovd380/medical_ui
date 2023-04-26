@@ -30,8 +30,8 @@
       :headers="headers"
       hide-default-header
       :footer-props="{
-        itemsPerPageAllText: 'Все',
-        itemsPerPageText: 'Строк в странице',
+        itemsPerPageAllText: $t('All'),
+        itemsPerPageText: $t('Rows_page'),
         disablePagination: true,
         nextIcon: '',
         prevIcon: '',
@@ -42,8 +42,8 @@
       :search="search"
       show-select
       v-model="selected"
-      no-data-text="Нет Данных"
-      no-results-text="Нет Данных"
+      :no-data-text="$t('No_data')"
+      :no-results-text="$t('No_data')"
       :page.sync="page"
       @page-count="pageCount = $event"
     >
@@ -84,13 +84,13 @@
       >
         <v-card height="256">
           <div class="dialog__title">
-            <h3 class="text-center">Вы хотите {{ $t("Delete") }} выбранные медиафайлы?</h3>
+            <h3 class="text-center">{{ $t('SetupData.Delete_media') }}</h3>
             <div class="mt-10 text-center">
               <v-btn class="dialog__btn" color="var(--secondary-color)" @click="deleteMedia">
-                Да
+                {{ $t('Yes') }}
               </v-btn>
               <v-btn class="dialog__btn" color="var(--secondary-color)" @click="deleteDialog = !deleteDialog">
-                Нет
+                {{ $t('No') }}
               </v-btn>
             </div>
           </div>
@@ -108,7 +108,7 @@
         <v-card height="256">
           <div class="text-center">
             <div class="container">
-              <h4 class="mt-8 ms-4 mb-2">Название</h4>
+              <h4 class="mt-8 ms-4 mb-2">{{ $t('SurveyData.Name_survey') }}</h4>
               <v-text-field
                 filled
                 rounded
@@ -134,7 +134,7 @@
                   ></v-text-field>
                 </v-col>
                 <v-col class="col-4">
-                  <v-btn class="dialog__btn" color="var(--secondary-color)" @click="triggerFile">Выбрать</v-btn>
+                  <v-btn class="dialog__btn" color="var(--secondary-color)" @click="triggerFile">{{ $t('Choose') }}</v-btn>
                   <input
                     type="file"
                     class="d-none"
@@ -149,7 +149,7 @@
               {{ $t("Save") }}
             </v-btn>
             <v-btn class="dialog__btn" color="var(--secondary-color)" @click="cancelMedia">
-              Отмена
+              {{ $t('Cancel') }}
             </v-btn>
           </div>
         </v-card>
@@ -177,7 +177,7 @@
             align: 'center',
           },
           {
-            text: 'Название',
+            text: this.$t('SurveyData.Name_survey'),
             value: 'nameMedia',
             
           },
