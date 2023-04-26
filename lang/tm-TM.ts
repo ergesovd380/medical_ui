@@ -6,6 +6,7 @@ import PatientData from "./TM_tm/Patient";
 import BulletinData from "./TM_tm/Bulletin";
 import RecordData from "./TM_tm/Records";
 import StatisticData from "./TM_tm/Statistic";
+import ToleranceData from "./TM_tm/Tolerance";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -16,6 +17,7 @@ let messages: LocaleMessageObject = {
     BulletinData,
     RecordData,
     StatisticData,
+    ToleranceData,
 
 // Table
     // Filter
@@ -38,6 +40,7 @@ let messages: LocaleMessageObject = {
     By_requirments: 'Talaplar boýunça',
     By_personal: 'Lukman boýunça',
     By_date: 'Sene boýunça',
+    By_employees: 'Işgärleriň sany boýunça',
 
     // Footer
     All: 'Ählisi',

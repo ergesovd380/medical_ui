@@ -19,7 +19,7 @@
 <!--Name-->
       <v-row>
         <v-col class="col-6">
-          <h4 class="ms-4">Название</h4>
+          <h4 class="ms-4">{{ $t('SurveyData.Name_survey') }}</h4>
           <v-text-field
             filled
             rounded
@@ -60,8 +60,8 @@
             :items="elementtolerance"
             :items-per-page="100"
             :search="searchTolerance"
-            no-data-text="Нет Данных"
-            no-results-text="Нет Данных"
+            :no-data-text="$t('No_data')"
+            :no-results-text="$t('No_data')"
             item-key="name"
             show-select
             class="elevation-1"
@@ -101,8 +101,8 @@
             hide-default-footer
             :items="elementsToleranceCreate"
             :items-per-page="100"
-            no-data-text="Нет Данных"
-            no-results-text="Нет Данных"
+            :no-data-text="$t('No_data')"
+            :no-results-text="$t('No_data')"
             item-key="name"
             :search="searchCreate"
             show-select
@@ -128,7 +128,7 @@ export default {
       id: this.element.nametolerance,
       headers: [
         {
-          text: 'Права доступа',
+          text: this.$t('PersonalData.Access'),
           align: 'start',
           sortable: false,
           value: 'name',
@@ -136,40 +136,40 @@ export default {
       ],
       elementtolerance: [
         {
-          name: 'Кабинеты - Просмотр',
+          name: this.$t('ToleranceData.Cabinet_show'),
         },
         {
-          name: 'Кабинеты - СозДавать',
+          name: this.$t('ToleranceData.Create_cabinet'),
         },
         {
-          name: 'Кабинеты - Изменять',
+          name: this.$t('ToleranceData.Change_cabinet'),
         },
         {
-          name: 'Кабинеты - УДалять',
+          name: this.$t('ToleranceData.Delete_cabinet'),
         },
         {
-          name: 'Сотрудники - Просмотр',
+          name: this.$t('ToleranceData.Personal_show'),
         },
         {
-          name: 'Сотрудники - СозДавать',
+          name: this.$t('ToleranceData.Create_personal'),
         },
         {
-          name: 'Сотрудники - Изменять',
+          name: this.$t('ToleranceData.Change_personal'),
         },
         {
-          name: 'Сотрудники - УДалять',
+          name: this.$t('ToleranceData.Delete_personal'),
         },
         {
-          name: 'Обследования - Просмотр',
+          name: this.$t('ToleranceData.Survey_show'),
         },
         {
-          name: 'Обследования - СозДавать',
+          name: this.$t('ToleranceData.Create_survey'),
         },
         {
-          name: 'Обследования - Изменять',
+          name: this.$t('ToleranceData.Change_survey'),
         },
         {
-          name: 'Обследования - УДалять',
+          name: this.$t('ToleranceData.Delete_survey'),
         },
       ],
       elementsToleranceCreate: [],

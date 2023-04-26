@@ -994,7 +994,6 @@ export const state = () => ({
     { text: 'ID', value: 'id' },
     { text: 'Название группы доступа', value: 'nametolerance' },
     { text: 'Количество сотрудников', value: 'personalnumber' },
-    { text: 'Сотрудники', value: 'personal' }
   ],
   elementsTolerance: [
     {

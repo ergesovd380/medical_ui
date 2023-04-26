@@ -6,6 +6,7 @@ import PatientData from "./Ru_ru/Patient";
 import BulletinData from "./Ru_ru/Bulletin";
 import RecordData from "./Ru_ru/Records";
 import StatisticData from "./Ru_ru/Statistic";
+import ToleranceData from "./Ru_ru/Tolerance";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -16,6 +17,7 @@ let messages: LocaleMessageObject = {
     BulletinData,
     RecordData,
     StatisticData,
+    ToleranceData,
 
 // Table
     Default: 'По умолчанию',
@@ -37,6 +39,7 @@ let messages: LocaleMessageObject = {
     By_requirments: 'По требованиям',
     By_personal: 'По персоналу',
     By_date: 'По дате',
+    By_employees: 'По количеству сотрудников',
 
     // Footer
     All: 'Все',
