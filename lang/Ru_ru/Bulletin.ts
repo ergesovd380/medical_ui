@@ -6,6 +6,7 @@ export default {
   Text_turkmen: 'Текст на туркменском',
   Text_russian: 'Текст на русском',
   Checkbox_read: 'Галочка Прочитал',
-  Visible: 'Скрыть'
-
+  Visible: 'Скрыть',
+  Requirment: 'Требования',
+  Readed: 'Прочитано'
 }

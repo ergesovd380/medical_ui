@@ -101,7 +101,15 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('CabinetData.Name_cabinet'), value: 'nameofcabinet' },
+          { text: this.$t('Phone_number'), value: 'phonenumber' },
+          { text: this.$t('CabinetData.Number_cabinet'), value: 'numberofcabinet' },
+          { text: this.$t('CabinetData.Floor'), value: 'floor' },
+          { text: this.$t('Status'), value: 'status' },
+        ],
       }
     },
     methods: {
@@ -114,9 +122,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersCabinet
-      },
       elements(): any {
         return this.$store.getters.elementsCabinet
       }

@@ -25,7 +25,7 @@ let messages: LocaleMessageObject = {
 
 // Table
     // Filter
-    Default: 'Yzygiderlikde',
+    Default: 'ID boýunça',
     By_name_cabinet: 'Kabinetleriň ady boýunça',
     By_phone_number: 'Telefon belgi boýunça',
     By_number_cabinet: 'Kabinet belgi boýunça',

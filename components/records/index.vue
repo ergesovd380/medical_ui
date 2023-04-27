@@ -100,7 +100,14 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('PatientData.Number_card'), value: 'numberofcard' },
+          { text: this.$t('RecordData.Number_record'), value: 'numberofrecord' },
+          { text: this.$t('PatientData.NSF_patient'), value: 'namesurnameofpatient' },
+          { text: this.$t('Status'), value: 'statuspatient' },
+        ],
       }
     },
     methods: {
@@ -113,9 +120,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersRecords
-      },
       elements(): any {
         return this.$store.getters.elementsRecords
       }

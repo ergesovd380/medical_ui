@@ -98,7 +98,12 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('ToleranceData.Name_admission'), value: 'nametolerance' },
+          { text: this.$t('ToleranceData.Employees_personal'), value: 'personalnumber' },
+        ],
       }
     },
     methods: {
@@ -111,9 +116,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersTolerance
-      },
       elements(): any {
         return this.$store.getters.elementsTolerance
       }

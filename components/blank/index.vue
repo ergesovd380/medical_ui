@@ -97,7 +97,12 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('Nav.Blanks'), value: 'blank' },
+          { text: this.$t('CabinetData.Name_cabinet'), value: 'nameofcabinet' },
+        ]
       }
     },
     methods: {
@@ -110,9 +115,9 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersBlank
-      },
+      // headers(): any {
+      //   return this.$store.getters.headersBlank
+      // },
       elements(): any {
         return this.$store.getters.elementsBlank
       }

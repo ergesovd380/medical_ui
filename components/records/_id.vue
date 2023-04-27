@@ -117,6 +117,14 @@ export default {
       name: 'Название процедуры',
       price: 'Цена',
       notes2: 'Примечание какое-то',
+      headersRecordCreate: [
+      { text: 'ID', value: 'id' },
+      { text: this.$t('Cabinet'), value: 'nameofcabinet' },
+      { text: this.$t('Personal'), value: 'personal' },
+      { text: this.$t('Date'), value: 'date' },
+      { text: this.$t('Time'), value: 'time' },
+      { text: this.$t('Survey'), value: 'survey' },
+    ],
     }
   },
   methods: {
@@ -128,9 +136,6 @@ export default {
   computed: {
     elementByNumberOfCardRecord() {
       return this.$store.getters.elementByNumberOfCardRecord(this.id)
-    },
-    headersRecordCreate() {
-      return this.$store.getters['indexRecordCreate/headersRecordCreate']
     },
     elementsRecordCreate() {
       return this.$store.getters['indexRecordCreate/elementsRecordCreate']

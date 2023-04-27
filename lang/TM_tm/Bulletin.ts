@@ -6,5 +6,7 @@ export default {
   Text_turkmen: 'Türkmençe tekst',
   Text_russian: 'Rusça tekst',
   Checkbox_read: 'Okandygy barada bellik',
-  Visible: 'Gizlemek'
+  Visible: 'Gizlemek',
+  Requirment: 'Talaplar',
+  Readed: 'Okalan'
 }

@@ -101,7 +101,15 @@
         sortBy: 'name',
         sortDesc: false,
         itemsPerPage: 15,
-        id: this.$route.params.id
+        id: this.$route.params.id,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('BulletinData.Name_bulletin_turkmen'), value: 'nameturkmen' },
+          { text: this.$t('BulletinData.Name_bulletin_russian'), value: 'namerussian' },
+          { text: this.$t('RecordData.Doctor'), value: 'personal' },
+          { text: this.$t('Cabinet'), value: 'cabinet' },
+          { text: this.$t('BulletinData.Readed'), value: 'readed' },
+        ],
       }
     },
     methods: {
@@ -110,9 +118,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersBulletinRecord
-      },
       elements(): any {
         return this.$store.getters.elementsBulletinRecord(this.id)
       }

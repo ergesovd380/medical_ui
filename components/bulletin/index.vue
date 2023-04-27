@@ -100,7 +100,14 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('BulletinData.Name_bulletin_turkmen'), value: 'nameturkmen' },
+          { text: this.$t('BulletinData.Name_bulletin_russian'), value: 'namerussian' },
+          { text: this.$t('BulletinData.Requirment'), value: 'requirements' },
+          { text: this.$t('Status'), value: 'statusbulletin' }
+        ],
       }
     },
     methods: {
@@ -113,9 +120,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersBulletin
-      },
       elements(): any {
         return this.$store.getters.elementsBulletin
       }

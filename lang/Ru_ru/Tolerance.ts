@@ -11,4 +11,6 @@ export default {
   Create_survey: 'Обследования - Создавать',
   Change_survey: 'Обследования - Изменять',
   Delete_survey: 'Обследования - Удалять',
+  Name_admission: 'Название группы доступа',
+  Employees_personal: 'Количество сотрудников'
 }

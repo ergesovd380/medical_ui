@@ -34,7 +34,7 @@
                   <v-subheader @click="sortByFilter('namesurname')" class="menu-items">{{ $t('By_NSF') }}</v-subheader>
                   <v-subheader @click="sortByFilter('job')" class="menu-items">{{ $t('By_job') }}</v-subheader>
                   <v-subheader @click="sortByFilter('nameofcabinet')" class="menu-items">{{ $t('By_name_cabinet') }}</v-subheader>
-                  <v-subheader @click="sortByFilter('tolerance')" class="menu-items">{{ $t('By_admission') }}</v-subheader>
+                  <v-subheader @click="sortByFilter('tolerance')" class="menu-items">{{ $t('By_status') }}</v-subheader>
               </v-list>
           </v-card>
       </v-menu>
@@ -101,7 +101,15 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('Phone_number'), value: 'phonenumber' },
+          { text: this.$t('PersonalData.NSF_personal'), value: 'namesurname' },
+          { text: this.$t('PersonalData.Job'), value: 'job' },
+          { text: this.$t('Cabinet'), value: 'nameofcabinet' },
+          { text: this.$t('Status'), value: 'tolerance' },
+        ],
       }
     },
     methods: {
@@ -114,9 +122,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersPersonal
-      },
       elements(): any {
         return this.$store.getters.elementsPersonal
       }

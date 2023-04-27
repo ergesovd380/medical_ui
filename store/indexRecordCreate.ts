@@ -1,14 +1,6 @@
 import { GetterTree } from "vuex";
 export const state = () => ({
 // Cabinet Page
-  headersRecordCreate: [
-    { text: 'ID', value: 'id' },
-    { text: 'Кабинет', value: 'nameofcabinet' },
-    { text: 'Сотрудник', value: 'personal' },
-    { text: 'Дата', value: 'date' },
-    { text: 'Время', value: 'time' },
-    { text: 'Обследования', value: 'survey' },
-  ],
   elementsRecordCreate: [
     {
       id: '1',
@@ -39,9 +31,6 @@ export const state = () => ({
 export type RootState = ReturnType<typeof state>;
 
 export const getters: GetterTree<RootState, RootState> = {
-  headersRecordCreate(state: any) {
-    return state.headersRecordCreate
-  },
   elementsRecordCreate(state: any) {
     return state.elementsRecordCreate
   },

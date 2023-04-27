@@ -11,4 +11,6 @@ export default {
   Create_survey: 'Barlaglary - Goşmak',
   Change_survey: 'Barlaglary - Üýtgetmek',
   Delete_survey: 'Barlaglary - Aýyrmak',
+  Name_admission: 'Rugsat toparynyň ady',
+  Employees_personal: 'Işgärleriň sany'
 }

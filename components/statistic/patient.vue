@@ -133,7 +133,15 @@ export default {
       pageCount: 0,
       sortBy: 'name',
       sortDesc: false,
-      itemsPerPage: 15
+      itemsPerPage: 15,
+      headers: [
+        { text: 'ID', value: 'id' },
+        { text: this.$t('PatientData.Number_card'), value: 'numberofcard' },
+        { text: this.$t('PatientData.NSF_patient'), value: 'namesurnameofpatient' },
+        { text: this.$t('PatientData.Birthday'), value: 'birthday' },
+        { text: this.$t('Phone_number'), value: 'phonenumberpatient' },
+        { text: this.$t('Status'), value: 'statuspatient' }
+      ],
     }
   },
   methods: {
@@ -159,9 +167,6 @@ export default {
           }
         ],
       }
-    },
-    headers(): any {
-      return this.$store.getters.headersPatient
     },
     elements(): any {
       return this.$store.getters.elementsPatient

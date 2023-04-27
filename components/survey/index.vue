@@ -98,10 +98,19 @@
         pageCount: 0,
         sortBy: 'name',
         sortDesc: false,
-        itemsPerPage: 15
+        itemsPerPage: 15,
+        headers: [
+          { text: 'ID', value: 'id' },
+          { text: this.$t('PersonalData.Survey_a_diagnostics'), value: 'pod' },
+          { text: this.$t('CabinetData.Name_cabinet'), value: 'nameofcabinet' },
+          { text: this.$t('SurveyData.Not_insurance_table'), value: 'withoutinsurance' },
+          { text: this.$t('SurveyData.With_insurance_table'), value: 'withinsurance' },
+          { text: this.$t('SurveyData.Forigner_table'), value: 'foreigner' },
+          { text: this.$t('SurveyData.Diplomat_table'), value: 'diplomat' },
+        ],
       }
     },
-    methods:   {
+    methods: {
       openRow(...item: any) {
         const id = item[1].item.pod
         this.$router.push('/survey/' + id)
@@ -111,9 +120,6 @@
       }
     },
     computed: {
-      headers(): any {
-        return this.$store.getters.headersSurvey
-      },
       elements(): any {
         return this.$store.getters.elementsSurvey
       }

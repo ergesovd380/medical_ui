@@ -45,11 +45,11 @@ let messages: LocaleMessageObject = {
     By_date: 'По дате',
     By_employees: 'По количеству сотрудников',
 
-    // Footer
+// Footer
     All: 'Все',
     Rows_page:'Строк в странице',
 
-    // Header
+// Header
     Cabinet: 'Кабинет',
     Personal: 'Сотрудник',
     Survey: 'Обследования',

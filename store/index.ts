@@ -1,14 +1,7 @@
 import { GetterTree } from "vuex";
 export const state = () => ({
 // Cabinet Page
-  headersCabinet: [
-    { text: 'ID', value: 'id' },
-    { text: 'Название кабинета', value: 'nameofcabinet' },
-    { text: 'Номер телефона', value: 'phonenumber' },
-    { text: 'Номер кабинета', value: 'numberofcabinet' },
-    { text: 'Этаж', value: 'floor' },
-    { text: 'Статус', value: 'status' },
-  ],
+
   elementsCabinet: [
     {
       id: '1',
@@ -132,14 +125,6 @@ export const state = () => ({
     },
   ],
 // Personal Page
-  headersPersonal: [
-    { text: 'ID', value: 'id' },
-    { text: 'Номер телефона', value: 'phonenumber' },
-    { text: 'Ф.И.О сотрудника', value: 'namesurname' },
-    { text: 'Должность', value: 'job' },
-    { text: 'Кабинет', value: 'nameofcabinet' },
-    { text: 'Допуск', value: 'tolerance' },
-  ],
   elementsPersonal: [
     {
       id: '1',
@@ -278,11 +263,6 @@ export const state = () => ({
     },
   ],
 // Blank Page
-  headersBlank: [
-    { text: 'ID', value: 'id' },
-    { text: 'Бланки', value: 'blank' },
-    { text: 'Название кабинета', value: 'nameofcabinet' },
-  ],
   elementsBlank: [
     {
       id: '1',
@@ -361,15 +341,6 @@ export const state = () => ({
     },
   ],
 // Survey Page
-  headersSurvey: [
-    { text: 'ID', value: 'id' },
-    { text: 'Приемы, обследования, диагностика', value: 'pod' },
-    { text: 'Название кабинета', value: 'nameofcabinet' },
-    { text: 'Без страховки', value: 'withoutinsurance' },
-    { text: 'Со страховкой', value: 'withinsurance' },
-    { text: 'Иностранец', value: 'foreigner' },
-    { text: 'Дипломат', value: 'diplomat' },
-  ],
   elementsSurvey: [
     {
       id: '1',
@@ -499,14 +470,6 @@ export const state = () => ({
     }
   ],
 // Patient Page
-  headersPatient: [
-    { text: 'ID', value: 'id' },
-    { text: 'Номер мед.карты', value: 'numberofcard' },
-    { text: 'Ф.И.О пациента', value: 'namesurnameofpatient' },
-    { text: 'Дата рождения', value: 'birthday' },
-    { text: 'Номер телефона', value: 'phonenumberpatient' },
-    { text: 'Статус', value: 'statuspatient' }
-  ],
   elementsPatient: [
     {
       id: '1',
@@ -630,13 +593,6 @@ export const state = () => ({
     },
   ],
 //Records Page
-  headersRecords: [
-    { text: 'ID', value: 'id' },
-    { text: '№ мед.карты', value: 'numberofcard' },
-    { text: '№ записи', value: 'numberofrecord' },
-    { text: 'Ф.И.О пациента', value: 'namesurnameofpatient' },
-    { text: 'Статус', value: 'statuspatient' },
-  ],
   elementsRecords: [
     {
       id: '1',
@@ -745,13 +701,6 @@ export const state = () => ({
     },
   ],
 //Bulletin Page
-  headersBulletin: [
-    { text: 'ID', value: 'id' },
-    { text: 'Название на Туркменском', value: 'nameturkmen' },
-    { text: 'Название на Русском', value: 'namerussian' },
-    { text: 'Требования', value: 'requirements' },
-    { text: 'Статус', value: 'statusbulletin' }
-  ],
   elementsBulletin: [
     {
       id: '1',
@@ -858,14 +807,6 @@ export const state = () => ({
       requirements: 'Галочка “Прочитал”',
       statusbulletin: 'Активный'
     },
-  ],
-  headersBulletinRecord: [
-    { text: 'ID', value: 'id' },
-    { text: 'Название на туркменском', value: 'nameturkmen' },
-    { text: 'Название на русском', value: 'namerussian' },
-    { text: 'Доктор', value: 'personal' },
-    { text: 'Кабинет', value: 'cabinet' },
-    { text: 'Прочитано', value: 'readed' },
   ],
   elementsBulletinRecord: [
     {
@@ -990,11 +931,6 @@ export const state = () => ({
     }
   ],
 //Tolerance Group
-  headersTolerance: [
-    { text: 'ID', value: 'id' },
-    { text: 'Название группы доступа', value: 'nametolerance' },
-    { text: 'Количество сотрудников', value: 'personalnumber' },
-  ],
   elementsTolerance: [
     {
       id: '1',
@@ -1028,9 +964,6 @@ export type RootState = ReturnType<typeof state>;
 
 export const getters: GetterTree<RootState, RootState> = {
 // Cabinet Page
-  headersCabinet(state: any) {
-    return state.headersCabinet
-  },
   elementsCabinet(state: any) {
     return state.elementsCabinet
   },
@@ -1040,9 +973,6 @@ export const getters: GetterTree<RootState, RootState> = {
     }
   },
 // Personal Page
-  headersPersonal(state: any) {
-    return state.headersPersonal
-  },
   elementsPersonal(state: any) {
     return state.elementsPersonal
   },
@@ -1079,9 +1009,6 @@ export const getters: GetterTree<RootState, RootState> = {
     }
   },
 // Blank Page
-  headersBlank(state: any) {
-    return state.headersBlank
-  },
   elementsBlank(state: any) {
     return state.elementsBlank
   },
@@ -1095,9 +1022,6 @@ export const getters: GetterTree<RootState, RootState> = {
     return output
   },
 // Survey Page
-  headersSurvey(state: any) {
-    return state.headersSurvey
-  },
   elementsSurvey(state: any) {
     return state.elementsSurvey
   },
@@ -1116,9 +1040,6 @@ export const getters: GetterTree<RootState, RootState> = {
     return output
   },
 // Patient Page
-  headersPatient(state: any) {
-    return state.headersPatient
-  },
   elementsPatient(state: any) {
     return state.elementsPatient
   },
@@ -1137,9 +1058,6 @@ export const getters: GetterTree<RootState, RootState> = {
     }
   },
 // Records Page
-  headersRecords(state: any) {
-    return state.headersRecords
-  },
   elementsRecords(state: any) {
     return state.elementsRecords
   },
@@ -1149,9 +1067,6 @@ export const getters: GetterTree<RootState, RootState> = {
     }
   },
 // Bulletin Page
-  headersBulletin(state: any) {
-    return state.headersBulletin
-  },
   elementsBulletin(state: any) {
     return state.elementsBulletin
   },
@@ -1160,18 +1075,12 @@ export const getters: GetterTree<RootState, RootState> = {
       return state.elementsBulletin.find((element: any) => element.nameturkmen === elementId)
     }
   },
-  headersBulletinRecord(state: any) {
-    return state.headersBulletinRecord
-  },
   elementsBulletinRecord(state: any) {
     return (elementId: any) => {
       return state.elementsBulletinRecord.find((element: any) => element.nameturkmen === elementId)
     }
   },
 // Tolerance Group
-  headersTolerance(state: any) {
-    return state.headersTolerance
-  },
   elementsTolerance(state: any) {
     return state.elementsTolerance
   },
