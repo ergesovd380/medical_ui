@@ -8,6 +8,7 @@ import RecordData from "./Ru_ru/Records";
 import StatisticData from "./Ru_ru/Statistic";
 import ToleranceData from "./Ru_ru/Tolerance";
 import SetupData from "./Ru_ru/Setup";
+import Nav from "./Ru_ru/Nav";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -20,6 +21,7 @@ let messages: LocaleMessageObject = {
     StatisticData,
     ToleranceData,
     SetupData,
+    Nav,
 
 // Table
     Default: 'По умолчанию',

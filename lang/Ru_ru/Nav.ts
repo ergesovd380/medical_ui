@@ -1,0 +1,16 @@
+export default {
+  Cabinets: 'Кабинеты',
+  Personals: 'Сотрудники',
+  Blanks: 'Бланки',
+  Surveys: 'Обследования',
+  Patients: 'Пациенты',
+  Tolerance: 'Группы допуска',
+  Setup: 'Настройки',
+  Info: 'Инфо.страница',
+  Media: 'Медиафайлы',
+  Job: 'Должности',
+  Group_patient: 'Группы пациентов',
+  Cityzen_status: 'Гражданский статус',
+  Disease: 'База Болезней',
+  Policlinic: 'Поликлиники',
+}

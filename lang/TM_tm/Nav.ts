@@ -1,0 +1,16 @@
+export default {
+  Cabinets: 'Kabinetler',
+  Personals: 'Işgärler',
+  Blanks: 'Blankalar',
+  Surveys: 'Barlaglar',
+  Patients: 'Hassalar',
+  Tolerance: 'Rugsatlar',
+  Setup: 'Sazlamalar',
+  Info: 'Maglumat sahypasy',
+  Media: 'Media faýllar',
+  Job: 'Wezipeler',
+  Group_patient: 'Hassa toparlary',
+  Cityzen_status: 'Raýatlyk statuslary',
+  Disease: 'Kesselleriň bazasy',
+  Policlinic: 'Keselhanalar',
+}

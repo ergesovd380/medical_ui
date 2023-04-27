@@ -67,7 +67,64 @@
         locale: [
           { text: "Turkmen", value: "tm" },
           { text: "Русский", value: "ru" },
-        ]
+        ],
+        items: [
+          {
+            icon: 'mdi-alpha-k-box',
+            title: this.$t('Nav.Cabinets'),
+            to: '/cabinet'
+          },
+          {
+            icon: 'mdi-doctor',
+            title: this.$t('Nav.Personals'),
+            to: '/personal'
+          },
+          {
+            icon: 'mdi-note-text',
+            title: this.$t('Nav.Blanks'),
+            to: '/blank'
+          },
+          {
+            icon: 'mdi-heart-flash',
+            title: this.$t('Nav.Surveys'),
+            to: '/survey'
+          },
+          {
+            icon: 'mdi-card-account-details',
+            title: this.$t('Nav.Patients'),
+            to: '/patient'
+          },
+          {
+            icon: 'mdi-bulletin-board',
+            title: this.$t('Bulletin'),
+            to: '/bulletin'
+          },
+          {
+            icon: 'mdi-table-edit',
+            title: this.$t('Records'),
+            to: '/records'
+          },
+          {
+            icon: 'mdi-chart-bar',
+            title: this.$t('Statistic'),
+            to: '/statistic'
+          },
+          {
+            icon: 'mdi-shield-account',
+            title: this.$t('Nav.Tolerance'),
+            to: '/tolerance'
+          },
+          {
+            icon: 'mdi-wrench',
+            title: this.$t('Nav.Setup'),
+            to: '/setup'
+          },
+          {
+            icon: 'mdi-information-outline',
+            title: this.$t('Nav.Info'),
+            to: '/'
+          }
+        ],
       }
     },
     methods: {
@@ -75,11 +132,11 @@
         this.$router.replace(this.switchLocalePath(event));
       }
     },
-    computed: {
-      items(): any {
-        return this.$store.getters['indexDefault/items']
-      }
-    },
+    // computed: {
+    //   items(): any {
+    //     return this.$store.getters['indexDefault/items']
+    //   }
+    // },
     watch: {
       activeLang: function changeLang(val) {
         this.$i18n.setLocaleCookie(val);

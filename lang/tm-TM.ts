@@ -8,6 +8,7 @@ import RecordData from "./TM_tm/Records";
 import StatisticData from "./TM_tm/Statistic";
 import ToleranceData from "./TM_tm/Tolerance";
 import SetupData from "./TM_tm/Setup";
+import Nav from "./TM_tm/Nav";
 
 let messages: LocaleMessageObject = {
 // Pages
@@ -20,6 +21,7 @@ let messages: LocaleMessageObject = {
     StatisticData,
     ToleranceData,
     SetupData,
+    Nav,
 
 // Table
     // Filter
